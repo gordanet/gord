@@ -1,9 +1,9 @@
 package protowire
 
 import (
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/util/mstime"
+	"github.com/gordanet/gord/app/appmessage"
+	"github.com/gordanet/gord/domain/consensus/model/externalapi"
+	"github.com/gordanet/gord/util/mstime"
 	"github.com/pkg/errors"
 	"math"
 	"math/big"
