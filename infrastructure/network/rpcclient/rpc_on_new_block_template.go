@@ -1,7 +1,7 @@
 package rpcclient
 
 import (
-	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/gordanet/gord/app/appmessage"
 	routerpkg "github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
