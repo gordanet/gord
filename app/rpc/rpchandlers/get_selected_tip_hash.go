@@ -1,9 +1,9 @@
 package rpchandlers
 
 import (
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/app/rpc/rpccontext"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
+	"github.com/gordanet/gord/app/appmessage"
+	"github.com/gordanet/gord/app/rpc/rpccontext"
+	"github.com/gordanet/gord/infrastructure/network/netadapter/router"
 )
 
 // HandleGetSelectedTipHash handles the respectively named RPC command
