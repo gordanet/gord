@@ -2,10 +2,10 @@ package grpcclient
 
 import (
 	"context"
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/server/grpcserver"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/gordanet/gord/app/appmessage"
+	"github.com/gordanet/gord/infrastructure/network/netadapter/router"
+	"github.com/gordanet/gord/infrastructure/network/netadapter/server/grpcserver"
+	"github.com/gordanet/gord/infrastructure/network/netadapter/server/grpcserver/protowire"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/encoding/gzip"
