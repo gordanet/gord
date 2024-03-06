@@ -8,7 +8,7 @@ import (
 	"net"
 	"testing"
 
-	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/gordanet/gord/app/appmessage"
 )
 
 // TestIPTypes ensures the various functions which determine the type of an IP
