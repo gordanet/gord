@@ -2,7 +2,7 @@ package grpcserver
 
 import (
 	"github.com/davecgh/go-spew/spew"
-	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/gordanet/gord/app/appmessage"
 	"github.com/ixbaseANT/gord/infrastructure/logger"
 	"io"
 	"os"
