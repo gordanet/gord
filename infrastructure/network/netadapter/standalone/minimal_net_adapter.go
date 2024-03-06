@@ -3,16 +3,16 @@ package standalone
 import (
 	"sync"
 
-	"github.com/ixbaseANT/gord/app/protocol/common"
-	"github.com/ixbaseANT/gord/util/mstime"
+	"github.com/gordanet/gord/app/protocol/common"
+	"github.com/gordanet/gord/util/mstime"
 
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/id"
+	"github.com/gordanet/gord/infrastructure/network/netadapter/id"
 
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
+	"github.com/gordanet/gord/app/appmessage"
+	"github.com/gordanet/gord/infrastructure/network/netadapter/router"
 
-	"github.com/ixbaseANT/gord/infrastructure/config"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
+	"github.com/gordanet/gord/infrastructure/config"
+	"github.com/gordanet/gord/infrastructure/network/netadapter"
 
 	"github.com/pkg/errors"
 )
