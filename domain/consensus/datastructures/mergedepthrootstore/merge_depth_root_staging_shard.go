@@ -1,8 +1,8 @@
 package mergedepthrootstore
 
 import (
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
+	"github.com/gordanet/gord/domain/consensus/model"
+	"github.com/gordanet/gord/domain/consensus/model/externalapi"
 )
 
 type mergeDepthRootStagingShard struct {
