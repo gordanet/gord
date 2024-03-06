@@ -9,7 +9,7 @@ import (
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
 	"github.com/gordanet/gord/domain/consensus/utils/testutils"
 	"github.com/gordanet/gord/infrastructure/db/database"
-	"github.com/pkg/errors"
+	"github.com/pkg/errors" 
 )
 
 func TestAddHeaderTip(t *testing.T) {
