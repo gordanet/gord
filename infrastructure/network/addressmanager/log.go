@@ -5,7 +5,7 @@
 package addressmanager
 
 import (
-	"github.com/ixbaseANT/gord/infrastructure/logger"
+	"github.com/gordanet/gord/infrastructure/logger"
 )
 
 var log = logger.RegisterSubSystem("ADXR")
