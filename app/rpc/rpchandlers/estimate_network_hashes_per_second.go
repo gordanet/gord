@@ -1,11 +1,11 @@
 package rpchandlers
 
 import (
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/app/rpc/rpccontext"
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
+	"github.com/gordanet/gord/app/appmessage"
+	"github.com/gordanet/gord/app/rpc/rpccontext"
+	"github.com/gordanet/gord/domain/consensus/model"
+	"github.com/gordanet/gord/gord/domain/consensus/model/externalapi"
+	"github.com/gordanet/gord/gord/infrastructure/network/netadapter/router"
 )
 
 // HandleEstimateNetworkHashesPerSecond handles the respectively named RPC command
