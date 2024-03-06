@@ -6,15 +6,15 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/infrastructure/network/dnsseed"
+	"github.com/gordanet/gord/app/appmessage"
+	"github.com/gordanet/gord/infrastructure/network/dnsseed"
 	"github.com/pkg/errors"
 
-	"github.com/ixbaseANT/gord/infrastructure/network/addressmanager"
+	"github.com/gordanet/gord/infrastructure/network/addressmanager"
 
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
+	"github.com/gordanet/gord/infrastructure/network/netadapter"
 
-	"github.com/ixbaseANT/gord/infrastructure/config"
+	"github.com/gordanet/gord/infrastructure/config"
 )
 
 // connectionRequest represents a user request (either through CLI or RPC) to connect to a certain node
