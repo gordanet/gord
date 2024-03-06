@@ -9,10 +9,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/infrastructure/config"
-	"github.com/ixbaseANT/gord/infrastructure/db/database/ldb"
-	"github.com/ixbaseANT/gord/util/mstime"
+	"github.com/gordanet/gord/app/appmessage"
+	"github.com/gordanet/gord/infrastructure/config"
+	"github.com/gordanet/gord/infrastructure/db/database/ldb"
+	"github.com/gordanet/gord/util/mstime"
 )
 
 func newAddressManagerForTest(t *testing.T, testName string) (addressManager *AddressManager, teardown func()) {
