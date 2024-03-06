@@ -5,8 +5,8 @@
 package addressmanager
 
 import (
-	"github.com/ixbaseANT/gord/infrastructure/db/database"
-	"github.com/ixbaseANT/gord/util/mstime"
+	"github.com/gordanet/gord/infrastructure/db/database"
+	"github.com/gordanet/gord/util/mstime"
 	"net"
 	"sync"
 	"time"
