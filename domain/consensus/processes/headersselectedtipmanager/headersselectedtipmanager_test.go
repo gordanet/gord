@@ -5,10 +5,10 @@ import (
 
 	"github.com/ixbaseANT/gord/domain/consensus/model"
 
-	"github.com/ixbaseANT/gord/domain/consensus"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/testutils"
-	"github.com/ixbaseANT/gord/infrastructure/db/database"
+	"github.com/gordanet/gord/domain/consensus"
+	"github.com/gordanet/gord/domain/consensus/model/externalapi"
+	"github.com/gordanet/gord/domain/consensus/utils/testutils"
+	"github.com/gordanet/gord/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 
