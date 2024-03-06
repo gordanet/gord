@@ -3,7 +3,7 @@ package protowire
 import (
 	"math"
 
-	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/gordanet/gord/app/appmessage"
 	"github.com/pkg/errors"
 )
 
