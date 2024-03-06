@@ -3,7 +3,7 @@ package headersselectedtipmanager_test
 import (
 	"testing"
 
-	"github.com/ixbaseANT/gord/domain/consensus/model"
+	"github.com/gordanet/gord/domain/consensus/model"
 
 	"github.com/gordanet/gord/domain/consensus"
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
