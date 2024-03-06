@@ -3,12 +3,12 @@ package standalone
 import (
 	"time"
 
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter"
+	"github.com/gordanet/gord/infrastructure/network/netadapter"
 
 	"github.com/pkg/errors"
 
-	"github.com/ixbaseANT/gord/app/appmessage"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
+	"github.com/gordanet/gord/app/appmessage"
+	"github.com/gordanet/gord/infrastructure/network/netadapter/router"
 )
 
 // Routes holds the incoming and outgoing routes of a connection created by MinimalNetAdapter
