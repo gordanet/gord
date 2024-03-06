@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ixbaseANT/gord/app/appmessage"
+	"github.com/gordanet/gord/app/appmessage"
 
-	"github.com/ixbaseANT/gord/infrastructure/config"
-	"github.com/ixbaseANT/gord/infrastructure/network/netadapter/router"
+	"github.com/gordanet/gord/infrastructure/config"
+	"github.com/gordanet/gord/infrastructure/network/netadapter/router"
 )
 
 // routerInitializerForTest returns new RouterInitializer which simply sets
