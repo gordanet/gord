@@ -1,10 +1,10 @@
 package mergedepthrootstore
 
 import (
-	"github.com/ixbaseANT/gord/domain/consensus/model"
-	"github.com/ixbaseANT/gord/domain/consensus/model/externalapi"
-	"github.com/ixbaseANT/gord/domain/consensus/utils/lrucache"
-	"github.com/ixbaseANT/gord/util/staging"
+	"github.com/gordanet/gord/domain/consensus/model"
+	"github.com/gordanet/gord/domain/consensus/model/externalapi"
+	"github.com/gordanet/gord/domain/consensus/utils/lrucache"
+	"github.com/gordanet/gord/util/staging"
 )
 
 var bucketName = []byte("merge-depth-roots")
