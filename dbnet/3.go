@@ -10,7 +10,7 @@ import (
 	"encoding/hex"
 	"net/http"
 	"database/sql"
-	_ "github.com/lib/pq"
+	
 )
 
 func main() {
