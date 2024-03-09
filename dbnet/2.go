@@ -9,7 +9,7 @@ import (
 	"strings"
 	"encoding/hex"
 	"database/sql"
-	"github.com/lib/pq"
+	
 )
 
 func main() {
