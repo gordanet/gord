@@ -3,7 +3,7 @@ package server
 import (
 	"testing"
 
-	"github.com/gordanet/gord/cmd/gorwallet/libkaspawallet/serialization"
+	"github.com/gordanet/gord/cmd/gorwallet/libgorwallet/serialization"
 
 	"github.com/gordanet/gord/cmd/gorwallet/keys"
 	"github.com/gordanet/gord/util/txmass"
