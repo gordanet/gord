@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gordanet/gord/cmd/gorwallet/libkaspawallet"
+	"github.com/gordanet/gord/cmd/gorwallet/libgorwallet"
 	"github.com/gordanet/gord/domain/consensus"
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
 	"github.com/gordanet/gord/domain/consensus/utils/consensushashing"
