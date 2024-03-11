@@ -12,17 +12,17 @@ import (
 func ExampleAmount() {
 
 	a := util.Amount(0)
-	fmt.Println("Zero Sompi:", a)
+	fmt.Println("Zero Seep:", a)
 
 	a = util.Amount(1e8)
-	fmt.Println("100,000,000 Sompi:", a)
+	fmt.Println("100,000,000 Seep:", a)
 
 	a = util.Amount(1e5)
-	fmt.Println("100,000 Sompi:", a)
+	fmt.Println("100,000 Seep:", a)
 	// Output:
-	// Zero Sompi: 0 KAS
-	// 100,000,000 Sompi: 1 KAS
-	// 100,000 Sompi: 0.001 KAS
+	// Zero Seep: 0 GOR
+	// 100,000,000 Seep: 1 GOR
+	// 100,000 Seep: 0.001 GOR
 }
 
 func ExampleNewAmount() {
@@ -54,27 +54,27 @@ func ExampleNewAmount() {
 	}
 	fmt.Println(amountNaN) //Output 4
 
-	// Output: 1 KAS
-	// 0.01234567 KAS
-	// 0 KAS
-	// invalid kaspa amount
+	// Output: 1 GOR
+	// 0.01234567 GOR
+	// 0 GOR
+	// invalid gor amount
 }
 
 func ExampleAmount_unitConversions() {
 	amount := util.Amount(44433322211100)
 
-	fmt.Println("Sompi to kKAS:", amount.Format(util.AmountKiloKAS))
-	fmt.Println("Sompi to KAS:", amount)
-	fmt.Println("Sompi to MilliKAS:", amount.Format(util.AmountMilliKAS))
-	fmt.Println("Sompi to MicroKAS:", amount.Format(util.AmountMicroKAS))
-	fmt.Println("Sompi to Sompi:", amount.Format(util.AmountSompi))
+	fmt.Println("Seep to kGOR:", amount.Format(util.AmountKiloGOR))
+	fmt.Println("Seep to GOR:", amount)
+	fmt.Println("Seep to MilliGOR:", amount.Format(util.AmountMilliGOR))
+	fmt.Println("Seep to MicroGOR:", amount.Format(util.AmountMicroGOR))
+	fmt.Println("Seep to Seep:", amount.Format(util.AmountSeep))
 
 	// Output:
-	// Sompi to kKAS: 444.333222111 kKAS
-	// Sompi to KAS: 444333.222111 KAS
-	// Sompi to MilliKAS: 444333222.111 mKAS
-	// Sompi to MicroKAS: 444333222111 μKAS
-	// Sompi to Sompi: 44433322211100 Sompi
+	// Sompi to kGOR: 444.333222111 kGOR
+	// Sompi to GOR: 444333.222111 GOR
+	// Sompi to MilliGOR: 444333222.111 mGOR
+	// Sompi to MicroGOR: 444333222111 μGOR
+	// Sompi to Seep: 44433322211100 Seep
 }
 
 // This example demonstrates how to convert the compact "bits" in a block header
