@@ -90,7 +90,7 @@ func (x *GetBalanceResponse) ProtoReflect() protoreflect.Message {
 		if ms.LoadMessageInfo() == nil {
 			ms.StoreMessageInfo(mi)
 		}
-		return ms
+		return  ms
 	}
 	return mi.MessageOf(x)
 }
