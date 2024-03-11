@@ -1,4 +1,4 @@
-package libkaspawallet
+package libgorwallet
 
 import (
 	"github.com/gordanet/gord/cmd/gorwallet/libgorwallet/bip32"
