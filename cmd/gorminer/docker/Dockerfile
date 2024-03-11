@@ -14,8 +14,8 @@ RUN go mod download
 
 COPY . .
 
-WORKDIR /go/src/github.com/gordanet/gord/cmd/kaspaminer
-RUN GOOS=linux go build -a -installsuffix cgo -o kaspaminer .
+WORKDIR /go/src/github.com/gordanet/gord/cmd/gorminer
+RUN GOOS=linux go build -a -installsuffix cgo -o gorminer .
 
 # --- multistage docker build: stage #2: runtime image
 FROM alpine
@@ -23,7 +23,7 @@ WORKDIR /app
 
 RUN apk add --no-cache ca-certificates tini
 
-COPY --from=build /go/src/github.com/gordanet/gord/cmd/kaspaminer/kaspaminer /app/
+COPY --from=build /go/src/github.com/gordanet/gord/cmd/gorminer/gorminer /app/
 
 USER nobody
 ENTRYPOINT [ "/sbin/tini", "--" ]
