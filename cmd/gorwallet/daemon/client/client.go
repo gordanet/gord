@@ -25,7 +25,7 @@ func Connect(address string) (pb.KaspawalletdClient, func(), error) {
 		return nil, nil, err
 	}
 
-	return pb.NewKaspawalletdClient(conn), func() {
+	return pb.NewGorwalletdClient(conn), func() {
 		conn.Close()
 	}, nil
 }
