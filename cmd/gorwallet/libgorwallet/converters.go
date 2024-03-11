@@ -10,7 +10,7 @@ import (
 	"github.com/gordanet/gord/domain/consensus/utils/utxo"
 )
 
-// GorwalletdUTXOsTolibkaspawalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libkaspawallet.UTXO
+// GorwalletdUTXOsTolibkaspawalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libgorwallet.UTXO
 func gorwalletdUTXOsTolibgorwalletUTXOs(gorwalletdUtxoEntires []*pb.UtxosByAddressesEntry) ([]*UTXO, error) {
 	UTXOs := make([]*UTXO, len(gorwalletdUtxoEntires))
 	for i, entry := range gorwalletdUtxoEntires {
@@ -41,7 +41,7 @@ func gorwalletdUTXOsTolibgorwalletUTXOs(gorwalletdUtxoEntires []*pb.UtxosByAddre
 	return UTXOs, nil
 }
 
-// AppMessageUTXOToKaspawalletdUTXO converts an appmessage.UTXOsByAddressesEntry to a  pb.UtxosByAddressesEntry
+// AppMessageUTXOToGorwalletdUTXO converts an appmessage.UTXOsByAddressesEntry to a  pb.UtxosByAddressesEntry
 func AppMessageUTXOToKaspawalletdUTXO(appUTXOsByAddressesEntry *appmessage.UTXOsByAddressesEntry) *pb.UtxosByAddressesEntry {
 	return &pb.UtxosByAddressesEntry{
 		Outpoint: &pb.Outpoint{
