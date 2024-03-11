@@ -11,8 +11,8 @@ import (
 	"google.golang.org/grpc"
 )
 
-// Connect connects to the kaspawalletd server, and returns the client instance
-func Connect(address string) (pb.KaspawalletdClient, func(), error) {
+// Connect connects to the gorwalletd server, and returns the client instance
+func Connect(address string) (pb.GorwalletdClient, func(), error) {
 	// Connection is local, so 1 second timeout is sufficient
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
