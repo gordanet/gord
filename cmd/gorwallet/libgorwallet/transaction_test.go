@@ -1,4 +1,4 @@
-package libkaspawallet_test
+package libgorwallet_test
 
 import (
 	"fmt"
@@ -42,12 +42,12 @@ func TestMultisig(t *testing.T) {
 			publicKeys := make([]string, numKeys)
 			for i := 0; i < numKeys; i++ {
 				var err error
-				mnemonics[i], err = libkaspawallet.CreateMnemonic()
+				mnemonics[i], err = libgorwallet.CreateMnemonic()
 				if err != nil {
 					t.Fatalf("CreateMnemonic: %+v", err)
 				}
 
-				publicKeys[i], err = libkaspawallet.MasterPublicKeyFromMnemonic(&consensusConfig.Params, mnemonics[i], true)
+				publicKeys[i], err = libgorwallet.MasterPublicKeyFromMnemonic(&consensusConfig.Params, mnemonics[i], true)
 				if err != nil {
 					t.Fatalf("MasterPublicKeyFromMnemonic: %+v", err)
 				}
@@ -55,7 +55,7 @@ func TestMultisig(t *testing.T) {
 
 			const minimumSignatures = 2
 			path := "m/1/2/3"
-			address, err := libkaspawallet.Address(params, publicKeys, minimumSignatures, path, ecdsa)
+			address, err := libgorwallet.Address(params, publicKeys, minimumSignatures, path, ecdsa)
 			if err != nil {
 				t.Fatalf("Address: %+v", err)
 			}
@@ -91,7 +91,7 @@ func TestMultisig(t *testing.T) {
 
 			block1Tx := block1.Transactions[0]
 			block1TxOut := block1Tx.Outputs[0]
-			selectedUTXOs := []*libkaspawallet.UTXO{
+			selectedUTXOs := []*libgorwallet.UTXO{
 				{
 					Outpoint: &externalapi.DomainOutpoint{
 						TransactionID: *consensushashing.TransactionID(block1.Transactions[0]),
@@ -102,8 +102,8 @@ func TestMultisig(t *testing.T) {
 				},
 			}
 
-			unsignedTransaction, err := libkaspawallet.CreateUnsignedTransaction(publicKeys, minimumSignatures,
-				[]*libkaspawallet.Payment{{
+			unsignedTransaction, err := libgorwallet.CreateUnsignedTransaction(publicKeys, minimumSignatures,
+				[]*libgorwallet.Payment{{
 					Address: address,
 					Amount:  10,
 				}}, selectedUTXOs)
@@ -111,7 +111,7 @@ func TestMultisig(t *testing.T) {
 				t.Fatalf("CreateUnsignedTransactions: %+v", err)
 			}
 
-			isFullySigned, err := libkaspawallet.IsTransactionFullySigned(unsignedTransaction)
+			isFullySigned, err := libgorwallet.IsTransactionFullySigned(unsignedTransaction)
 			if err != nil {
 				t.Fatalf("IsTransactionFullySigned: %+v", err)
 			}
@@ -120,17 +120,17 @@ func TestMultisig(t *testing.T) {
 				t.Fatalf("Transaction is not expected to be signed")
 			}
 
-			_, err = libkaspawallet.ExtractTransaction(unsignedTransaction, ecdsa)
+			_, err = libgorwallet.ExtractTransaction(unsignedTransaction, ecdsa)
 			if err == nil || !strings.Contains(err.Error(), fmt.Sprintf("missing %d signatures", minimumSignatures)) {
 				t.Fatal("Unexpectedly succeed to extract a valid transaction out of unsigned transaction")
 			}
 
-			signedTxStep1, err := libkaspawallet.Sign(params, mnemonics[:1], unsignedTransaction, ecdsa)
+			signedTxStep1, err := libgorwallet.Sign(params, mnemonics[:1], unsignedTransaction, ecdsa)
 			if err != nil {
 				t.Fatalf("Sign: %+v", err)
 			}
 
-			isFullySigned, err = libkaspawallet.IsTransactionFullySigned(signedTxStep1)
+			isFullySigned, err = libgorwallet.IsTransactionFullySigned(signedTxStep1)
 			if err != nil {
 				t.Fatalf("IsTransactionFullySigned: %+v", err)
 			}
@@ -139,12 +139,12 @@ func TestMultisig(t *testing.T) {
 				t.Fatalf("Transaction is not expected to be fully signed")
 			}
 
-			signedTxStep2, err := libkaspawallet.Sign(params, mnemonics[1:2], signedTxStep1, ecdsa)
+			signedTxStep2, err := libgorwallet.Sign(params, mnemonics[1:2], signedTxStep1, ecdsa)
 			if err != nil {
 				t.Fatalf("Sign: %+v", err)
 			}
 
-			extractedSignedTxStep2, err := libkaspawallet.ExtractTransaction(signedTxStep2, ecdsa)
+			extractedSignedTxStep2, err := libgorwallet.ExtractTransaction(signedTxStep2, ecdsa)
 			if err != nil {
 				t.Fatalf("ExtractTransaction: %+v", err)
 			}
@@ -154,7 +154,7 @@ func TestMultisig(t *testing.T) {
 				t.Fatalf("Sign: %+v", err)
 			}
 
-			extractedSignedTxOneStep, err := libkaspawallet.ExtractTransaction(signedTxOneStep, ecdsa)
+			extractedSignedTxOneStep, err := libgorwallet.ExtractTransaction(signedTxOneStep, ecdsa)
 			if err != nil {
 				t.Fatalf("ExtractTransaction: %+v", err)
 			}
@@ -197,12 +197,12 @@ func TestP2PK(t *testing.T) {
 			publicKeys := make([]string, numKeys)
 			for i := 0; i < numKeys; i++ {
 				var err error
-				mnemonics[i], err = libkaspawallet.CreateMnemonic()
+				mnemonics[i], err = libgorwallet.CreateMnemonic()
 				if err != nil {
 					t.Fatalf("CreateMnemonic: %+v", err)
 				}
 
-				publicKeys[i], err = libkaspawallet.MasterPublicKeyFromMnemonic(&consensusConfig.Params, mnemonics[i], false)
+				publicKeys[i], err = libgorwallet.MasterPublicKeyFromMnemonic(&consensusConfig.Params, mnemonics[i], false)
 				if err != nil {
 					t.Fatalf("MasterPublicKeyFromMnemonic: %+v", err)
 				}
@@ -210,7 +210,7 @@ func TestP2PK(t *testing.T) {
 
 			const minimumSignatures = 1
 			path := "m/1/2/3"
-			address, err := libkaspawallet.Address(params, publicKeys, minimumSignatures, path, ecdsa)
+			address, err := libgorwallet.Address(params, publicKeys, minimumSignatures, path, ecdsa)
 			if err != nil {
 				t.Fatalf("Address: %+v", err)
 			}
@@ -263,8 +263,8 @@ func TestP2PK(t *testing.T) {
 				},
 			}
 
-			unsignedTransaction, err := libkaspawallet.CreateUnsignedTransaction(publicKeys, minimumSignatures,
-				[]*libkaspawallet.Payment{{
+			unsignedTransaction, err := libgorwallet.CreateUnsignedTransaction(publicKeys, minimumSignatures,
+				[]*libgorwallet.Payment{{
 					Address: address,
 					Amount:  10,
 				}}, selectedUTXOs)
@@ -272,7 +272,7 @@ func TestP2PK(t *testing.T) {
 				t.Fatalf("CreateUnsignedTransactions: %+v", err)
 			}
 
-			isFullySigned, err := libkaspawallet.IsTransactionFullySigned(unsignedTransaction)
+			isFullySigned, err := libgorwallet.IsTransactionFullySigned(unsignedTransaction)
 			if err != nil {
 				t.Fatalf("IsTransactionFullySigned: %+v", err)
 			}
@@ -281,17 +281,17 @@ func TestP2PK(t *testing.T) {
 				t.Fatalf("Transaction is not expected to be signed")
 			}
 
-			_, err = libkaspawallet.ExtractTransaction(unsignedTransaction, ecdsa)
+			_, err = libgorwallet.ExtractTransaction(unsignedTransaction, ecdsa)
 			if err == nil || !strings.Contains(err.Error(), "missing signature") {
 				t.Fatal("Unexpectedly succeed to extract a valid transaction out of unsigned transaction")
 			}
 
-			signedTx, err := libkaspawallet.Sign(params, mnemonics, unsignedTransaction, ecdsa)
+			signedTx, err := libgorwallet.Sign(params, mnemonics, unsignedTransaction, ecdsa)
 			if err != nil {
 				t.Fatalf("Sign: %+v", err)
 			}
 
-			tx, err := libkaspawallet.ExtractTransaction(signedTx, ecdsa)
+			tx, err := libgorwallet.ExtractTransaction(signedTx, ecdsa)
 			if err != nil {
 				t.Fatalf("ExtractTransaction: %+v", err)
 			}
@@ -329,12 +329,12 @@ func TestMaxSompi(t *testing.T) {
 		publicKeys := make([]string, numKeys)
 		for i := 0; i < numKeys; i++ {
 			var err error
-			mnemonics[i], err = libkaspawallet.CreateMnemonic()
+			mnemonics[i], err = libgorwallet.CreateMnemonic()
 			if err != nil {
 				t.Fatalf("CreateMnemonic: %+v", err)
 			}
 
-			publicKeys[i], err = libkaspawallet.MasterPublicKeyFromMnemonic(&cfg.Params, mnemonics[i], false)
+			publicKeys[i], err = libgorwallet.MasterPublicKeyFromMnemonic(&cfg.Params, mnemonics[i], false)
 			if err != nil {
 				t.Fatalf("MasterPublicKeyFromMnemonic: %+v", err)
 			}
@@ -342,7 +342,7 @@ func TestMaxSompi(t *testing.T) {
 
 		const minimumSignatures = 1
 		path := "m/1/2/3"
-		address, err := libkaspawallet.Address(params, publicKeys, minimumSignatures, path, false)
+		address, err := libgorwallet.Address(params, publicKeys, minimumSignatures, path, false)
 		if err != nil {
 			t.Fatalf("Address: %+v", err)
 		}
@@ -425,8 +425,8 @@ func TestMaxSompi(t *testing.T) {
 			},
 		}
 
-		unsignedTxWithLargeInputAmount, err := libkaspawallet.CreateUnsignedTransaction(publicKeys, minimumSignatures,
-			[]*libkaspawallet.Payment{{
+		unsignedTxWithLargeInputAmount, err := libgorwallet.CreateUnsignedTransaction(publicKeys, minimumSignatures,
+			[]*libgorwallet.Payment{{
 				Address: address,
 				Amount:  10,
 			}}, selectedUTXOsForTxWithLargeInputAmount)
@@ -434,12 +434,12 @@ func TestMaxSompi(t *testing.T) {
 			t.Fatalf("CreateUnsignedTransactions: %+v", err)
 		}
 
-		signedTxWithLargeInputAmount, err := libkaspawallet.Sign(params, mnemonics, unsignedTxWithLargeInputAmount, false)
+		signedTxWithLargeInputAmount, err := libgorwallet.Sign(params, mnemonics, unsignedTxWithLargeInputAmount, false)
 		if err != nil {
 			t.Fatalf("Sign: %+v", err)
 		}
 
-		txWithLargeInputAmount, err := libkaspawallet.ExtractTransaction(signedTxWithLargeInputAmount, false)
+		txWithLargeInputAmount, err := libgorwallet.ExtractTransaction(signedTxWithLargeInputAmount, false)
 		if err != nil {
 			t.Fatalf("ExtractTransaction: %+v", err)
 		}
@@ -457,7 +457,7 @@ func TestMaxSompi(t *testing.T) {
 			t.Fatalf("Transaction wasn't accepted in the DAG")
 		}
 
-		selectedUTXOsForTxWithLargeInputAndOutputAmount := []*libkaspawallet.UTXO{
+		selectedUTXOsForTxWithLargeInputAndOutputAmount := []*libgorwallet.UTXO{
 			{
 				Outpoint: &externalapi.DomainOutpoint{
 					TransactionID: *consensushashing.TransactionID(fundingBlock4.Transactions[0]),
@@ -476,7 +476,7 @@ func TestMaxSompi(t *testing.T) {
 			},
 		}
 
-		unsignedTxWithLargeInputAndOutputAmount, err := libkaspawallet.CreateUnsignedTransaction(publicKeys, minimumSignatures,
+		unsignedTxWithLargeInputAndOutputAmount, err := libgorwallet.CreateUnsignedTransaction(publicKeys, minimumSignatures,
 			[]*libkaspawallet.Payment{{
 				Address: address,
 				Amount:  22e6 * constants.SompiPerKaspa,
@@ -485,7 +485,7 @@ func TestMaxSompi(t *testing.T) {
 			t.Fatalf("CreateUnsignedTransactions: %+v", err)
 		}
 
-		signedTxWithLargeInputAndOutputAmount, err := libkaspawallet.Sign(params, mnemonics, unsignedTxWithLargeInputAndOutputAmount, false)
+		signedTxWithLargeInputAndOutputAmount, err := libgorwallet.Sign(params, mnemonics, unsignedTxWithLargeInputAndOutputAmount, false)
 		if err != nil {
 			t.Fatalf("Sign: %+v", err)
 		}
