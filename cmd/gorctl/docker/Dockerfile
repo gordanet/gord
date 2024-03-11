@@ -14,9 +14,9 @@ RUN go mod download
 
 COPY . .
 
-WORKDIR /go/src/github.com/gordanet/gord/cmd/kaspactl
+WORKDIR /go/src/github.com/gordanet/gord/cmd/gorctl
 
-RUN GOOS=linux go build -a -installsuffix cgo -o kaspactl .
+RUN GOOS=linux go build -a -installsuffix cgo -o gorctl .
 
 # --- multistage docker build: stage #2: runtime image
 FROM alpine
@@ -24,7 +24,7 @@ WORKDIR /app
 
 RUN apk add --no-cache ca-certificates tini
 
-COPY --from=build /go/src/github.com/gordanet/gord/cmd/kaspactl/kaspactl /app/
+COPY --from=build /go/src/github.com/gordanet/gord/cmd/gorctl/gorctl /app/
 
 USER nobody
 ENTRYPOINT [ "/sbin/tini", "--" ]
