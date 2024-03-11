@@ -30,13 +30,13 @@ func TestAmountCreation(t *testing.T) {
 			name:     "max producible",
 			amount:   29e9,
 			valid:    true,
-			expected: Amount(constants.MaxSompi),
+			expected: Amount(constants.MaxSeep),
 		},
 		{
 			name:     "one hundred",
 			amount:   100,
 			valid:    true,
-			expected: 100 * constants.SompiPerKaspa,
+			expected: 100 * constants.SeepPerGor,
 		},
 		{
 			name:     "fraction",
@@ -48,13 +48,13 @@ func TestAmountCreation(t *testing.T) {
 			name:     "rounding up",
 			amount:   54.999999999999943157,
 			valid:    true,
-			expected: 55 * constants.SompiPerKaspa,
+			expected: 55 * constants.SeepPerGor,
 		},
 		{
 			name:     "rounding down",
 			amount:   55.000000000000056843,
 			valid:    true,
-			expected: 55 * constants.SompiPerKaspa,
+			expected: 55 * constants.SeepPerGor,
 		},
 
 		// Negative tests.
@@ -102,48 +102,48 @@ func TestAmountUnitConversions(t *testing.T) {
 		s         string
 	}{
 		{
-			name:      "MKAS",
-			amount:    Amount(constants.MaxSompi),
-			unit:      AmountMegaKAS,
+			name:      "MGOR",
+			amount:    Amount(constants.MaxSeep),
+			unit:      AmountMegaGOR,
 			converted: 29000,
-			s:         "29000 MKAS",
+			s:         "29000 MGOR",
 		},
 		{
-			name:      "kKAS",
+			name:      "kGOR",
 			amount:    44433322211100,
-			unit:      AmountKiloKAS,
+			unit:      AmountKiloGOR,
 			converted: 444.33322211100,
-			s:         "444.333222111 kKAS",
+			s:         "444.333222111 kGOR",
 		},
 		{
-			name:      "KAS",
+			name:      "GOR",
 			amount:    44433322211100,
-			unit:      AmountKAS,
+			unit:      AmountGOR,
 			converted: 444333.22211100,
-			s:         "444333.222111 KAS",
+			s:         "444333.222111 GOR",
 		},
 		{
-			name:      "mKAS",
+			name:      "mGOR",
 			amount:    44433322211100,
-			unit:      AmountMilliKAS,
+			unit:      AmountMilliGOR,
 			converted: 444333222.11100,
-			s:         "444333222.111 mKAS",
+			s:         "444333222.111 mGOR",
 		},
 		{
 
-			name:      "μKAS",
+			name:      "μGOR",
 			amount:    44433322211100,
-			unit:      AmountMicroKAS,
+			unit:      AmountMicroGOR,
 			converted: 444333222111.00,
-			s:         "444333222111 μKAS",
+			s:         "444333222111 μGOR",
 		},
 		{
 
-			name:      "sompi",
+			name:      "seep",
 			amount:    44433322211100,
-			unit:      AmountSompi,
+			unit:      AmountSeep,
 			converted: 44433322211100,
-			s:         "44433322211100 Sompi",
+			s:         "44433322211100 Seep",
 		},
 		{
 
@@ -151,7 +151,7 @@ func TestAmountUnitConversions(t *testing.T) {
 			amount:    44433322211100,
 			unit:      AmountUnit(-1),
 			converted: 4443332.2211100,
-			s:         "4443332.22111 1e-1 KAS",
+			s:         "4443332.22111 1e-1 GOR",
 		},
 	}
 
@@ -168,18 +168,18 @@ func TestAmountUnitConversions(t *testing.T) {
 			continue
 		}
 
-		// Verify that Amount.ToKAS works as advertised.
-		f1 := test.amount.ToUnit(AmountKAS)
-		f2 := test.amount.ToKAS()
+		// Verify that Amount.ToGOR works as advertised.
+		f1 := test.amount.ToUnit(AmountGOR)
+		f2 := test.amount.ToGOR()
 		if f1 != f2 {
-			t.Errorf("%v: ToKAS does not match ToUnit(AmountKAS): %v != %v", test.name, f1, f2)
+			t.Errorf("%v: ToGOR does not match ToUnit(AmountGOR): %v != %v", test.name, f1, f2)
 		}
 
 		// Verify that Amount.String works as advertised.
-		s1 := test.amount.Format(AmountKAS)
+		s1 := test.amount.Format(AmountGOR)
 		s2 := test.amount.String()
 		if s1 != s2 {
-			t.Errorf("%v: String does not match Format(AmountKAS): %v != %v", test.name, s1, s2)
+			t.Errorf("%v: String does not match Format(AmountGOR): %v != %v", test.name, s1, s2)
 		}
 	}
 }
@@ -192,40 +192,40 @@ func TestAmountMulF64(t *testing.T) {
 		res  Amount
 	}{
 		{
-			name: "Multiply 0.1 KAS by 2",
-			amt:  100e5, // 0.1 KAS
+			name: "Multiply 0.1 GOR by 2",
+			amt:  100e5, // 0.1 GOR
 			mul:  2,
-			res:  200e5, // 0.2 KAS
+			res:  200e5, // 0.2 GOR
 		},
 		{
-			name: "Multiply 0.2 KAS by 0.02",
-			amt:  200e5, // 0.2 KAS
+			name: "Multiply 0.2 GOR by 0.02",
+			amt:  200e5, // 0.2 GOR
 			mul:  1.02,
-			res:  204e5, // 0.204 KAS
+			res:  204e5, // 0.204 GOR
 		},
 		{
 			name: "Round down",
-			amt:  49, // 49 Sompi
+			amt:  49, // 49 Seep
 			mul:  0.01,
 			res:  0,
 		},
 		{
 			name: "Round up",
-			amt:  50, // 50 Sompi
+			amt:  50, // 50 Seep
 			mul:  0.01,
-			res:  1, // 1 Sompi
+			res:  1, // 1 Seep
 		},
 		{
 			name: "Multiply by 0.",
-			amt:  1e8, // 1 KAS
+			amt:  1e8, // 1 GOR
 			mul:  0,
 			res:  0, // 0 KAS
 		},
 		{
 			name: "Multiply 1 by 0.5.",
-			amt:  1, // 1 Sompi
+			amt:  1, // 1 Seep
 			mul:  0.5,
-			res:  1, // 1 Sompi
+			res:  1, // 1 Seep
 		},
 		{
 			name: "Multiply 100 by 66%.",
@@ -235,15 +235,15 @@ func TestAmountMulF64(t *testing.T) {
 		},
 		{
 			name: "Multiply 100 by 66.6%.",
-			amt:  100, // 100 Sompi
+			amt:  100, // 100 Seep
 			mul:  0.666,
-			res:  67, // 67 Sompi
+			res:  67, // 67 Seep
 		},
 		{
 			name: "Multiply 100 by 2/3.",
-			amt:  100, // 100 Sompi
+			amt:  100, // 100 Seep
 			mul:  2.0 / 3,
-			res:  67, // 67 Sompi
+			res:  67, // 67 Seep
 		},
 	}
 
