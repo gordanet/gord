@@ -1,4 +1,4 @@
-package libkaspawallet
+package libgorwallet
 
 import (
 	"math"
