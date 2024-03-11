@@ -100,7 +100,7 @@ func postJSON(cfg *configFlags, client *grpcclient.GRPCClient, doneChan chan str
 }
 
 func prettifyResponse(response string) string {
-	kaspadMessage := &protowire.KaspadMessage{}
+	gordMessage := &protowire.GordMessage{}
 	err := protojson.Unmarshal([]byte(response), kaspadMessage)
 	if err != nil {
 		printErrorAndExit(fmt.Sprintf("error parsing the response from the RPC server: %s", err))
@@ -109,7 +109,7 @@ func prettifyResponse(response string) string {
 	marshalOptions := &protojson.MarshalOptions{}
 	marshalOptions.Indent = "    "
 	marshalOptions.EmitUnpopulated = true
-	return marshalOptions.Format(kaspadMessage)
+	return marshalOptions.Format(gorMessage)
 }
 
 func printErrorAndExit(message string) {
