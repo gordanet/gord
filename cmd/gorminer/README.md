@@ -1,6 +1,6 @@
-# kaspaminer
+# gorminer
 
-Kaspaminer is a CPU-based miner for kaspad
+Gorminer is a CPU-based miner for gord
 
 ## Requirements
 
@@ -19,27 +19,27 @@ Go 1.19 or later.
 $ go version
 ```
 
-- Run the following commands to obtain and install kaspad including all dependencies:
+- Run the following commands to obtain and install gord including all dependencies:
 
 ```bash
 $ git clone https://github.com/gordanet/gord
-$ cd kaspad/cmd/kaspaminer
+$ cd gor/cmd/gorminer
 $ go install .
 ```
 
-- Kapaminer should now be installed in `$(go env GOPATH)/bin`. If you did
+- Gorminer should now be installed in `$(go env GOPATH)/bin`. If you did
   not already add the bin directory to your system path during Go installation,
   you are encouraged to do so now.
   
 ## Usage
 
-The full kaspaminer configuration options can be seen with:
+The full gordminer configuration options can be seen with:
 
 ```bash
-$ kaspaminer --help
+$ gorminer --help
 ```
 
 But the minimum configuration needed to run it is:
 ```bash
-$ kaspaminer --miningaddr=<YOUR_MINING_ADDRESS>
+$ gorminer --miningaddr=<YOUR_MINING_ADDRESS>
 ```
