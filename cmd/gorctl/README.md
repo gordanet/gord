@@ -1,6 +1,6 @@
-# kaspactl
+# gorctl
 
-kaspactl is an RPC client for kaspad
+gorctl is an RPC client for gord
 
 ## Requirements
 
@@ -19,11 +19,11 @@ Go 1.19 or later.
 $ go version
 ```
 
-- Run the following commands to obtain and install kaspad including all dependencies:
+- Run the following commands to obtain and install gord including all dependencies:
 
 ```bash
 $ git clone https://github.com/gordanet/gord
-$ cd kaspad/cmd/kaspactl
+$ cd gord/cmd/goractl
 $ go install .
 ```
 
@@ -32,22 +32,22 @@ $ go install .
 
 ## Usage
 
-The full kaspctl configuration options can be seen with:
+The full gorctl configuration options can be seen with:
 
 ```bash
-$ kaspctl --help
+$ gorctl --help
 ```
 
 But the minimum configuration needed to run it is:
 
 ```bash
-$ kaspactl <REQUEST_JSON>
+$ gorctl <REQUEST_JSON>
 ```
 
 For example:
 
 ```
-$ kaspactl '{"getBlockDagInfoRequest":{}}'
+$ gorctl '{"getBlockDagInfoRequest":{}}'
 ```
 
 For a list of all available requests check out the [RPC documentation](infrastructure/network/netadapter/server/grpcserver/protowire/rpc.md)
