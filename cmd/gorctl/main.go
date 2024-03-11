@@ -35,13 +35,13 @@ func main() {
 	defer client.Disconnect()
 
 	if !cfg.AllowConnectionToDifferentVersions {
-		kaspadMessage, err := client.Post(&protowire.KaspadMessage{Payload: &protowire.KaspadMessage_GetInfoRequest{GetInfoRequest: &protowire.GetInfoRequestMessage{}}})
+		kaspadMessage, err := client.Post(&protowire.GordMessage{Payload: &protowire.GordMessage_GetInfoRequest{GetInfoRequest: &protowire.GetInfoRequestMessage{}}})
 		if err != nil {
 			printErrorAndExit(fmt.Sprintf("Cannot post GetInfo message: %s", err))
 		}
 
 		localVersion := version.Version()
-		remoteVersion := kaspadMessage.GetGetInfoResponse().ServerVersion
+		remoteVersion := gordMessage.GetGetInfoResponse().ServerVersion
 
 		if localVersion != remoteVersion {
 			printErrorAndExit(fmt.Sprintf("Server version mismatch, expect: %s, got: %s", localVersion, remoteVersion))
@@ -101,7 +101,7 @@ func postJSON(cfg *configFlags, client *grpcclient.GRPCClient, doneChan chan str
 
 func prettifyResponse(response string) string {
 	gordMessage := &protowire.GordMessage{}
-	err := protojson.Unmarshal([]byte(response), kaspadMessage)
+	err := protojson.Unmarshal([]byte(response), gordMessage)
 	if err != nil {
 		printErrorAndExit(fmt.Sprintf("error parsing the response from the RPC server: %s", err))
 	}
