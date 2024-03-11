@@ -12,37 +12,37 @@ import (
 )
 
 // AmountUnit describes a method of converting an Amount to something
-// other than the base unit of a kaspa. The value of the AmountUnit
+// other than the base unit of a gor. The value of the AmountUnit
 // is the exponent component of the decadic multiple to convert from
-// an amount in kaspa to an amount counted in units.
+// an amount in gor to an amount counted in units.
 type AmountUnit int
 
 // These constants define various units used when describing a kaspa
 // monetary amount.
 const (
-	AmountMegaKAS  AmountUnit = 6
-	AmountKiloKAS  AmountUnit = 3
-	AmountKAS      AmountUnit = 0
-	AmountMilliKAS AmountUnit = -3
-	AmountMicroKAS AmountUnit = -6
+	AmountMegaGOR  AmountUnit = 6
+	AmountKiloGOR  AmountUnit = 3
+	AmountGOR      AmountUnit = 0
+	AmountMilliGOR AmountUnit = -3
+	AmountMicroGOR AmountUnit = -6
 	AmountSompi    AmountUnit = -8
 )
 
 // String returns the unit as a string. For recognized units, the SI
 // prefix is used, or "Sompi" for the base unit. For all unrecognized
-// units, "1eN KAS" is returned, where N is the AmountUnit.
+// units, "1eN GOR" is returned, where N is the AmountUnit.
 func (u AmountUnit) String() string {
 	switch u {
-	case AmountMegaKAS:
-		return "MKAS"
-	case AmountKiloKAS:
-		return "kKAS"
-	case AmountKAS:
-		return "KAS"
-	case AmountMilliKAS:
-		return "mKAS"
+	case AmountMegaGOR:
+		return "MGOR"
+	case AmountKiloGOR:
+		return "kGOR"
+	case AmountGOR:
+		return "GOR"
+	case AmountMilliGOR:
+		return "mGOR"
 	case AmountMicroKAS:
-		return "μKAS"
+		return "μGOR"
 	case AmountSompi:
 		return "Sompi"
 	default:
@@ -50,8 +50,8 @@ func (u AmountUnit) String() string {
 	}
 }
 
-// Amount represents the base kaspa monetary unit (colloquially referred
-// to as a `Sompi'). A single Amount is equal to 1e-8 of a kaspa.
+// Amount represents the base gor monetary unit (colloquially referred
+// to as a `Sompi'). A single Amount is equal to 1e-8 of a gor.
 type Amount uint64
 
 // round converts a floating point number, which may or may not be representable
@@ -67,13 +67,13 @@ func round(f float64) Amount {
 
 // NewAmount creates an Amount from a floating point value representing
 // some value in kaspa. NewAmount errors if f is NaN or +-Infinity, but
-// does not check that the amount is within the total amount of kaspa
+// does not check that the amount is within the total amount of gor
 // producible as f may not refer to an amount at a single moment in time.
 //
-// NewAmount is for specifically for converting KAS to Sompi.
+// NewAmount is for specifically for converting GOR to Sompi.
 // For creating a new Amount with an int64 value which denotes a quantity of Sompi,
 // do a simple type conversion from type int64 to Amount.
-// TODO: Refactor NewAmount. When amounts are more than 1e9 KAS, the precision
+// TODO: Refactor NewAmount. When amounts are more than 1e9 GOR, the precision
 // can be higher than one sompi (1e9 and 1e9+1e-8 will result as the same number)
 func NewAmount(f float64) (Amount, error) {
 	// The amount is only considered invalid if it cannot be represented
@@ -91,13 +91,13 @@ func NewAmount(f float64) (Amount, error) {
 }
 
 // ToUnit converts a monetary amount counted in kaspa base units to a
-// floating point value representing an amount of kaspa.
+// floating point value representing an amount of gor.
 func (a Amount) ToUnit(u AmountUnit) float64 {
 	return float64(a) / math.Pow10(int(u+8))
 }
 
-// ToKAS is the equivalent of calling ToUnit with AmountKAS.
-func (a Amount) ToKAS() float64 {
+// ToKAS is the equivalent of calling ToUnit with AmountGOR.
+func (a Amount) ToGOR() float64 {
 	return a.ToUnit(AmountKAS)
 }
 
@@ -110,14 +110,14 @@ func (a Amount) Format(u AmountUnit) string {
 	return strconv.FormatFloat(a.ToUnit(u), 'f', -int(u+8), 64) + units
 }
 
-// String is the equivalent of calling Format with AmountKAS.
+// String is the equivalent of calling Format with AmountGOR.
 func (a Amount) String() string {
-	return a.Format(AmountKAS)
+	return a.Format(AmountGOR)
 }
 
 // MulF64 multiplies an Amount by a floating point value. While this is not
 // an operation that must typically be done by a full node or wallet, it is
-// useful for services that build on top of kaspa (for example, calculating
+// useful for services that build on top of gor (for example, calculating
 // a fee by multiplying by a percentage).
 func (a Amount) MulF64(f float64) Amount {
 	return round(float64(a) * f)
