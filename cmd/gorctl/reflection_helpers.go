@@ -29,13 +29,13 @@ func isFieldExported(field reflect.StructField) bool {
 }
 
 // generateKaspadMessage generates a wrapped KaspadMessage with the given `commandValue`
-func generateKaspadMessage(commandValue reflect.Value, commandDesc *commandDescription) (*protowire.KaspadMessage, error) {
+func generateGordMessage(commandValue reflect.Value, commandDesc *commandDescription) (*protowire.KaspadMessage, error) {
 	commandWrapper := reflect.New(commandDesc.typeof)
 	unwrapCommandValue(commandWrapper).Set(commandValue)
 
-	kaspadMessage := reflect.New(reflect.TypeOf(protowire.KaspadMessage{}))
-	kaspadMessage.Elem().FieldByName("Payload").Set(commandWrapper)
-	return kaspadMessage.Interface().(*protowire.KaspadMessage), nil
+	gordMessage := reflect.New(reflect.TypeOf(protowire.GordMessage{}))
+	gordMessage.Elem().FieldByName("Payload").Set(commandWrapper)
+	return gordMessage.Interface().(*protowire.GordMessage), nil
 }
 
 // pointerToValue returns a reflect.Value that represents a pointer to the given value
