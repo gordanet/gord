@@ -22,80 +22,80 @@ var BitcoinMainnetPublic = [4]byte{
 	0x1e,
 }
 
-// KaspaMainnetPrivate is the version that is used for
-// kaspa mainnet bip32 private extended keys.
+// GorMainnetPrivate is the version that is used for
+// gor mainnet bip32 private extended keys.
 // Ecnodes to xprv in base58.
-var KaspaMainnetPrivate = [4]byte{
+var GorMainnetPrivate = [4]byte{
 	0x03,
 	0x8f,
 	0x2e,
 	0xf4,
 }
 
-// KaspaMainnetPublic is the version that is used for
-// kaspa mainnet bip32 public extended keys.
+// GorMainnetPublic is the version that is used for
+// gor mainnet bip32 public extended keys.
 // Ecnodes to kpub in base58.
-var KaspaMainnetPublic = [4]byte{
+var GorMainnetPublic = [4]byte{
 	0x03,
 	0x8f,
 	0x33,
 	0x2e,
 }
 
-// KaspaTestnetPrivate is the version that is used for
-// kaspa testnet bip32 public extended keys.
+// GorTestnetPrivate is the version that is used for
+// gor testnet bip32 public extended keys.
 // Ecnodes to ktrv in base58.
-var KaspaTestnetPrivate = [4]byte{
+var GorTestnetPrivate = [4]byte{
 	0x03,
 	0x90,
 	0x9e,
 	0x07,
 }
 
-// KaspaTestnetPublic is the version that is used for
-// kaspa testnet bip32 public extended keys.
+// GorTestnetPublic is the version that is used for
+// gor testnet bip32 public extended keys.
 // Ecnodes to ktub in base58.
-var KaspaTestnetPublic = [4]byte{
+var GorTestnetPublic = [4]byte{
 	0x03,
 	0x90,
 	0xa2,
 	0x41,
 }
 
-// KaspaDevnetPrivate is the version that is used for
-// kaspa devnet bip32 public extended keys.
+// GorDevnetPrivate is the version that is used for
+// gor devnet bip32 public extended keys.
 // Ecnodes to kdrv in base58.
-var KaspaDevnetPrivate = [4]byte{
+var GorDevnetPrivate = [4]byte{
 	0x03,
 	0x8b,
 	0x3d,
 	0x80,
 }
 
-// KaspaDevnetPublic is the version that is used for
-// kaspa devnet bip32 public extended keys.
+// GorDevnetPublic is the version that is used for
+// gor devnet bip32 public extended keys.
 // Ecnodes to xdub in base58.
-var KaspaDevnetPublic = [4]byte{
+var GorDevnetPublic = [4]byte{
 	0x03,
 	0x8b,
 	0x41,
 	0xba,
 }
 
-// KaspaSimnetPrivate is the version that is used for
-// kaspa simnet bip32 public extended keys.
+// GorSimnetPrivate is the version that is used for
+// gor simnet bip32 public extended keys.
 // Ecnodes to ksrv in base58.
-var KaspaSimnetPrivate = [4]byte{
+var GorSimnetPrivate = [4]byte{
 	0x03,
 	0x90,
 	0x42,
 	0x42,
 }
 
-// KaspaSimnetPublic is the version that is used for
-// kaspa simnet bip32 public extended keys.
+// GorSimnetPublic is the version that is used for
+// Gor simnet bip32 public extended keys.
 // Ecnodes to xsub in base58.
-var KaspaSimnetPublic = [4]byte{
+var GorSimnetPublic = [4]byte{
 	0x03,
 	0x90,
 	0x46,
@@ -106,13 +106,13 @@ func toPublicVersion(version [4]byte) ([4]byte, error) {
 	switch version {
 	case BitcoinMainnetPrivate:
 		return BitcoinMainnetPublic, nil
-	case KaspaMainnetPrivate:
+	case GorMainnetPrivate:
 		return KaspaMainnetPublic, nil
-	case KaspaTestnetPrivate:
+	case GorTestnetPrivate:
 		return KaspaTestnetPublic, nil
-	case KaspaDevnetPrivate:
+	case GorDevnetPrivate:
 		return KaspaDevnetPublic, nil
-	case KaspaSimnetPrivate:
+	case GorSimnetPrivate:
 		return KaspaSimnetPublic, nil
 	}
 
@@ -123,13 +123,13 @@ func isPrivateVersion(version [4]byte) bool {
 	switch version {
 	case BitcoinMainnetPrivate:
 		return true
-	case KaspaMainnetPrivate:
+	case GorMainnetPrivate:
 		return true
-	case KaspaTestnetPrivate:
+	case GorTestnetPrivate:
 		return true
-	case KaspaDevnetPrivate:
+	case GorDevnetPrivate:
 		return true
-	case KaspaSimnetPrivate:
+	case GorSimnetPrivate:
 		return true
 	}
 
