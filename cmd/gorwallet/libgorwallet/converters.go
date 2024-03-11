@@ -10,10 +10,10 @@ import (
 	"github.com/gordanet/gord/domain/consensus/utils/utxo"
 )
 
-// KaspawalletdUTXOsTolibkaspawalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libkaspawallet.UTXO
-func KaspawalletdUTXOsTolibkaspawalletUTXOs(kaspawalletdUtxoEntires []*pb.UtxosByAddressesEntry) ([]*UTXO, error) {
-	UTXOs := make([]*UTXO, len(kaspawalletdUtxoEntires))
-	for i, entry := range kaspawalletdUtxoEntires {
+// GorwalletdUTXOsTolibkaspawalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libkaspawallet.UTXO
+func gorwalletdUTXOsTolibgorwalletUTXOs(gorwalletdUtxoEntires []*pb.UtxosByAddressesEntry) ([]*UTXO, error) {
+	UTXOs := make([]*UTXO, len(gorwalletdUtxoEntires))
+	for i, entry := range gorwalletdUtxoEntires {
 		script, err := hex.DecodeString(entry.UtxoEntry.ScriptPublicKey.ScriptPublicKey)
 		if err != nil {
 			return nil, err
