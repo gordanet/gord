@@ -22,7 +22,7 @@ type TxLoc struct {
 	TxLen   int
 }
 
-// MsgBlock implements the Message interface and represents a kaspa
+// MsgBlock implements the Message interface and represents a gord
 // block message. It is used to deliver block and transaction information in
 // response to a getdata message (MsgGetData) for a given block hash.
 type MsgBlock struct {
