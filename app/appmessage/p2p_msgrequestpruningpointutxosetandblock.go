@@ -4,7 +4,7 @@ import (
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
 )
 
-// MsgRequestPruningPointUTXOSet represents a kaspa RequestPruningPointUTXOSet message
+// MsgRequestPruningPointUTXOSet represents a gord RequestPruningPointUTXOSet message
 type MsgRequestPruningPointUTXOSet struct {
 	baseMessage
 	PruningPointHash *externalapi.DomainHash
