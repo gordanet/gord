@@ -1,6 +1,6 @@
 package appmessage
 
-// MsgDoneBlocksWithTrustedData implements the Message interface and represents a kaspa
+// MsgDoneBlocksWithTrustedData implements the Message interface and represents a gord
 // DoneBlocksWithTrustedData message
 //
 // This message has no payload.
