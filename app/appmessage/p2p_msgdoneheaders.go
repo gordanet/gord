@@ -1,6 +1,6 @@
 package appmessage
 
-// MsgDoneHeaders implements the Message interface and represents a kaspa
+// MsgDoneHeaders implements the Message interface and represents a gord
 // DoneHeaders message. It is used to notify the IBD syncing peer that the
 // syncer sent all the requested headers.
 //
