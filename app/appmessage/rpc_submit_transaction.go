@@ -42,7 +42,7 @@ func NewSubmitTransactionResponseMessage(transactionID string) *SubmitTransactio
 	}
 }
 
-// RPCTransaction is a kaspad transaction representation meant to be
+// RPCTransaction is a gord transaction representation meant to be
 // used over RPC
 type RPCTransaction struct {
 	Version      uint16
@@ -55,7 +55,7 @@ type RPCTransaction struct {
 	VerboseData  *RPCTransactionVerboseData
 }
 
-// RPCTransactionInput is a kaspad transaction input representation
+// RPCTransactionInput is a gord transaction input representation
 // meant to be used over RPC
 type RPCTransactionInput struct {
 	PreviousOutpoint *RPCOutpoint
@@ -71,7 +71,7 @@ type RPCScriptPublicKey struct {
 	Script  string
 }
 
-// RPCTransactionOutput is a kaspad transaction output representation
+// RPCTransactionOutput is a gord transaction output representation
 // meant to be used over RPC
 type RPCTransactionOutput struct {
 	Amount          uint64
@@ -79,14 +79,14 @@ type RPCTransactionOutput struct {
 	VerboseData     *RPCTransactionOutputVerboseData
 }
 
-// RPCOutpoint is a kaspad outpoint representation meant to be used
+// RPCOutpoint is a gord outpoint representation meant to be used
 // over RPC
 type RPCOutpoint struct {
 	TransactionID string
 	Index         uint32
 }
 
-// RPCUTXOEntry is a kaspad utxo entry representation meant to be used
+// RPCUTXOEntry is a gord utxo entry representation meant to be used
 // over RPC
 type RPCUTXOEntry struct {
 	Amount          uint64
