@@ -1,6 +1,6 @@
 package appmessage
 
-// BlockHeadersMessage represents a kaspa BlockHeaders message
+// BlockHeadersMessage represents a gord BlockHeaders message
 type BlockHeadersMessage struct {
 	baseMessage
 	BlockHeaders []*MsgBlockHeader
