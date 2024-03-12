@@ -1,6 +1,6 @@
 package appmessage
 
-// MsgUnexpectedPruningPoint represents a kaspa UnexpectedPruningPoint message
+// MsgUnexpectedPruningPoint represents a gord UnexpectedPruningPoint message
 type MsgUnexpectedPruningPoint struct {
 	baseMessage
 }
