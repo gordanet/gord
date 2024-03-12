@@ -4,7 +4,7 @@ import (
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
 )
 
-// MsgRequestIBDBlocks implements the Message interface and represents a kaspa
+// MsgRequestIBDBlocks implements the Message interface and represents a gord
 // RequestIBDBlocks message. It is used to request blocks as part of the IBD
 // protocol.
 type MsgRequestIBDBlocks struct {
