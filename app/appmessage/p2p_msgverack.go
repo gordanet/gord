@@ -19,7 +19,7 @@ func (msg *MsgVerAck) Command() MessageCommand {
 	return CmdVerAck
 }
 
-// NewMsgVerAck returns a new kaspa verack message that conforms to the
+// NewMsgVerAck returns a new gord verack message that conforms to the
 // Message interface.
 func NewMsgVerAck() *MsgVerAck {
 	return &MsgVerAck{}
