@@ -8,7 +8,7 @@ package appmessage
 // kaspa Addresses message (MsgAddresses).
 const MaxAddressesPerMsg = 1000
 
-// MsgAddresses implements the Message interface and represents a kaspa
+// MsgAddresses implements the Message interface and represents a gord
 // Addresses message.
 type MsgAddresses struct {
 	baseMessage
