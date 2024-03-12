@@ -1,6 +1,6 @@
 package appmessage
 
-// MsgRequestNextPruningPointUTXOSetChunk represents a kaspa RequestNextPruningPointUTXOSetChunk message
+// MsgRequestNextPruningPointUTXOSetChunk represents a gord RequestNextPruningPointUTXOSetChunk message
 type MsgRequestNextPruningPointUTXOSetChunk struct {
 	baseMessage
 }
