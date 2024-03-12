@@ -17,7 +17,7 @@ import (
 // an amount in gor to an amount counted in units.
 type AmountUnit int
 
-// These constants define various units used when describing a kaspa
+// These constants define various units used when describing a gor
 // monetary amount.
 const (
 	AmountMegaGOR  AmountUnit = 6
@@ -25,11 +25,11 @@ const (
 	AmountGOR      AmountUnit = 0
 	AmountMilliGOR AmountUnit = -3
 	AmountMicroGOR AmountUnit = -6
-	AmountSompi    AmountUnit = -8
+	AmountSeep     AmountUnit = -8
 )
 
 // String returns the unit as a string. For recognized units, the SI
-// prefix is used, or "Sompi" for the base unit. For all unrecognized
+// prefix is used, or "Seep" for the base unit. For all unrecognized
 // units, "1eN GOR" is returned, where N is the AmountUnit.
 func (u AmountUnit) String() string {
 	switch u {
@@ -43,15 +43,15 @@ func (u AmountUnit) String() string {
 		return "mGOR"
 	case AmountMicroKAS:
 		return "μGOR"
-	case AmountSompi:
-		return "Sompi"
+	case AmountSeep:
+		return "Seep"
 	default:
-		return "1e" + strconv.FormatInt(int64(u), 10) + " KAS"
+		return "1e" + strconv.FormatInt(int64(u), 10) + " GOR"
 	}
 }
 
 // Amount represents the base gor monetary unit (colloquially referred
-// to as a `Sompi'). A single Amount is equal to 1e-8 of a gor.
+// to as a `Seep'). A single Amount is equal to 1e-8 of a gor.
 type Amount uint64
 
 // round converts a floating point number, which may or may not be representable
@@ -66,15 +66,15 @@ func round(f float64) Amount {
 }
 
 // NewAmount creates an Amount from a floating point value representing
-// some value in kaspa. NewAmount errors if f is NaN or +-Infinity, but
+// some value in gor. NewAmount errors if f is NaN or +-Infinity, but
 // does not check that the amount is within the total amount of gor
 // producible as f may not refer to an amount at a single moment in time.
 //
-// NewAmount is for specifically for converting GOR to Sompi.
-// For creating a new Amount with an int64 value which denotes a quantity of Sompi,
+// NewAmount is for specifically for converting GOR to Seep.
+// For creating a new Amount with an int64 value which denotes a quantity of Seep,
 // do a simple type conversion from type int64 to Amount.
 // TODO: Refactor NewAmount. When amounts are more than 1e9 GOR, the precision
-// can be higher than one sompi (1e9 and 1e9+1e-8 will result as the same number)
+// can be higher than one seep (1e9 and 1e9+1e-8 will result as the same number)
 func NewAmount(f float64) (Amount, error) {
 	// The amount is only considered invalid if it cannot be represented
 	// as an integer type. This may happen if f is NaN or +-Infinity.
@@ -84,27 +84,27 @@ func NewAmount(f float64) (Amount, error) {
 	case math.IsInf(f, 1):
 		fallthrough
 	case math.IsInf(f, -1):
-		return 0, errors.New("invalid kaspa amount")
+		return 0, errors.New("invalid gor amount")
 	}
 
-	return round(f * constants.SompiPerKaspa), nil
+	return round(f * constants.SeepPerGor), nil
 }
 
-// ToUnit converts a monetary amount counted in kaspa base units to a
+// ToUnit converts a monetary amount counted in gor base units to a
 // floating point value representing an amount of gor.
 func (a Amount) ToUnit(u AmountUnit) float64 {
 	return float64(a) / math.Pow10(int(u+8))
 }
 
-// ToKAS is the equivalent of calling ToUnit with AmountGOR.
+// ToGOR is the equivalent of calling ToUnit with AmountGOR.
 func (a Amount) ToGOR() float64 {
-	return a.ToUnit(AmountKAS)
+	return a.ToUnit(AmountGOR)
 }
 
-// Format formats a monetary amount counted in kaspa base units as a
+// Format formats a monetary amount counted in gor base units as a
 // string for a given unit. The conversion will succeed for any unit,
 // however, known units will be formated with an appended label describing
-// the units with SI notation, or "Sompi" for the base unit.
+// the units with SI notation, or "Seep" for the base unit.
 func (a Amount) Format(u AmountUnit) string {
 	units := " " + u.String()
 	return strconv.FormatFloat(a.ToUnit(u), 'f', -int(u+8), 64) + units
