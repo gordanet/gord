@@ -46,7 +46,7 @@ const (
 	defaultBlockMaxMass          = 10_000_000
 	blockMaxMassMin              = 1000
 	blockMaxMassMax              = 10_000_000
-	defaultMinRelayTxFee         = 1e-5 // 1 sompi per byte
+	defaultMinRelayTxFee         = 1e-5 // 1 seep per byte
 	defaultMaxOrphanTransactions = 100
 	//DefaultMaxOrphanTxSize is the default maximum size for an orphan transaction
 	DefaultMaxOrphanTxSize  = 100_000
@@ -57,7 +57,7 @@ const (
 )
 
 var (
-	// DefaultAppDir is the default home directory for kaspad.
+	// DefaultAppDir is the default home directory for gord.
 //my-add
 	DefaultAppDir = util.AppDir("gord", false)
 
@@ -67,7 +67,7 @@ var (
 	defaultRPCCertFile = filepath.Join(DefaultAppDir, "rpc.cert")
 )
 
-//go:embed sample-kaspad.conf
+//go:embed sample-gord.conf
 var sampleConfig string
 
 // RunServiceCommand is only set to a real function on Windows. It is used
