@@ -4,9 +4,9 @@
 
 package appmessage
 
-// MsgPong implements the Message interface and represents a kaspa pong
+// MsgPong implements the Message interface and represents a gord pong
 // message which is used primarily to confirm that a connection is still valid
-// in response to a kaspa ping message (MsgPing).
+// in response to a gord ping message (MsgPing).
 //
 // This message was not added until protocol versions AFTER BIP0031Version.
 type MsgPong struct {
