@@ -4,7 +4,7 @@ Gord
 
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/gordanet/gord)
 
-Gord is the reference full node Gorbaniov implementation written in Go (golang).
+Gord is the reference full node Gor implementation written in Go (golang).
 
 ## What is Gor Network
 
