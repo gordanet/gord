@@ -2,7 +2,7 @@ package appmessage
 
 import "github.com/gordanet/gord/domain/consensus/model/externalapi"
 
-// MsgPruningPointUTXOSetChunk represents a kaspa PruningPointUTXOSetChunk message
+// MsgPruningPointUTXOSetChunk represents a gord PruningPointUTXOSetChunk message
 type MsgPruningPointUTXOSetChunk struct {
 	baseMessage
 	OutpointAndUTXOEntryPairs []*OutpointAndUTXOEntryPair
