@@ -40,24 +40,24 @@ const (
 	Bech32PrefixUnknown Bech32Prefix = iota
 
 	// Prefix for the main network.
-	Bech32PrefixKaspa
+	Bech32PrefixGor
 
 	// Prefix for the dev network.
-	Bech32PrefixKaspaDev
+	Bech32PrefixGorDev
 
 	// Prefix for the test network.
-	Bech32PrefixKaspaTest
+	Bech32PrefixGorTest
 
 	// Prefix for the simulation network.
-	Bech32PrefixKaspaSim
+	Bech32PrefixGorSim
 )
 
 // Map from strings to Bech32 address prefix constants for parsing purposes.
 var stringsToBech32Prefixes = map[string]Bech32Prefix{
-	"gor":     Bech32PrefixKaspa,
-	"gordev":  Bech32PrefixKaspaDev,
-	"gortest": Bech32PrefixKaspaTest,
-	"gorsim":  Bech32PrefixKaspaSim,
+	"gor":     Bech32PrefixGor,
+	"gordev":  Bech32PrefixGorDev,
+	"gortest": Bech32PrefixGorTest,
+	"gorsim":  Bech32PrefixGorSim,
 }
 
 // ParsePrefix attempts to parse a Bech32 address prefix.
@@ -326,7 +326,7 @@ func (a *AddressScriptHash) ScriptAddress() []byte {
 }
 
 // IsForPrefix returns whether or not the pay-to-script-hash address is associated
-// with the passed kaspa network.
+// with the passed gor network.
 func (a *AddressScriptHash) IsForPrefix(prefix Bech32Prefix) bool {
 	return a.prefix == prefix
 }
