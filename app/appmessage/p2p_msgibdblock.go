@@ -4,7 +4,7 @@
 
 package appmessage
 
-// MsgIBDBlock implements the Message interface and represents a kaspa
+// MsgIBDBlock implements the Message interface and represents a gord
 // ibdblock message. It is used to deliver block and transaction information in
 // response to a RequestIBDBlocks message (MsgRequestIBDBlocks).
 type MsgIBDBlock struct {
