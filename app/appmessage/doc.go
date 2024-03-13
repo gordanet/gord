@@ -74,7 +74,7 @@ the following constants:
 # Determining Message Type
 
 As discussed in the gord message overview section, this package reads
-and writes kaspa messages using a generic interface named Message. In
+and writes gord messages using a generic interface named Message. In
 order to determine the actual concrete type of the message, use a type
 switch or type assertion. An example of a type switch follows:
 
@@ -96,10 +96,10 @@ function. It accepts any io.Reader, but typically this will be a net.Conn to
 a remote node running a kaspa peer. Example syntax is:
 
 	// Reads and validates the next gord message from conn using the
-	// protocol version pver and the gord network kaspaNet. The returns
+	// protocol version pver and the gord network gordNet. The returns
 	// are a appmessage.Message, a []byte which contains the unmarshalled
 	// raw payload, and a possible error.
-	msg, rawPayload, err := appmessage.ReadMessage(conn, pver, kaspaNet)
+	msg, rawPayload, err := appmessage.ReadMessage(conn, pver, gordNet)
 	if err != nil {
 		// Log and handle the error
 	}
@@ -117,7 +117,7 @@ from a remote peer is:
 	// Writes a gord message msg to conn using the protocol version
 	// pver, and the gord network kaspaNet. The return is a possible
 	// error.
-	err := appmessage.WriteMessage(conn, msg, pver, gordaNet)
+	err := appmessage.WriteMessage(conn, msg, pver, gordNet)
 	if err != nil {
 		// Log and handle the error
 	}
