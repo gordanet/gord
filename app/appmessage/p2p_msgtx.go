@@ -111,7 +111,7 @@ type TxOut struct {
 	ScriptPubKey *externalapi.ScriptPublicKey
 }
 
-// NewTxOut returns a new kaspa transaction output with the provided
+// NewTxOut returns a new gord transaction output with the provided
 // transaction value and public key script.
 func NewTxOut(value uint64, scriptPubKey *externalapi.ScriptPublicKey) *TxOut {
 	return &TxOut{
