@@ -14,7 +14,7 @@ func (msg *MsgDoneBlocksWithTrustedData) Command() MessageCommand {
 	return CmdDoneBlocksWithTrustedData
 }
 
-// NewMsgDoneBlocksWithTrustedData returns a new kaspa DoneBlocksWithTrustedData message that conforms to the
+// NewMsgDoneBlocksWithTrustedData returns a new gord DoneBlocksWithTrustedData message that conforms to the
 // Message interface.
 func NewMsgDoneBlocksWithTrustedData() *MsgDoneBlocksWithTrustedData {
 	return &MsgDoneBlocksWithTrustedData{}
