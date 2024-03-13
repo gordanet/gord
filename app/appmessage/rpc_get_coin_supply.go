@@ -21,7 +21,7 @@ func NewGetCoinSupplyRequestMessage() *GetCoinSupplyRequestMessage {
 type GetCoinSupplyResponseMessage struct {
 	baseMessage
 	MaxSeep         uint64
-	CirculatingSompi uint64
+	CirculatingSeep uint64
 
 	Error *RPCError
 }
@@ -32,9 +32,9 @@ func (msg *GetCoinSupplyResponseMessage) Command() MessageCommand {
 }
 
 // NewGetCoinSupplyResponseMessage returns a instance of the message
-func NewGetCoinSupplyResponseMessage(maxSeep uint64, circulatingSompi uint64) *GetCoinSupplyResponseMessage {
+func NewGetCoinSupplyResponseMessage(maxSeep uint64, circulatingSeep uint64) *GetCoinSupplyResponseMessage {
 	return &GetCoinSupplyResponseMessage{
 		MaxSeep:         maxSeep,
-		CirculatingSompi: circulatingSeep,
+		CirculatingSeep: circulatingSeep,
 	}
 }
