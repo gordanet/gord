@@ -22,7 +22,7 @@ func (msg *MsgPong) Command() MessageCommand {
 	return CmdPong
 }
 
-// NewMsgPong returns a new kaspa pong message that conforms to the Message
+// NewMsgPong returns a new gord pong message that conforms to the Message
 // interface. See MsgPong for details.
 func NewMsgPong(nonce uint64) *MsgPong {
 	return &MsgPong{
