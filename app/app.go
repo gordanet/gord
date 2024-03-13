@@ -33,7 +33,7 @@ var desiredLimits = &limits.DesiredLimits{
 var serviceDescription = &winservice.ServiceDescription{
 	Name:        "gordsvc",
 	DisplayName: "Gord Service",
-	Description: "Downloads and stays synchronized with the Kaspa blockDAG and " +
+	Description: "Downloads and stays synchronized with the Gord blockDAG and " +
 		"provides DAG services to applications.",
 }
 
@@ -55,7 +55,7 @@ func StartApp() error {
 	defer logger.BackendLog.Close()
 	defer panics.HandlePanic(log, "MAIN", nil)
 
-	app := &kgordApp{cfg: cfg}
+	app := &gordApp{cfg: cfg}
 
 	// Call serviceMain on Windows to handle running as a service. When
 	// the return isService flag is true, exit now since we ran as a
@@ -145,7 +145,7 @@ func (app *gordApp) main(startedChan chan<- struct{}) error {
 		case <-time.After(shutdownTimeout):
 			log.Criticalf("Graceful shutdown timed out %s. Terminating...", shutdownTimeout)
 		}
-		log.Infof("Kaspad shutdown complete")
+		log.Infof("Gord shutdown complete")
 	}()
 
 	componentManager.Start()
