@@ -4,7 +4,7 @@
 
 package appmessage
 
-// MsgVerAck defines a kaspa verack message which is used for a peer to
+// MsgVerAck defines a gord verack message which is used for a peer to
 // acknowledge a version message (MsgVersion) after it has used the information
 // to negotiate parameters. It implements the Message interface.
 //
