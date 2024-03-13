@@ -64,7 +64,7 @@ func (msg *MsgBlock) ConvertToPartial(subnetworkID *externalapi.DomainSubnetwork
 	}
 }
 
-// NewMsgBlock returns a new kaspa block message that conforms to the
+// NewMsgBlock returns a new gord block message that conforms to the
 // Message interface. See MsgBlock for details.
 func NewMsgBlock(blockHeader *MsgBlockHeader) *MsgBlock {
 	return &MsgBlock{
