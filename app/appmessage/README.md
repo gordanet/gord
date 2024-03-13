@@ -19,23 +19,23 @@ To accomplish this, there is a generic interface for gord messages named
 `Message` which allows messages of any type to be read, written, or passed
 around through channels, functions, etc. In addition, concrete implementations
 of most all gord messages are provided. All of the details of marshalling and 
-unmarshalling to and from the wire using kaspa encoding are handled so the 
+unmarshalling to and from the wire using gord encoding are handled so the 
 caller doesn't have to concern themselves with the specifics.
 
 ## Reading Messages Example
 
 In order to unmarshal gord messages from the wire, use the `ReadMessage`
 function. It accepts any `io.Reader`, but typically this will be a `net.Conn`
-to a remote node running a kaspa peer. Example syntax is:
+to a remote node running a gord peer. Example syntax is:
 
 ```Go
 	// Use the most recent protocol version supported by the package and the
-	// main gor network.
+	// main gord network.
 	pver := wire.ProtocolVersion
-	gordanet := wire.Mainnet
+	gordnet := wire.Mainnet
 
-	// Reads and validates the next kaspa message from conn using the
-	// protocol version pver and the gord network gordanet. The returns
+	// Reads and validates the next gord message from conn using the
+	// protocol version pver and the gord network gordnet. The returns
 	// are a appmessage.Message, a []byte which contains the unmarshalled
 	// raw payload, and a possible error.
 	msg, rawPayload, err := wire.ReadMessage(conn, pver, kaspanet)
@@ -57,13 +57,13 @@ from a remote peer is:
 	// Use the most recent protocol version supported by the package and the
 	// main bitcoin network.
 	pver := wire.ProtocolVersion
-	kaspanet := wire.Mainnet
+	gordnet := wire.Mainnet
 
 	// Create a new getaddr gord message.
 	msg := wire.NewMsgGetAddr()
 
 	// Writes a gord message msg to conn using the protocol version
-	// pver, and the gord network gordanet. The return is a possible
+	// pver, and the gord network gordnet. The return is a possible
 	// error.
 	err := wire.WriteMessage(conn, msg, pver, gordanet)
 	if err != nil {
