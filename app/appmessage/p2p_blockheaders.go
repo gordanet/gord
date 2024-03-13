@@ -11,7 +11,7 @@ func (msg *BlockHeadersMessage) Command() MessageCommand {
 	return CmdBlockHeaders
 }
 
-// NewBlockHeadersMessage returns a new kaspa BlockHeaders message
+// NewBlockHeadersMessage returns a new gord BlockHeaders message
 func NewBlockHeadersMessage(blockHeaders []*MsgBlockHeader) *BlockHeadersMessage {
 	return &BlockHeadersMessage{
 		BlockHeaders: blockHeaders,
