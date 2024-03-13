@@ -4,7 +4,7 @@ import (
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
 )
 
-// MsgIBDBlockLocatorHighestHash represents a kaspa BlockLocatorHighestHash message
+// MsgIBDBlockLocatorHighestHash represents a gord BlockLocatorHighestHash message
 type MsgIBDBlockLocatorHighestHash struct {
 	baseMessage
 	HighestHash *externalapi.DomainHash
