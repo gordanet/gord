@@ -302,7 +302,7 @@ var RPCMessageCommandToString = map[MessageCommand]string{
 	CmdGetCoinSupplyResponseMessage:                               "GetCoinSupplyResponse",
 }
 
-// Message is an interface that describes a kaspa message. A type that
+// Message is an interface that describes a gord message. A type that
 // implements Message has complete control over the representation of its data
 // and may therefore contain additional or fewer fields than those which
 // are used directly in the protocol encoded message.
