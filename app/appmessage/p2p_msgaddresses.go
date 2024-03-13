@@ -21,7 +21,7 @@ func (msg *MsgAddresses) Command() MessageCommand {
 	return CmdAddresses
 }
 
-// NewMsgAddresses returns a new kaspa Addresses message that conforms to the
+// NewMsgAddresses returns a new gord Addresses message that conforms to the
 // Message interface. See MsgAddresses for details.
 func NewMsgAddresses(addressList []*NetAddress) *MsgAddresses {
 	return &MsgAddresses{
