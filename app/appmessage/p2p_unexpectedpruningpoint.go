@@ -10,7 +10,7 @@ func (msg *MsgUnexpectedPruningPoint) Command() MessageCommand {
 	return CmdUnexpectedPruningPoint
 }
 
-// NewMsgUnexpectedPruningPoint returns a new kaspa UnexpectedPruningPoint message
+// NewMsgUnexpectedPruningPoint returns a new gord UnexpectedPruningPoint message
 func NewMsgUnexpectedPruningPoint() *MsgUnexpectedPruningPoint {
 	return &MsgUnexpectedPruningPoint{}
 }
