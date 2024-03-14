@@ -10,7 +10,7 @@ import (
 )
 
 // RunGordForTesting runs gord for testing purposes
-func RunKaspadForTesting(t *testing.T, testName string, rpcAddress string) func() {
+func RunGordForTesting(t *testing.T, testName string, rpcAddress string) func() {
 	appDir, err := TempDir(testName)
 	if err != nil {
 		t.Fatalf("TempDir: %s", err)
