@@ -48,6 +48,6 @@ func RunKaspadForTesting(t *testing.T, testName string, rpcAddress string) func(
 			t.Fatalf("RemoveAll: %s", err)
 		}
 		atomic.StoreUint64(&isShutdown, 1)
-		t.Logf("Kaspad stopped")
+		t.Logf("Gord stopped")
 	}
 }
