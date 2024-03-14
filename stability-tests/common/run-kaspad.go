@@ -9,15 +9,15 @@ import (
 	"testing"
 )
 
-// RunKaspadForTesting runs kaspad for testing purposes
+// RunGordForTesting runs gord for testing purposes
 func RunKaspadForTesting(t *testing.T, testName string, rpcAddress string) func() {
 	appDir, err := TempDir(testName)
 	if err != nil {
 		t.Fatalf("TempDir: %s", err)
 	}
 
-	kaspadRunCommand, err := StartCmd("KASPAD",
-		"kaspad",
+	gordRunCommand, err := StartCmd("GORD",
+		"gord",
 		NetworkCliArgumentFromNetParams(&dagconfig.DevnetParams),
 		"--appdir", appDir,
 		"--rpclisten", rpcAddress,
@@ -26,20 +26,20 @@ func RunKaspadForTesting(t *testing.T, testName string, rpcAddress string) func(
 	if err != nil {
 		t.Fatalf("StartCmd: %s", err)
 	}
-	t.Logf("Kaspad started with --appdir=%s", appDir)
+	t.Logf("Gord started with --appdir=%s", appDir)
 
 	isShutdown := uint64(0)
 	go func() {
-		err := kaspadRunCommand.Wait()
+		err := gordRunCommand.Wait()
 		if err != nil {
 			if atomic.LoadUint64(&isShutdown) == 0 {
-				panic(fmt.Sprintf("Kaspad closed unexpectedly: %s. See logs at: %s", err, appDir))
+				panic(fmt.Sprintf("Gord closed unexpectedly: %s. See logs at: %s", err, appDir))
 			}
 		}
 	}()
 
 	return func() {
-		err := kaspadRunCommand.Process.Signal(syscall.SIGTERM)
+		err := gordRunCommand.Process.Signal(syscall.SIGTERM)
 		if err != nil {
 			t.Fatalf("Signal: %s", err)
 		}
