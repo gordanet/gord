@@ -25,7 +25,7 @@ func TestUTXOIndex(t *testing.T) {
 		miningAddressPrivateKey: miningAddress1PrivateKey,
 		utxoIndex:               true,
 	}
-	kaspad, teardown := setupHarness(t, harnessParams)
+	gord, teardown := setupHarness(t, harnessParams)
 	defer teardown()
 
 	// skip the first block because it's paying to genesis script,
@@ -61,12 +61,12 @@ func TestUTXOIndex(t *testing.T) {
 		t.Fatalf("Error Retriving BlockCount: %s", err)
 	}
 	rewardsMinedViaBlockCountSompi := uint64(
-		(getBlockCountResponse.BlockCount - 2) * constants.SompiPerKaspa * 500, // -2 because of genesis and virtual.
+		(getBlockCountResponse.BlockCount - 2) * constants.SeepPerGor * 500, // -2 because of genesis and virtual.
 	)
 
 	if getCoinSupplyResponse.CirculatingSompi != rewardsMinedSompi {
 		t.Fatalf("Error: Circulating supply Mismatch - Circulating Sompi: %d Sompi Mined: %d", getCoinSupplyResponse.CirculatingSompi, rewardsMinedSompi)
-	} else if getCoinSupplyResponse.CirculatingSompi != rewardsMinedViaBlockCountSompi {
+	} else if getCoinSupplyResponse.CirculatingSeep != rewardsMinedViaBlockCountSompi {
 		t.Fatalf("Error: Circulating supply Mismatch - Circulating Sompi: %d Sompi Mined via Block count: %d", getCoinSupplyResponse.CirculatingSompi, rewardsMinedViaBlockCountSompi)
 	}
 
@@ -89,14 +89,14 @@ func TestUTXOIndex(t *testing.T) {
 	const transactionAmountToSpend = 5
 	for i := 0; i < transactionAmountToSpend; i++ {
 		rpcTransaction := buildTransactionForUTXOIndexTest(t, notificationEntries[i])
-		_, err = kaspad.rpcClient.SubmitTransaction(rpcTransaction, false)
+		_, err = gord.rpcClient.SubmitTransaction(rpcTransaction, false)
 		if err != nil {
 			t.Fatalf("Error submitting transaction: %s", err)
 		}
 	}
 
 	// Mine a block to include the above transactions
-	mineNextBlock(t, kaspad)
+	mineNextBlock(t, gord)
 
 	// Make sure this block removed the UTXOs we spent
 	notification := <-onUTXOsChangedChan
@@ -128,7 +128,7 @@ func TestUTXOIndex(t *testing.T) {
 
 	// Get all the UTXOs and make sure the response is equivalent
 	// to the data collected via notifications
-	utxosByAddressesResponse, err := kaspad.rpcClient.GetUTXOsByAddresses([]string{miningAddress1})
+	utxosByAddressesResponse, err := gord.rpcClient.GetUTXOsByAddresses([]string{miningAddress1})
 	if err != nil {
 		t.Fatalf("Failed to get UTXOs: %s", err)
 	}
