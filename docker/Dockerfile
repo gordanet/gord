@@ -11,7 +11,7 @@ COPY go.mod .
 COPY go.sum .
 
 
-# Cache kaspad dependencies
+# Cache gord dependencies
 RUN go mod download
 
 COPY . .
