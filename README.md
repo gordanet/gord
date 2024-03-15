@@ -47,8 +47,8 @@ $ build.sh
 ```bash
 $ sudo apt install postgresql postgresql-contrib
 $ sudo -u postgres psql
-$ CREATE ROLE gorbaniov WITH LOGIN ENCRYPTED PASSWORD '1';
-$ CREATE DATABASE gor OWNER gorbaniov;
+$ CREATE ROLE gor WITH LOGIN ENCRYPTED PASSWORD '1';
+$ CREATE DATABASE gor OWNER gor;
 $ Quit psql with \q
 ```
 
