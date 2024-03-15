@@ -1,31 +1,31 @@
 #!/bin/bash
-rm -rf /tmp/kaspad-temp
+rm -rf /tmp/gord-temp
 
-kaspad --devnet --appdir=/tmp/kaspad-temp --profile=6061 --loglevel=debug &
-KASPAD_PID=$!
-KASPAD_KILLED=0
-function killKaspadIfNotKilled() {
-    if [ $KASPAD_KILLED -eq 0 ]; then
-      kill $KASPAD_PID
+kaspad --devnet --appdir=/tmp/gord-temp --profile=6061 --loglevel=debug &
+GORD_PID=$!
+gorD_KILLED=0
+function killGordIfNotKilled() {
+    if [ $GORD_KILLED -eq 0 ]; then
+      kill $GORD_PID
     fi
 }
-trap "killKaspadIfNotKilled" EXIT
+trap "killgordIfNotKilled" EXIT
 
 sleep 1
 
 application-level-garbage --devnet -alocalhost:16611 -b blocks.dat --profile=7000
 TEST_EXIT_CODE=$?
 
-kill $KASPAD_PID
+kill $GORD_PID
 
-wait $KASPAD_PID
-KASPAD_KILLED=1
-KASPAD_EXIT_CODE=$?
+wait $GORD_PID
+GORD_KILLED=1
+GORD_EXIT_CODE=$?
 
 echo "Exit code: $TEST_EXIT_CODE"
-echo "Kaspad exit code: $KASPAD_EXIT_CODE"
+echo "Gord exit code: $GORD_EXIT_CODE"
 
-if [ $TEST_EXIT_CODE -eq 0 ] && [ $KASPAD_EXIT_CODE -eq 0 ]; then
+if [ $TEST_EXIT_CODE -eq 0 ] && [ $GORD_EXIT_CODE -eq 0 ]; then
   echo "application-level-garbage test: PASSED"
   exit 0
 fi
