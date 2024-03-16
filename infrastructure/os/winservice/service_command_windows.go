@@ -39,7 +39,7 @@ func (s *Service) performServiceCommand() error {
 	return err
 }
 
-// installService attempts to install the kaspad service. Typically this should
+// installService attempts to install the gord service. Typically this should
 // be done by the msi installer, but it is provided here since it can be useful
 // for development.
 func (s *Service) installService() error {
