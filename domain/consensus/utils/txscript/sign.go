@@ -5,7 +5,9 @@
 package txscript
 
 import (
-	"github.com/kaspanet/go-secp256k1"
+	"github.com/gordanet/go-secp256k1"
+	 "github.com/gordanet/gord-muhash@v0.0.4"
+	
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
 	"github.com/gordanet/gord/domain/consensus/utils/consensushashing"
 	"github.com/pkg/errors"
