@@ -9,6 +9,7 @@ import (
 	"github.com/gordanet/gord/cmd/gorwallet/keys"
 	"github.com/gordanet/gord/cmd/gorwallet/libgorwallet"
 	"github.com/pkg/errors"
+	"github.com/gordanet/go-secp256k1"
 )
 
 func sign(conf *signConfig) error {
