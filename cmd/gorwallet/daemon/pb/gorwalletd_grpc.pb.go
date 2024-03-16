@@ -218,7 +218,7 @@ func _Gorwalletd_GetExternalSpendableUTXOs_Handler(srv interface{}, ctx context.
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Kaspawalletd_CreateUnsignedTransactions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Gorwalletd_CreateUnsignedTransactions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateUnsignedTransactionsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -272,7 +272,7 @@ func _Gorwalletd_NewAddress_Handler(srv interface{}, ctx context.Context, dec fu
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Kaspawalletd_Shutdown_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Gorwalletd_Shutdown_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ShutdownRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -290,7 +290,7 @@ func _Kaspawalletd_Shutdown_Handler(srv interface{}, ctx context.Context, dec fu
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Kaspawalletd_Broadcast_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Gorwalletd_Broadcast_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(BroadcastRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -326,7 +326,7 @@ func _Gorwalletd_Send_Handler(srv interface{}, ctx context.Context, dec func(int
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Kaspawalletd_Sign_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Gorwalletd_Sign_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SignRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -361,7 +361,7 @@ var Gorwalletd_ServiceDesc = grpc.ServiceDesc{
 		},
 		{
 			MethodName: "CreateUnsignedTransactions",
-			Handler:    _Kaspawalletd_CreateUnsignedTransactions_Handler,
+			Handler:    _Gorwalletd_CreateUnsignedTransactions_Handler,
 		},
 		{
 			MethodName: "ShowAddresses",
