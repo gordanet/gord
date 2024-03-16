@@ -12,17 +12,17 @@ import (
 func ExampleAmount() {
 
 	a := util.Amount(0)
-	fmt.Println("Zero Seep:", a)
+	fmt.Println("Zero Sompi:", a)
 
 	a = util.Amount(1e8)
-	fmt.Println("100,000,000 Seep:", a)
+	fmt.Println("100,000,000 Sompi:", a)
 
 	a = util.Amount(1e5)
-	fmt.Println("100,000 Seep:", a)
+	fmt.Println("100,000 Sompi:", a)
 	// Output:
-	// Zero Seep: 0 GOR
-	// 100,000,000 Seep: 1 GOR
-	// 100,000 Seep: 0.001 GOR
+	// Zero Sompi: 0 GOR
+	// 100,000,000 Sompi: 1 GOR
+	// 100,000 Sompi: 0.001 GOR
 }
 
 func ExampleNewAmount() {
@@ -63,11 +63,11 @@ func ExampleNewAmount() {
 func ExampleAmount_unitConversions() {
 	amount := util.Amount(44433322211100)
 
-	fmt.Println("Seep to kGOR:", amount.Format(util.AmountKiloGOR))
-	fmt.Println("Seep to GOR:", amount)
-	fmt.Println("Seep to MilliGOR:", amount.Format(util.AmountMilliGOR))
-	fmt.Println("Seep to MicroGOR:", amount.Format(util.AmountMicroGOR))
-	fmt.Println("Seep to Seep:", amount.Format(util.AmountSeep))
+	fmt.Println("Sompi to kGOR:", amount.Format(util.AmountKiloGOR))
+	fmt.Println("Sompi to GOR:", amount)
+	fmt.Println("Sompi to MilliGOR:", amount.Format(util.AmountMilliGOR))
+	fmt.Println("Sompi to MicroGOR:", amount.Format(util.AmountMicroGOR))
+	fmt.Println("Sompi to Seep:", amount.Format(util.AmountSompi))
 
 	// Output:
 	// Sompi to kGOR: 444.333222111 kGOR
