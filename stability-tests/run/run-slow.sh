@@ -15,8 +15,8 @@ cd "${PROJECT_ROOT}/infra-level-garbage/run" && ./run.sh || failedTests+=("infra
 echo "Done running infra-level-garbage"
 
 echo "Running kaspadsanity"
-cd "${PROJECT_ROOT}/kaspadsanity/run" && ./run.sh || failedTests+=("kaspadsanity")
-echo "Done running kaspadsanity"
+cd "${PROJECT_ROOT}/gordsanity/run" && ./run.sh || failedTests+=("gordsanity")
+echo "Done running gordsanity"
 
 echo "Running rpc-stability"
 cd "${PROJECT_ROOT}/rpc-stability/run" && ./run.sh || failedTests+=("rpc-stability")
