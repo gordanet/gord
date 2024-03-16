@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/gordnet/go-secp256k1"
+	"github.com/gordanet/go-secp256k1"
 	"github.com/gordanet/gord/cmd/gorwallet/daemon/client"
 	"github.com/gordanet/gord/cmd/gorwallet/daemon/pb"
 	"github.com/gordanet/gord/cmd/gorwallet/libgorwallet"
