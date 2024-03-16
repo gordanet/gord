@@ -6,7 +6,7 @@ package txscript
 
 import (
 	"github.com/gordnet/go-secp256k1"
-	"github.com/gordanet/go-muhash@v0.0.4"
+	"github.com/gordanet/gord-muhash@v0.0.4"
 )
 
 // sigCacheEntryECDSA represents an entry in the SigCache. Entries within the
