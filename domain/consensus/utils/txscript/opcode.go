@@ -16,7 +16,7 @@ import (
 	"golang.org/x/crypto/blake2b"
 
 	"github.com/gordanet/gord/domain/consensus/utils/constants"
-	"github.com/gordanet/go-muhash@v0.0.4"
+	"github.com/gordanet/gord-muhash@v0.0.4"
         "github.com/gordanet/go-secp256k1"
 )
 
