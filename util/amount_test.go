@@ -30,13 +30,13 @@ func TestAmountCreation(t *testing.T) {
 			name:     "max producible",
 			amount:   29e9,
 			valid:    true,
-			expected: Amount(constants.MaxSeep),
+			expected: Amount(constants.MaxSompi),
 		},
 		{
 			name:     "one hundred",
 			amount:   100,
 			valid:    true,
-			expected: 100 * constants.SeepPerGor,
+			expected: 100 * constants.SompiPerGor,
 		},
 		{
 			name:     "fraction",
@@ -54,7 +54,7 @@ func TestAmountCreation(t *testing.T) {
 			name:     "rounding down",
 			amount:   55.000000000000056843,
 			valid:    true,
-			expected: 55 * constants.SeepPerGor,
+			expected: 55 * constants.SompiPerGor,
 		},
 
 		// Negative tests.
@@ -103,7 +103,7 @@ func TestAmountUnitConversions(t *testing.T) {
 	}{
 		{
 			name:      "MGOR",
-			amount:    Amount(constants.MaxSeep),
+			amount:    Amount(constants.MaxSompi),
 			unit:      AmountMegaGOR,
 			converted: 29000,
 			s:         "29000 MGOR",
@@ -139,7 +139,7 @@ func TestAmountUnitConversions(t *testing.T) {
 		},
 		{
 
-			name:      "seep",
+			name:      "sompi",
 			amount:    44433322211100,
 			unit:      AmountSeep,
 			converted: 44433322211100,
@@ -205,15 +205,15 @@ func TestAmountMulF64(t *testing.T) {
 		},
 		{
 			name: "Round down",
-			amt:  49, // 49 Seep
+			amt:  49, // 49 Sompi
 			mul:  0.01,
 			res:  0,
 		},
 		{
 			name: "Round up",
-			amt:  50, // 50 Seep
+			amt:  50, // 50 Sompi
 			mul:  0.01,
-			res:  1, // 1 Seep
+			res:  1, // 1 Sompi
 		},
 		{
 			name: "Multiply by 0.",
@@ -235,15 +235,15 @@ func TestAmountMulF64(t *testing.T) {
 		},
 		{
 			name: "Multiply 100 by 66.6%.",
-			amt:  100, // 100 Seep
+			amt:  100, // 100 Sompi
 			mul:  0.666,
-			res:  67, // 67 Seep
+			res:  67, // 67 Sompi
 		},
 		{
 			name: "Multiply 100 by 2/3.",
-			amt:  100, // 100 Seep
+			amt:  100, // 100 Sompi
 			mul:  2.0 / 3,
-			res:  67, // 67 Seep
+			res:  67, // 67 Sompi
 		},
 	}
 
