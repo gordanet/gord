@@ -8,7 +8,7 @@ import (
 	"github.com/gordanet/gord/infrastructure/os/limits"
 )
 
-// Initialize initializes the execution environment required to run kaspad
+// Initialize initializes the execution environment required to run gord
 func Initialize(desiredLimits *limits.DesiredLimits) {
 	// Use all processor cores.
 	runtime.GOMAXPROCS(runtime.NumCPU())
