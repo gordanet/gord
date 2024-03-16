@@ -6,7 +6,7 @@ import (
 
 	"github.com/gordanet/gord/domain/consensus/utils/utxo"
 
-	"github.com/kaspanet/go-secp256k1"
+	"github.com/gordanet/go-secp256k1"
 	"github.com/gordanet/gord/app/appmessage"
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
 	"github.com/gordanet/gord/domain/consensus/utils/consensushashing"
@@ -17,7 +17,7 @@ import (
 )
 
 func TestUTXOIndex(t *testing.T) {
-	// Setup a single kaspad instance
+	// Setup a single gord instance
 	harnessParams := &harnessParams{
 		p2pAddress:              p2pAddress1,
 		rpcAddress:              rpcAddress1,
@@ -35,7 +35,7 @@ func TestUTXOIndex(t *testing.T) {
 	// Register for UTXO changes
 	const blockAmountToMine = 100
 	onUTXOsChangedChan := make(chan *appmessage.UTXOsChangedNotificationMessage, blockAmountToMine)
-	err := kaspad.rpcClient.RegisterForUTXOsChangedNotifications([]string{miningAddress1}, func(
+	err := gord.rpcClient.RegisterForUTXOsChangedNotifications([]string{miningAddress1}, func(
 		notification *appmessage.UTXOsChangedNotificationMessage) {
 
 		onUTXOsChangedChan <- notification
@@ -50,13 +50,13 @@ func TestUTXOIndex(t *testing.T) {
 	}
 
 	//check if rewards corrosponds to circulating supply.
-	getCoinSupplyResponse, err := kaspad.rpcClient.GetCoinSupply()
+	getCoinSupplyResponse, err := gord.rpcClient.GetCoinSupply()
 	if err != nil {
 		t.Fatalf("Error Retriving Coin supply: %s", err)
 	}
 
-	rewardsMinedSompi := uint64(blockAmountToMine * constants.SompiPerKaspa * 500)
-	getBlockCountResponse, err := kaspad.rpcClient.GetBlockCount()
+	rewardsMinedSompi := uint64(blockAmountToMine * constants.SompiPerGor * 500)
+	getBlockCountResponse, err := gord.rpcClient.GetBlockCount()
 	if err != nil {
 		t.Fatalf("Error Retriving BlockCount: %s", err)
 	}
