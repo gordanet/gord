@@ -98,32 +98,32 @@ type KaspaNet uint32
 // better idea to simply disconnect clients that are misbehaving over TCP.
 const (
 	// Mainnet represents the main gord network.
-	Mainnet GordNet = 0x3ddcf71d
+	Mainnet GorNet = 0x3ddcf71d
 
 	// Testnet represents the test network.
-	Testnet GordNet = 0xddb8af8f
+	Testnet GorNet = 0xddb8af8f
 
 	// Simnet represents the simulation test network.
-	Simnet GordNet = 0x374dcf1c
+	Simnet GorNet = 0x374dcf1c
 
 	// Devnet represents the development test network.
-	Devnet GordNet = 0x732d87e1
+	Devnet GorNet = 0x732d87e1
 )
 
-// bnStrings is a map of gord networks back to their constant names for
+// bnStrings is a map of gor networks back to their constant names for
 // pretty printing.
-var bnStrings = map[GordNet]string{
+var bnStrings = map[GorNet]string{
 	Mainnet: "Mainnet",
 	Testnet: "Testnet",
 	Simnet:  "Simnet",
 	Devnet:  "Devnet",
 }
 
-// String returns the KaspaNet in human-readable form.
+// String returns the GorNet in human-readable form.
 func (n GordNet) String() string {
 	if s, ok := bnStrings[n]; ok {
 		return s
 	}
 
-	return fmt.Sprintf("Unknown GordNet (%d)", uint32(n))
+	return fmt.Sprintf("Unknown GorNet (%d)", uint32(n))
 }
