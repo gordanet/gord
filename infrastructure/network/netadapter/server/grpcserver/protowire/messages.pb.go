@@ -954,173 +954,173 @@ func (x *GordMessage) GetStopNotifyingUtxosChangedRequest() *StopNotifyingUtxosC
 	return nil
 }
 
-func (x *KaspadMessage) GetStopNotifyingUtxosChangedResponse() *StopNotifyingUtxosChangedResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_StopNotifyingUtxosChangedResponse); ok {
+func (x *GordMessage) GetStopNotifyingUtxosChangedResponse() *StopNotifyingUtxosChangedResponseMessage {
+	if x, ok := x.GetPayload().(*GordMessage_StopNotifyingUtxosChangedResponse); ok {
 		return x.StopNotifyingUtxosChangedResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyPruningPointUTXOSetOverrideRequest() *NotifyPruningPointUTXOSetOverrideRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyPruningPointUTXOSetOverrideRequest); ok {
+func (x *GordMessage) GetNotifyPruningPointUTXOSetOverrideRequest() *NotifyPruningPointUTXOSetOverrideRequestMessage {
+	if x, ok := x.GetPayload().(*GordMessage_NotifyPruningPointUTXOSetOverrideRequest); ok {
 		return x.NotifyPruningPointUTXOSetOverrideRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyPruningPointUTXOSetOverrideResponse() *NotifyPruningPointUTXOSetOverrideResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyPruningPointUTXOSetOverrideResponse); ok {
+func (x *GordMessage) GetNotifyPruningPointUTXOSetOverrideResponse() *NotifyPruningPointUTXOSetOverrideResponseMessage {
+	if x, ok := x.GetPayload().(*GordMessage_NotifyPruningPointUTXOSetOverrideResponse); ok {
 		return x.NotifyPruningPointUTXOSetOverrideResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetPruningPointUTXOSetOverrideNotification() *PruningPointUTXOSetOverrideNotificationMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_PruningPointUTXOSetOverrideNotification); ok {
+func (x *GordMessage) GetPruningPointUTXOSetOverrideNotification() *PruningPointUTXOSetOverrideNotificationMessage {
+	if x, ok := x.GetPayload().(*GordMessage_PruningPointUTXOSetOverrideNotification); ok {
 		return x.PruningPointUTXOSetOverrideNotification
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetStopNotifyingPruningPointUTXOSetOverrideRequest() *StopNotifyingPruningPointUTXOSetOverrideRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest); ok {
+func (x *GordMessage) GetStopNotifyingPruningPointUTXOSetOverrideRequest() *StopNotifyingPruningPointUTXOSetOverrideRequestMessage {
+	if x, ok := x.GetPayload().(*GordMessage_StopNotifyingPruningPointUTXOSetOverrideRequest); ok {
 		return x.StopNotifyingPruningPointUTXOSetOverrideRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetStopNotifyingPruningPointUTXOSetOverrideResponse() *StopNotifyingPruningPointUTXOSetOverrideResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse); ok {
+func (x *GordMessage) GetStopNotifyingPruningPointUTXOSetOverrideResponse() *StopNotifyingPruningPointUTXOSetOverrideResponseMessage {
+	if x, ok := x.GetPayload().(*GordMessage_StopNotifyingPruningPointUTXOSetOverrideResponse); ok {
 		return x.StopNotifyingPruningPointUTXOSetOverrideResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetEstimateNetworkHashesPerSecondRequest() *EstimateNetworkHashesPerSecondRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_EstimateNetworkHashesPerSecondRequest); ok {
+func (x *GordMessage) GetEstimateNetworkHashesPerSecondRequest() *EstimateNetworkHashesPerSecondRequestMessage {
+	if x, ok := x.GetPayload().(*GordMessage_EstimateNetworkHashesPerSecondRequest); ok {
 		return x.EstimateNetworkHashesPerSecondRequest
 	}
 	return nil
 }
 
 func (x *GordMessage) GetEstimateNetworkHashesPerSecondResponse() *EstimateNetworkHashesPerSecondResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_EstimateNetworkHashesPerSecondResponse); ok {
+	if x, ok := x.GetPayload().(*GordMessage_EstimateNetworkHashesPerSecondResponse); ok {
 		return x.EstimateNetworkHashesPerSecondResponse
 	}
 	return nil
 }
 
 func (x *GordMessage) GetNotifyVirtualDaaScoreChangedRequest() *NotifyVirtualDaaScoreChangedRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyVirtualDaaScoreChangedRequest); ok {
+	if x, ok := x.GetPayload().(*GordMessage_NotifyVirtualDaaScoreChangedRequest); ok {
 		return x.NotifyVirtualDaaScoreChangedRequest
 	}
 	return nil
 }
 
 func (x *GordMessage) GetNotifyVirtualDaaScoreChangedResponse() *NotifyVirtualDaaScoreChangedResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyVirtualDaaScoreChangedResponse); ok {
+	if x, ok := x.GetPayload().(*GordMessage_NotifyVirtualDaaScoreChangedResponse); ok {
 		return x.NotifyVirtualDaaScoreChangedResponse
 	}
 	return nil
 }
 
 func (x *GordMessage) GetVirtualDaaScoreChangedNotification() *VirtualDaaScoreChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_VirtualDaaScoreChangedNotification); ok {
+	if x, ok := x.GetPayload().(*GordMessage_VirtualDaaScoreChangedNotification); ok {
 		return x.VirtualDaaScoreChangedNotification
 	}
 	return nil
 }
 
 func (x *GordMessage) GetGetBalanceByAddressRequest() *GetBalanceByAddressRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBalanceByAddressRequest); ok {
+	if x, ok := x.GetPayload().(*GordMessage_GetBalanceByAddressRequest); ok {
 		return x.GetBalanceByAddressRequest
 	}
 	return nil
 }
 
 func (x *GordMessage) GetGetBalanceByAddressResponse() *GetBalanceByAddressResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBalanceByAddressResponse); ok {
+	if x, ok := x.GetPayload().(*GordMessage_GetBalanceByAddressResponse); ok {
 		return x.GetBalanceByAddressResponse
 	}
 	return nil
 }
 
 func (x *GordMessage) GetGetBalancesByAddressesRequest() *GetBalancesByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBalancesByAddressesRequest); ok {
+	if x, ok := x.GetPayload().(*GordMessage_GetBalancesByAddressesRequest); ok {
 		return x.GetBalancesByAddressesRequest
 	}
 	return nil
 }
 
 func (x *GordMessage) GetGetBalancesByAddressesResponse() *GetBalancesByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetBalancesByAddressesResponse); ok {
+	if x, ok := x.GetPayload().(*GordMessage_GetBalancesByAddressesResponse); ok {
 		return x.GetBalancesByAddressesResponse
 	}
 	return nil
 }
 
 func (x *GordMessage) GetNotifyNewBlockTemplateRequest() *NotifyNewBlockTemplateRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyNewBlockTemplateRequest); ok {
+	if x, ok := x.GetPayload().(*GordMessage_NotifyNewBlockTemplateRequest); ok {
 		return x.NotifyNewBlockTemplateRequest
 	}
 	return nil
 }
 
 func (x *GordMessage) GetNotifyNewBlockTemplateResponse() *NotifyNewBlockTemplateResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NotifyNewBlockTemplateResponse); ok {
+	if x, ok := x.GetPayload().(*GordMessage_NotifyNewBlockTemplateResponse); ok {
 		return x.NotifyNewBlockTemplateResponse
 	}
 	return nil
 }
 
 func (x *GordMessage) GetNewBlockTemplateNotification() *NewBlockTemplateNotificationMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_NewBlockTemplateNotification); ok {
+	if x, ok := x.GetPayload().(*GordMessage_NewBlockTemplateNotification); ok {
 		return x.NewBlockTemplateNotification
 	}
 	return nil
 }
 
 func (x *GordMessage) GetGetMempoolEntriesByAddressesRequest() *GetMempoolEntriesByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetMempoolEntriesByAddressesRequest); ok {
+	if x, ok := x.GetPayload().(*GordMessage_GetMempoolEntriesByAddressesRequest); ok {
 		return x.GetMempoolEntriesByAddressesRequest
 	}
 	return nil
 }
 
 func (x *GordMessage) GetGetMempoolEntriesByAddressesResponse() *GetMempoolEntriesByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetMempoolEntriesByAddressesResponse); ok {
+	if x, ok := x.GetPayload().(*GordMessage_GetMempoolEntriesByAddressesResponse); ok {
 		return x.GetMempoolEntriesByAddressesResponse
 	}
 	return nil
 }
 
 func (x *GordMessage) GetGetCoinSupplyRequest() *GetCoinSupplyRequestMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetCoinSupplyRequest); ok {
+	if x, ok := x.GetPayload().(*GordMessage_GetCoinSupplyRequest); ok {
 		return x.GetCoinSupplyRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetCoinSupplyResponse() *GetCoinSupplyResponseMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_GetCoinSupplyResponse); ok {
+func (x *GordMessage) GetGetCoinSupplyResponse() *GetCoinSupplyResponseMessage {
+	if x, ok := x.GetPayload().(*GordMessage_GetCoinSupplyResponse); ok {
 		return x.GetCoinSupplyResponse
 	}
 	return nil
 }
 
-type isKaspadMessage_Payload interface {
+type isGordMessage_Payload interface {
 	isKaspadMessage_Payload()
 }
 
-type KaspadMessage_Addresses struct {
+type GordMessage_Addresses struct {
 	Addresses *AddressesMessage `protobuf:"bytes,1,opt,name=addresses,proto3,oneof"`
 }
 
-type KaspadMessage_Block struct {
+type GordMessage_Block struct {
 	Block *BlockMessage `protobuf:"bytes,2,opt,name=block,proto3,oneof"`
 }
 
-type KaspadMessage_Transaction struct {
+type GordMessage_Transaction struct {
 	Transaction *TransactionMessage `protobuf:"bytes,3,opt,name=transaction,proto3,oneof"`
 }
 
@@ -1128,11 +1128,11 @@ type KaspadMessage_BlockLocator struct {
 	BlockLocator *BlockLocatorMessage `protobuf:"bytes,5,opt,name=blockLocator,proto3,oneof"`
 }
 
-type KaspadMessage_RequestAddresses struct {
+type GordMessage_RequestAddresses struct {
 	RequestAddresses *RequestAddressesMessage `protobuf:"bytes,6,opt,name=requestAddresses,proto3,oneof"`
 }
 
-type KaspadMessage_RequestRelayBlocks struct {
+type GordMessage_RequestRelayBlocks struct {
 	RequestRelayBlocks *RequestRelayBlocksMessage `protobuf:"bytes,10,opt,name=requestRelayBlocks,proto3,oneof"`
 }
 
@@ -1140,11 +1140,11 @@ type KaspadMessage_RequestTransactions struct {
 	RequestTransactions *RequestTransactionsMessage `protobuf:"bytes,12,opt,name=requestTransactions,proto3,oneof"`
 }
 
-type KaspadMessage_IbdBlock struct {
+type GordMessage_IbdBlock struct {
 	IbdBlock *BlockMessage `protobuf:"bytes,13,opt,name=ibdBlock,proto3,oneof"`
 }
 
-type KaspadMessage_InvRelayBlock struct {
+type GordMessage_InvRelayBlock struct {
 	InvRelayBlock *InvRelayBlockMessage `protobuf:"bytes,14,opt,name=invRelayBlock,proto3,oneof"`
 }
 
@@ -1152,7 +1152,7 @@ type KaspadMessage_InvTransactions struct {
 	InvTransactions *InvTransactionsMessage `protobuf:"bytes,15,opt,name=invTransactions,proto3,oneof"`
 }
 
-type KaspadMessage_Ping struct {
+type GordMessage_Ping struct {
 	Ping *PingMessage `protobuf:"bytes,16,opt,name=ping,proto3,oneof"`
 }
 
@@ -1160,15 +1160,15 @@ type KaspadMessage_Pong struct {
 	Pong *PongMessage `protobuf:"bytes,17,opt,name=pong,proto3,oneof"`
 }
 
-type KaspadMessage_Verack struct {
+type GordMessage_Verack struct {
 	Verack *VerackMessage `protobuf:"bytes,19,opt,name=verack,proto3,oneof"`
 }
 
-type KaspadMessage_Version struct {
+type GordMessage_Version struct {
 	Version *VersionMessage `protobuf:"bytes,20,opt,name=version,proto3,oneof"`
 }
 
-type KaspadMessage_TransactionNotFound struct {
+type GordMessage_TransactionNotFound struct {
 	TransactionNotFound *TransactionNotFoundMessage `protobuf:"bytes,21,opt,name=transactionNotFound,proto3,oneof"`
 }
 
@@ -1176,15 +1176,15 @@ type KaspadMessage_Reject struct {
 	Reject *RejectMessage `protobuf:"bytes,22,opt,name=reject,proto3,oneof"`
 }
 
-type KaspadMessage_PruningPointUtxoSetChunk struct {
+type GordMessage_PruningPointUtxoSetChunk struct {
 	PruningPointUtxoSetChunk *PruningPointUtxoSetChunkMessage `protobuf:"bytes,25,opt,name=pruningPointUtxoSetChunk,proto3,oneof"`
 }
 
-type KaspadMessage_RequestIBDBlocks struct {
+type GordMessage_RequestIBDBlocks struct {
 	RequestIBDBlocks *RequestIBDBlocksMessage `protobuf:"bytes,26,opt,name=requestIBDBlocks,proto3,oneof"`
 }
 
-type KaspadMessage_UnexpectedPruningPoint struct {
+type GordMessage_UnexpectedPruningPoint struct {
 	UnexpectedPruningPoint *UnexpectedPruningPointMessage `protobuf:"bytes,27,opt,name=unexpectedPruningPoint,proto3,oneof"`
 }
 
@@ -1196,11 +1196,11 @@ type KaspadMessage_IbdBlockLocatorHighestHash struct {
 	IbdBlockLocatorHighestHash *IbdBlockLocatorHighestHashMessage `protobuf:"bytes,31,opt,name=ibdBlockLocatorHighestHash,proto3,oneof"`
 }
 
-type KaspadMessage_RequestNextPruningPointUtxoSetChunk struct {
+type GordMessage_RequestNextPruningPointUtxoSetChunk struct {
 	RequestNextPruningPointUtxoSetChunk *RequestNextPruningPointUtxoSetChunkMessage `protobuf:"bytes,33,opt,name=requestNextPruningPointUtxoSetChunk,proto3,oneof"`
 }
 
-type KaspadMessage_DonePruningPointUtxoSetChunks struct {
+type GordMessage_DonePruningPointUtxoSetChunks struct {
 	DonePruningPointUtxoSetChunks *DonePruningPointUtxoSetChunksMessage `protobuf:"bytes,34,opt,name=donePruningPointUtxoSetChunks,proto3,oneof"`
 }
 
@@ -1208,7 +1208,7 @@ type KaspadMessage_IbdBlockLocatorHighestHashNotFound struct {
 	IbdBlockLocatorHighestHashNotFound *IbdBlockLocatorHighestHashNotFoundMessage `protobuf:"bytes,35,opt,name=ibdBlockLocatorHighestHashNotFound,proto3,oneof"`
 }
 
-type KaspadMessage_BlockWithTrustedData struct {
+type GordMessage_BlockWithTrustedData struct {
 	BlockWithTrustedData *BlockWithTrustedDataMessage `protobuf:"bytes,36,opt,name=blockWithTrustedData,proto3,oneof"`
 }
 
@@ -1220,23 +1220,23 @@ type KaspadMessage_RequestPruningPointAndItsAnticone struct {
 	RequestPruningPointAndItsAnticone *RequestPruningPointAndItsAnticoneMessage `protobuf:"bytes,40,opt,name=requestPruningPointAndItsAnticone,proto3,oneof"`
 }
 
-type KaspadMessage_BlockHeaders struct {
+type GordMessage_BlockHeaders struct {
 	BlockHeaders *BlockHeadersMessage `protobuf:"bytes,41,opt,name=blockHeaders,proto3,oneof"`
 }
 
-type KaspadMessage_RequestNextHeaders struct {
+type GordMessage_RequestNextHeaders struct {
 	RequestNextHeaders *RequestNextHeadersMessage `protobuf:"bytes,42,opt,name=requestNextHeaders,proto3,oneof"`
 }
 
-type KaspadMessage_DoneHeaders struct {
+type GordMessage_DoneHeaders struct {
 	DoneHeaders *DoneHeadersMessage `protobuf:"bytes,43,opt,name=DoneHeaders,proto3,oneof"`
 }
 
-type KaspadMessage_RequestPruningPointUTXOSet struct {
+type GordMessage_RequestPruningPointUTXOSet struct {
 	RequestPruningPointUTXOSet *RequestPruningPointUTXOSetMessage `protobuf:"bytes,44,opt,name=requestPruningPointUTXOSet,proto3,oneof"`
 }
 
-type KaspadMessage_RequestHeaders struct {
+type GordMessage_RequestHeaders struct {
 	RequestHeaders *RequestHeadersMessage `protobuf:"bytes,45,opt,name=requestHeaders,proto3,oneof"`
 }
 
@@ -1244,27 +1244,27 @@ type KaspadMessage_RequestBlockLocator struct {
 	RequestBlockLocator *RequestBlockLocatorMessage `protobuf:"bytes,46,opt,name=requestBlockLocator,proto3,oneof"`
 }
 
-type KaspadMessage_PruningPoints struct {
+type GordMessage_PruningPoints struct {
 	PruningPoints *PruningPointsMessage `protobuf:"bytes,47,opt,name=pruningPoints,proto3,oneof"`
 }
 
-type KaspadMessage_RequestPruningPointProof struct {
+type GordMessage_RequestPruningPointProof struct {
 	RequestPruningPointProof *RequestPruningPointProofMessage `protobuf:"bytes,48,opt,name=requestPruningPointProof,proto3,oneof"`
 }
 
-type KaspadMessage_PruningPointProof struct {
+type GordMessage_PruningPointProof struct {
 	PruningPointProof *PruningPointProofMessage `protobuf:"bytes,49,opt,name=pruningPointProof,proto3,oneof"`
 }
 
-type KaspadMessage_Ready struct {
+type GordMessage_Ready struct {
 	Ready *ReadyMessage `protobuf:"bytes,50,opt,name=ready,proto3,oneof"`
 }
 
-type KaspadMessage_BlockWithTrustedDataV4 struct {
+type GordMessage_BlockWithTrustedDataV4 struct {
 	BlockWithTrustedDataV4 *BlockWithTrustedDataV4Message `protobuf:"bytes,51,opt,name=blockWithTrustedDataV4,proto3,oneof"`
 }
 
-type KaspadMessage_TrustedData struct {
+type GordMessage_TrustedData struct {
 	TrustedData *TrustedDataMessage `protobuf:"bytes,52,opt,name=trustedData,proto3,oneof"`
 }
 
@@ -1272,7 +1272,7 @@ type KaspadMessage_RequestIBDChainBlockLocator struct {
 	RequestIBDChainBlockLocator *RequestIBDChainBlockLocatorMessage `protobuf:"bytes,53,opt,name=requestIBDChainBlockLocator,proto3,oneof"`
 }
 
-type KaspadMessage_IbdChainBlockLocator struct {
+type GordMessage_IbdChainBlockLocator struct {
 	IbdChainBlockLocator *IbdChainBlockLocatorMessage `protobuf:"bytes,54,opt,name=ibdChainBlockLocator,proto3,oneof"`
 }
 
@@ -1280,11 +1280,11 @@ type KaspadMessage_RequestAnticone struct {
 	RequestAnticone *RequestAnticoneMessage `protobuf:"bytes,55,opt,name=requestAnticone,proto3,oneof"`
 }
 
-type KaspadMessage_RequestNextPruningPointAndItsAnticoneBlocks struct {
+type GordMessage_RequestNextPruningPointAndItsAnticoneBlocks struct {
 	RequestNextPruningPointAndItsAnticoneBlocks *RequestNextPruningPointAndItsAnticoneBlocksMessage `protobuf:"bytes,56,opt,name=requestNextPruningPointAndItsAnticoneBlocks,proto3,oneof"`
 }
 
-type KaspadMessage_GetCurrentNetworkRequest struct {
+type GordMessage_GetCurrentNetworkRequest struct {
 	GetCurrentNetworkRequest *GetCurrentNetworkRequestMessage `protobuf:"bytes,1001,opt,name=getCurrentNetworkRequest,proto3,oneof"`
 }
 
@@ -1292,7 +1292,7 @@ type KaspadMessage_GetCurrentNetworkResponse struct {
 	GetCurrentNetworkResponse *GetCurrentNetworkResponseMessage `protobuf:"bytes,1002,opt,name=getCurrentNetworkResponse,proto3,oneof"`
 }
 
-type KaspadMessage_SubmitBlockRequest struct {
+type GordMessage_SubmitBlockRequest struct {
 	SubmitBlockRequest *SubmitBlockRequestMessage `protobuf:"bytes,1003,opt,name=submitBlockRequest,proto3,oneof"`
 }
 
@@ -1304,7 +1304,7 @@ type KaspadMessage_GetBlockTemplateRequest struct {
 	GetBlockTemplateRequest *GetBlockTemplateRequestMessage `protobuf:"bytes,1005,opt,name=getBlockTemplateRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockTemplateResponse struct {
+type GordMessage_GetBlockTemplateResponse struct {
 	GetBlockTemplateResponse *GetBlockTemplateResponseMessage `protobuf:"bytes,1006,opt,name=getBlockTemplateResponse,proto3,oneof"`
 }
 
@@ -1316,7 +1316,7 @@ type KaspadMessage_NotifyBlockAddedResponse struct {
 	NotifyBlockAddedResponse *NotifyBlockAddedResponseMessage `protobuf:"bytes,1008,opt,name=notifyBlockAddedResponse,proto3,oneof"`
 }
 
-type KaspadMessage_BlockAddedNotification struct {
+type GordMessage_BlockAddedNotification struct {
 	BlockAddedNotification *BlockAddedNotificationMessage `protobuf:"bytes,1009,opt,name=blockAddedNotification,proto3,oneof"`
 }
 
@@ -1336,11 +1336,11 @@ type GordMessage_GetSelectedTipHashResponse struct {
 	GetSelectedTipHashResponse *GetSelectedTipHashResponseMessage `protobuf:"bytes,1013,opt,name=getSelectedTipHashResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetMempoolEntryRequest struct {
+type GordMessage_GetMempoolEntryRequest struct {
 	GetMempoolEntryRequest *GetMempoolEntryRequestMessage `protobuf:"bytes,1014,opt,name=getMempoolEntryRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetMempoolEntryResponse struct {
+type GordMessage_GetMempoolEntryResponse struct {
 	GetMempoolEntryResponse *GetMempoolEntryResponseMessage `protobuf:"bytes,1015,opt,name=getMempoolEntryResponse,proto3,oneof"`
 }
 
@@ -1348,11 +1348,11 @@ type KaspadMessage_GetConnectedPeerInfoRequest struct {
 	GetConnectedPeerInfoRequest *GetConnectedPeerInfoRequestMessage `protobuf:"bytes,1016,opt,name=getConnectedPeerInfoRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetConnectedPeerInfoResponse struct {
+type GordMessage_GetConnectedPeerInfoResponse struct {
 	GetConnectedPeerInfoResponse *GetConnectedPeerInfoResponseMessage `protobuf:"bytes,1017,opt,name=getConnectedPeerInfoResponse,proto3,oneof"`
 }
 
-type KaspadMessage_AddPeerRequest struct {
+type GordMessage_AddPeerRequest struct {
 	AddPeerRequest *AddPeerRequestMessage `protobuf:"bytes,1018,opt,name=addPeerRequest,proto3,oneof"`
 }
 
@@ -1360,167 +1360,167 @@ type KaspadMessage_AddPeerResponse struct {
 	AddPeerResponse *AddPeerResponseMessage `protobuf:"bytes,1019,opt,name=addPeerResponse,proto3,oneof"`
 }
 
-type KaspadMessage_SubmitTransactionRequest struct {
+type GordMessage_SubmitTransactionRequest struct {
 	SubmitTransactionRequest *SubmitTransactionRequestMessage `protobuf:"bytes,1020,opt,name=submitTransactionRequest,proto3,oneof"`
 }
 
-type KaspadMessage_SubmitTransactionResponse struct {
+type GordMessage_SubmitTransactionResponse struct {
 	SubmitTransactionResponse *SubmitTransactionResponseMessage `protobuf:"bytes,1021,opt,name=submitTransactionResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyVirtualSelectedParentChainChangedRequest struct {
+type GordMessage_NotifyVirtualSelectedParentChainChangedRequest struct {
 	NotifyVirtualSelectedParentChainChangedRequest *NotifyVirtualSelectedParentChainChangedRequestMessage `protobuf:"bytes,1022,opt,name=notifyVirtualSelectedParentChainChangedRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyVirtualSelectedParentChainChangedResponse struct {
+type GordMessage_NotifyVirtualSelectedParentChainChangedResponse struct {
 	NotifyVirtualSelectedParentChainChangedResponse *NotifyVirtualSelectedParentChainChangedResponseMessage `protobuf:"bytes,1023,opt,name=notifyVirtualSelectedParentChainChangedResponse,proto3,oneof"`
 }
 
-type KaspadMessage_VirtualSelectedParentChainChangedNotification struct {
+type GordMessage_VirtualSelectedParentChainChangedNotification struct {
 	VirtualSelectedParentChainChangedNotification *VirtualSelectedParentChainChangedNotificationMessage `protobuf:"bytes,1024,opt,name=virtualSelectedParentChainChangedNotification,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockRequest struct {
+type GordMessage_GetBlockRequest struct {
 	GetBlockRequest *GetBlockRequestMessage `protobuf:"bytes,1025,opt,name=getBlockRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockResponse struct {
+type GordMessage_GetBlockResponse struct {
 	GetBlockResponse *GetBlockResponseMessage `protobuf:"bytes,1026,opt,name=getBlockResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetSubnetworkRequest struct {
+type GordMessage_GetSubnetworkRequest struct {
 	GetSubnetworkRequest *GetSubnetworkRequestMessage `protobuf:"bytes,1027,opt,name=getSubnetworkRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetSubnetworkResponse struct {
+type GordMessage_GetSubnetworkResponse struct {
 	GetSubnetworkResponse *GetSubnetworkResponseMessage `protobuf:"bytes,1028,opt,name=getSubnetworkResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetVirtualSelectedParentChainFromBlockRequest struct {
+type GordMessage_GetVirtualSelectedParentChainFromBlockRequest struct {
 	GetVirtualSelectedParentChainFromBlockRequest *GetVirtualSelectedParentChainFromBlockRequestMessage `protobuf:"bytes,1029,opt,name=getVirtualSelectedParentChainFromBlockRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetVirtualSelectedParentChainFromBlockResponse struct {
+type GordMessage_GetVirtualSelectedParentChainFromBlockResponse struct {
 	GetVirtualSelectedParentChainFromBlockResponse *GetVirtualSelectedParentChainFromBlockResponseMessage `protobuf:"bytes,1030,opt,name=getVirtualSelectedParentChainFromBlockResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlocksRequest struct {
+type GordMessage_GetBlocksRequest struct {
 	GetBlocksRequest *GetBlocksRequestMessage `protobuf:"bytes,1031,opt,name=getBlocksRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlocksResponse struct {
+type GordMessage_GetBlocksResponse struct {
 	GetBlocksResponse *GetBlocksResponseMessage `protobuf:"bytes,1032,opt,name=getBlocksResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockCountRequest struct {
+type GordMessage_GetBlockCountRequest struct {
 	GetBlockCountRequest *GetBlockCountRequestMessage `protobuf:"bytes,1033,opt,name=getBlockCountRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockCountResponse struct {
+type GordMessage_GetBlockCountResponse struct {
 	GetBlockCountResponse *GetBlockCountResponseMessage `protobuf:"bytes,1034,opt,name=getBlockCountResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockDagInfoRequest struct {
+type GordMessage_GetBlockDagInfoRequest struct {
 	GetBlockDagInfoRequest *GetBlockDagInfoRequestMessage `protobuf:"bytes,1035,opt,name=getBlockDagInfoRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockDagInfoResponse struct {
+type GordMessage_GetBlockDagInfoResponse struct {
 	GetBlockDagInfoResponse *GetBlockDagInfoResponseMessage `protobuf:"bytes,1036,opt,name=getBlockDagInfoResponse,proto3,oneof"`
 }
 
-type KaspadMessage_ResolveFinalityConflictRequest struct {
+type GordMessage_ResolveFinalityConflictRequest struct {
 	ResolveFinalityConflictRequest *ResolveFinalityConflictRequestMessage `protobuf:"bytes,1037,opt,name=resolveFinalityConflictRequest,proto3,oneof"`
 }
 
-type KaspadMessage_ResolveFinalityConflictResponse struct {
+type GordMessage_ResolveFinalityConflictResponse struct {
 	ResolveFinalityConflictResponse *ResolveFinalityConflictResponseMessage `protobuf:"bytes,1038,opt,name=resolveFinalityConflictResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyFinalityConflictsRequest struct {
+type GordMessage_NotifyFinalityConflictsRequest struct {
 	NotifyFinalityConflictsRequest *NotifyFinalityConflictsRequestMessage `protobuf:"bytes,1039,opt,name=notifyFinalityConflictsRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyFinalityConflictsResponse struct {
+type GordMessage_NotifyFinalityConflictsResponse struct {
 	NotifyFinalityConflictsResponse *NotifyFinalityConflictsResponseMessage `protobuf:"bytes,1040,opt,name=notifyFinalityConflictsResponse,proto3,oneof"`
 }
 
-type KaspadMessage_FinalityConflictNotification struct {
+type GordMessage_FinalityConflictNotification struct {
 	FinalityConflictNotification *FinalityConflictNotificationMessage `protobuf:"bytes,1041,opt,name=finalityConflictNotification,proto3,oneof"`
 }
 
-type KaspadMessage_FinalityConflictResolvedNotification struct {
+type GordMessage_FinalityConflictResolvedNotification struct {
 	FinalityConflictResolvedNotification *FinalityConflictResolvedNotificationMessage `protobuf:"bytes,1042,opt,name=finalityConflictResolvedNotification,proto3,oneof"`
 }
 
-type KaspadMessage_GetMempoolEntriesRequest struct {
+type GordMessage_GetMempoolEntriesRequest struct {
 	GetMempoolEntriesRequest *GetMempoolEntriesRequestMessage `protobuf:"bytes,1043,opt,name=getMempoolEntriesRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetMempoolEntriesResponse struct {
+type GordMessage_GetMempoolEntriesResponse struct {
 	GetMempoolEntriesResponse *GetMempoolEntriesResponseMessage `protobuf:"bytes,1044,opt,name=getMempoolEntriesResponse,proto3,oneof"`
 }
 
-type KaspadMessage_ShutDownRequest struct {
+type GordMessage_ShutDownRequest struct {
 	ShutDownRequest *ShutDownRequestMessage `protobuf:"bytes,1045,opt,name=shutDownRequest,proto3,oneof"`
 }
 
-type KaspadMessage_ShutDownResponse struct {
+type GordMessage_ShutDownResponse struct {
 	ShutDownResponse *ShutDownResponseMessage `protobuf:"bytes,1046,opt,name=shutDownResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetHeadersRequest struct {
+type GordMessage_GetHeadersRequest struct {
 	GetHeadersRequest *GetHeadersRequestMessage `protobuf:"bytes,1047,opt,name=getHeadersRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetHeadersResponse struct {
+type GordMessage_GetHeadersResponse struct {
 	GetHeadersResponse *GetHeadersResponseMessage `protobuf:"bytes,1048,opt,name=getHeadersResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyUtxosChangedRequest struct {
+type GordMessage_NotifyUtxosChangedRequest struct {
 	NotifyUtxosChangedRequest *NotifyUtxosChangedRequestMessage `protobuf:"bytes,1049,opt,name=notifyUtxosChangedRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyUtxosChangedResponse struct {
+type GordMessage_NotifyUtxosChangedResponse struct {
 	NotifyUtxosChangedResponse *NotifyUtxosChangedResponseMessage `protobuf:"bytes,1050,opt,name=notifyUtxosChangedResponse,proto3,oneof"`
 }
 
-type KaspadMessage_UtxosChangedNotification struct {
+type GordMessage_UtxosChangedNotification struct {
 	UtxosChangedNotification *UtxosChangedNotificationMessage `protobuf:"bytes,1051,opt,name=utxosChangedNotification,proto3,oneof"`
 }
 
-type KaspadMessage_GetUtxosByAddressesRequest struct {
+type GordMessage_GetUtxosByAddressesRequest struct {
 	GetUtxosByAddressesRequest *GetUtxosByAddressesRequestMessage `protobuf:"bytes,1052,opt,name=getUtxosByAddressesRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetUtxosByAddressesResponse struct {
+type GordMessage_GetUtxosByAddressesResponse struct {
 	GetUtxosByAddressesResponse *GetUtxosByAddressesResponseMessage `protobuf:"bytes,1053,opt,name=getUtxosByAddressesResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetVirtualSelectedParentBlueScoreRequest struct {
+type GordMessage_GetVirtualSelectedParentBlueScoreRequest struct {
 	GetVirtualSelectedParentBlueScoreRequest *GetVirtualSelectedParentBlueScoreRequestMessage `protobuf:"bytes,1054,opt,name=getVirtualSelectedParentBlueScoreRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetVirtualSelectedParentBlueScoreResponse struct {
+type GordMessage_GetVirtualSelectedParentBlueScoreResponse struct {
 	GetVirtualSelectedParentBlueScoreResponse *GetVirtualSelectedParentBlueScoreResponseMessage `protobuf:"bytes,1055,opt,name=getVirtualSelectedParentBlueScoreResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest struct {
+type GordMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest struct {
 	NotifyVirtualSelectedParentBlueScoreChangedRequest *NotifyVirtualSelectedParentBlueScoreChangedRequestMessage `protobuf:"bytes,1056,opt,name=notifyVirtualSelectedParentBlueScoreChangedRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse struct {
+type GordMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse struct {
 	NotifyVirtualSelectedParentBlueScoreChangedResponse *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage `protobuf:"bytes,1057,opt,name=notifyVirtualSelectedParentBlueScoreChangedResponse,proto3,oneof"`
 }
 
-type KaspadMessage_VirtualSelectedParentBlueScoreChangedNotification struct {
+type GordMessage_VirtualSelectedParentBlueScoreChangedNotification struct {
 	VirtualSelectedParentBlueScoreChangedNotification *VirtualSelectedParentBlueScoreChangedNotificationMessage `protobuf:"bytes,1058,opt,name=virtualSelectedParentBlueScoreChangedNotification,proto3,oneof"`
 }
 
-type KaspadMessage_BanRequest struct {
+type GordMessage_BanRequest struct {
 	BanRequest *BanRequestMessage `protobuf:"bytes,1059,opt,name=banRequest,proto3,oneof"`
 }
 
-type KaspadMessage_BanResponse struct {
+type GordMessage_BanResponse struct {
 	BanResponse *BanResponseMessage `protobuf:"bytes,1060,opt,name=banResponse,proto3,oneof"`
 }
 
@@ -1528,349 +1528,349 @@ type KaspadMessage_UnbanRequest struct {
 	UnbanRequest *UnbanRequestMessage `protobuf:"bytes,1061,opt,name=unbanRequest,proto3,oneof"`
 }
 
-type KaspadMessage_UnbanResponse struct {
+type GordMessage_UnbanResponse struct {
 	UnbanResponse *UnbanResponseMessage `protobuf:"bytes,1062,opt,name=unbanResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetInfoRequest struct {
+type GordMessage_GetInfoRequest struct {
 	GetInfoRequest *GetInfoRequestMessage `protobuf:"bytes,1063,opt,name=getInfoRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetInfoResponse struct {
+type GordMessage_GetInfoResponse struct {
 	GetInfoResponse *GetInfoResponseMessage `protobuf:"bytes,1064,opt,name=getInfoResponse,proto3,oneof"`
 }
 
-type KaspadMessage_StopNotifyingUtxosChangedRequest struct {
+type GordMessage_StopNotifyingUtxosChangedRequest struct {
 	StopNotifyingUtxosChangedRequest *StopNotifyingUtxosChangedRequestMessage `protobuf:"bytes,1065,opt,name=stopNotifyingUtxosChangedRequest,proto3,oneof"`
 }
 
-type KaspadMessage_StopNotifyingUtxosChangedResponse struct {
+type GordMessage_StopNotifyingUtxosChangedResponse struct {
 	StopNotifyingUtxosChangedResponse *StopNotifyingUtxosChangedResponseMessage `protobuf:"bytes,1066,opt,name=stopNotifyingUtxosChangedResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyPruningPointUTXOSetOverrideRequest struct {
+type GordMessage_NotifyPruningPointUTXOSetOverrideRequest struct {
 	NotifyPruningPointUTXOSetOverrideRequest *NotifyPruningPointUTXOSetOverrideRequestMessage `protobuf:"bytes,1067,opt,name=notifyPruningPointUTXOSetOverrideRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyPruningPointUTXOSetOverrideResponse struct {
+type GordMessage_NotifyPruningPointUTXOSetOverrideResponse struct {
 	NotifyPruningPointUTXOSetOverrideResponse *NotifyPruningPointUTXOSetOverrideResponseMessage `protobuf:"bytes,1068,opt,name=notifyPruningPointUTXOSetOverrideResponse,proto3,oneof"`
 }
 
-type KaspadMessage_PruningPointUTXOSetOverrideNotification struct {
+type GordMessage_PruningPointUTXOSetOverrideNotification struct {
 	PruningPointUTXOSetOverrideNotification *PruningPointUTXOSetOverrideNotificationMessage `protobuf:"bytes,1069,opt,name=pruningPointUTXOSetOverrideNotification,proto3,oneof"`
 }
 
-type KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest struct {
+type GordMessage_StopNotifyingPruningPointUTXOSetOverrideRequest struct {
 	StopNotifyingPruningPointUTXOSetOverrideRequest *StopNotifyingPruningPointUTXOSetOverrideRequestMessage `protobuf:"bytes,1070,opt,name=stopNotifyingPruningPointUTXOSetOverrideRequest,proto3,oneof"`
 }
 
-type KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse struct {
+type GordMessage_StopNotifyingPruningPointUTXOSetOverrideResponse struct {
 	StopNotifyingPruningPointUTXOSetOverrideResponse *StopNotifyingPruningPointUTXOSetOverrideResponseMessage `protobuf:"bytes,1071,opt,name=stopNotifyingPruningPointUTXOSetOverrideResponse,proto3,oneof"`
 }
 
-type KaspadMessage_EstimateNetworkHashesPerSecondRequest struct {
+type GordMessage_EstimateNetworkHashesPerSecondRequest struct {
 	EstimateNetworkHashesPerSecondRequest *EstimateNetworkHashesPerSecondRequestMessage `protobuf:"bytes,1072,opt,name=estimateNetworkHashesPerSecondRequest,proto3,oneof"`
 }
 
-type KaspadMessage_EstimateNetworkHashesPerSecondResponse struct {
+type GordMessage_EstimateNetworkHashesPerSecondResponse struct {
 	EstimateNetworkHashesPerSecondResponse *EstimateNetworkHashesPerSecondResponseMessage `protobuf:"bytes,1073,opt,name=estimateNetworkHashesPerSecondResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyVirtualDaaScoreChangedRequest struct {
+type GordMessage_NotifyVirtualDaaScoreChangedRequest struct {
 	NotifyVirtualDaaScoreChangedRequest *NotifyVirtualDaaScoreChangedRequestMessage `protobuf:"bytes,1074,opt,name=notifyVirtualDaaScoreChangedRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyVirtualDaaScoreChangedResponse struct {
+type GordMessage_NotifyVirtualDaaScoreChangedResponse struct {
 	NotifyVirtualDaaScoreChangedResponse *NotifyVirtualDaaScoreChangedResponseMessage `protobuf:"bytes,1075,opt,name=notifyVirtualDaaScoreChangedResponse,proto3,oneof"`
 }
 
-type KaspadMessage_VirtualDaaScoreChangedNotification struct {
+type GordMessage_VirtualDaaScoreChangedNotification struct {
 	VirtualDaaScoreChangedNotification *VirtualDaaScoreChangedNotificationMessage `protobuf:"bytes,1076,opt,name=virtualDaaScoreChangedNotification,proto3,oneof"`
 }
 
-type KaspadMessage_GetBalanceByAddressRequest struct {
+type GordMessage_GetBalanceByAddressRequest struct {
 	GetBalanceByAddressRequest *GetBalanceByAddressRequestMessage `protobuf:"bytes,1077,opt,name=getBalanceByAddressRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBalanceByAddressResponse struct {
+type GordMessage_GetBalanceByAddressResponse struct {
 	GetBalanceByAddressResponse *GetBalanceByAddressResponseMessage `protobuf:"bytes,1078,opt,name=getBalanceByAddressResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetBalancesByAddressesRequest struct {
+type GordMessage_GetBalancesByAddressesRequest struct {
 	GetBalancesByAddressesRequest *GetBalancesByAddressesRequestMessage `protobuf:"bytes,1079,opt,name=getBalancesByAddressesRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetBalancesByAddressesResponse struct {
+type GordMessage_GetBalancesByAddressesResponse struct {
 	GetBalancesByAddressesResponse *GetBalancesByAddressesResponseMessage `protobuf:"bytes,1080,opt,name=getBalancesByAddressesResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyNewBlockTemplateRequest struct {
+type GordMessage_NotifyNewBlockTemplateRequest struct {
 	NotifyNewBlockTemplateRequest *NotifyNewBlockTemplateRequestMessage `protobuf:"bytes,1081,opt,name=notifyNewBlockTemplateRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyNewBlockTemplateResponse struct {
+type GordMessage_NotifyNewBlockTemplateResponse struct {
 	NotifyNewBlockTemplateResponse *NotifyNewBlockTemplateResponseMessage `protobuf:"bytes,1082,opt,name=notifyNewBlockTemplateResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NewBlockTemplateNotification struct {
+type GordMessage_NewBlockTemplateNotification struct {
 	NewBlockTemplateNotification *NewBlockTemplateNotificationMessage `protobuf:"bytes,1083,opt,name=newBlockTemplateNotification,proto3,oneof"`
 }
 
-type KaspadMessage_GetMempoolEntriesByAddressesRequest struct {
+type GordMessage_GetMempoolEntriesByAddressesRequest struct {
 	GetMempoolEntriesByAddressesRequest *GetMempoolEntriesByAddressesRequestMessage `protobuf:"bytes,1084,opt,name=getMempoolEntriesByAddressesRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetMempoolEntriesByAddressesResponse struct {
+type GordMessage_GetMempoolEntriesByAddressesResponse struct {
 	GetMempoolEntriesByAddressesResponse *GetMempoolEntriesByAddressesResponseMessage `protobuf:"bytes,1085,opt,name=getMempoolEntriesByAddressesResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetCoinSupplyRequest struct {
+type GordMessage_GetCoinSupplyRequest struct {
 	GetCoinSupplyRequest *GetCoinSupplyRequestMessage `protobuf:"bytes,1086,opt,name=getCoinSupplyRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetCoinSupplyResponse struct {
+type GordMessage_GetCoinSupplyResponse struct {
 	GetCoinSupplyResponse *GetCoinSupplyResponseMessage `protobuf:"bytes,1087,opt,name=getCoinSupplyResponse,proto3,oneof"`
 }
 
-func (*KaspadMessage_Addresses) isKaspadMessage_Payload() {}
+func (*GordMessage_Addresses) isGordMessage_Payload() {}
 
 func (*KaspadMessage_Block) isKaspadMessage_Payload() {}
 
-func (*KaspadMessage_Transaction) isKaspadMessage_Payload() {}
+func (*GordMessage_Transaction) isGordMessage_Payload() {}
 
-func (*KaspadMessage_BlockLocator) isKaspadMessage_Payload() {}
+func (*GordMessage_BlockLocator) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestAddresses) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestAddresses) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestRelayBlocks) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestRelayBlocks) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestTransactions) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestTransactions) isGordMessage_Payload() {}
 
-func (*KaspadMessage_IbdBlock) isKaspadMessage_Payload() {}
+func (*GordMessage_IbdBlock) isGordMessage_Payload() {}
 
-func (*KaspadMessage_InvRelayBlock) isKaspadMessage_Payload() {}
+func (*GordMessage_InvRelayBlock) isGordMessage_Payload() {}
 
-func (*KaspadMessage_InvTransactions) isKaspadMessage_Payload() {}
+func (*GordMessage_InvTransactions) isGordMessage_Payload() {}
 
-func (*KaspadMessage_Ping) isKaspadMessage_Payload() {}
+func (*GordMessage_Ping) isGordMessage_Payload() {}
 
-func (*KaspadMessage_Pong) isKaspadMessage_Payload() {}
+func (*GordMessage_Pong) isGordMessage_Payload() {}
 
-func (*KaspadMessage_Verack) isKaspadMessage_Payload() {}
+func (*GordMessage_Verack) isGordMessage_Payload() {}
 
-func (*KaspadMessage_Version) isKaspadMessage_Payload() {}
+func (*GordMessage_Version) isGordMessage_Payload() {}
 
-func (*KaspadMessage_TransactionNotFound) isKaspadMessage_Payload() {}
+func (*GordMessage_TransactionNotFound) isGordMessage_Payload() {}
 
-func (*KaspadMessage_Reject) isKaspadMessage_Payload() {}
+func (*GordMessage_Reject) isGordMessage_Payload() {}
 
-func (*KaspadMessage_PruningPointUtxoSetChunk) isKaspadMessage_Payload() {}
+func (*GordMessage_PruningPointUtxoSetChunk) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestIBDBlocks) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestIBDBlocks) isGordMessage_Payload() {}
 
-func (*KaspadMessage_UnexpectedPruningPoint) isKaspadMessage_Payload() {}
+func (*GordMessage_UnexpectedPruningPoint) isGordMessage_Payload() {}
 
-func (*KaspadMessage_IbdBlockLocator) isKaspadMessage_Payload() {}
+func (*GordMessage_IbdBlockLocator) isGordMessage_Payload() {}
 
-func (*KaspadMessage_IbdBlockLocatorHighestHash) isKaspadMessage_Payload() {}
+func (*GordMessage_IbdBlockLocatorHighestHash) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestNextPruningPointUtxoSetChunk) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestNextPruningPointUtxoSetChunk) isGordMessage_Payload() {}
 
-func (*KaspadMessage_DonePruningPointUtxoSetChunks) isKaspadMessage_Payload() {}
+func (*GordMessage_DonePruningPointUtxoSetChunks) isGordMessage_Payload() {}
 
-func (*KaspadMessage_IbdBlockLocatorHighestHashNotFound) isKaspadMessage_Payload() {}
+func (*GordMessage_IbdBlockLocatorHighestHashNotFound) isGordMessage_Payload() {}
 
-func (*KaspadMessage_BlockWithTrustedData) isKaspadMessage_Payload() {}
+func (*GordMessage_BlockWithTrustedData) isGordMessage_Payload() {}
 
-func (*KaspadMessage_DoneBlocksWithTrustedData) isKaspadMessage_Payload() {}
+func (*GordMessage_DoneBlocksWithTrustedData) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestPruningPointAndItsAnticone) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestPruningPointAndItsAnticone) isGordMessage_Payload() {}
 
-func (*KaspadMessage_BlockHeaders) isKaspadMessage_Payload() {}
+func (*GordMessage_BlockHeaders) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestNextHeaders) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestNextHeaders) isGordMessage_Payload() {}
 
-func (*KaspadMessage_DoneHeaders) isKaspadMessage_Payload() {}
+func (*GordMessage_DoneHeaders) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestPruningPointUTXOSet) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestPruningPointUTXOSet) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestHeaders) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestHeaders) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestBlockLocator) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestBlockLocator) isGordMessage_Payload() {}
 
-func (*KaspadMessage_PruningPoints) isKaspadMessage_Payload() {}
+func (*GordMessage_PruningPoints) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestPruningPointProof) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestPruningPointProof) isGordMessage_Payload() {}
 
-func (*KaspadMessage_PruningPointProof) isKaspadMessage_Payload() {}
+func (*GordMessage_PruningPointProof) isGordMessage_Payload() {}
 
-func (*KaspadMessage_Ready) isKaspadMessage_Payload() {}
+func (*GordMessage_Ready) isGordMessage_Payload() {}
 
-func (*KaspadMessage_BlockWithTrustedDataV4) isKaspadMessage_Payload() {}
+func (*GordMessage_BlockWithTrustedDataV4) isGordMessage_Payload() {}
 
-func (*KaspadMessage_TrustedData) isKaspadMessage_Payload() {}
+func (*GordMessage_TrustedData) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestIBDChainBlockLocator) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestIBDChainBlockLocator) isGordMessage_Payload() {}
 
-func (*KaspadMessage_IbdChainBlockLocator) isKaspadMessage_Payload() {}
+func (*GordMessage_IbdChainBlockLocator) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestAnticone) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestAnticone) isGordMessage_Payload() {}
 
-func (*KaspadMessage_RequestNextPruningPointAndItsAnticoneBlocks) isKaspadMessage_Payload() {}
+func (*GordMessage_RequestNextPruningPointAndItsAnticoneBlocks) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetCurrentNetworkRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetCurrentNetworkRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetCurrentNetworkResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetCurrentNetworkResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_SubmitBlockRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_SubmitBlockRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_SubmitBlockResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_SubmitBlockResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockTemplateRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBlockTemplateRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockTemplateResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBlockTemplateResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyBlockAddedRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyBlockAddedRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyBlockAddedResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyBlockAddedResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_BlockAddedNotification) isKaspadMessage_Payload() {}
+func (*GordMessage_BlockAddedNotification) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetPeerAddressesRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetPeerAddressesRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetPeerAddressesResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetPeerAddressesResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetSelectedTipHashRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetSelectedTipHashRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetSelectedTipHashResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetSelectedTipHashResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetMempoolEntryRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetMempoolEntryRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetMempoolEntryResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetMempoolEntryResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetConnectedPeerInfoRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetConnectedPeerInfoRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetConnectedPeerInfoResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetConnectedPeerInfoResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_AddPeerRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_AddPeerRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_AddPeerResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_AddPeerResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_SubmitTransactionRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_SubmitTransactionRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_SubmitTransactionResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_SubmitTransactionResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyVirtualSelectedParentChainChangedRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyVirtualSelectedParentChainChangedRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyVirtualSelectedParentChainChangedResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyVirtualSelectedParentChainChangedResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_VirtualSelectedParentChainChangedNotification) isKaspadMessage_Payload() {}
+func (*GordMessage_VirtualSelectedParentChainChangedNotification) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBlockRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBlockResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetSubnetworkRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetSubnetworkRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetSubnetworkResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetSubnetworkResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetVirtualSelectedParentChainFromBlockRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetVirtualSelectedParentChainFromBlockRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetVirtualSelectedParentChainFromBlockResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetVirtualSelectedParentChainFromBlockResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetBlocksRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBlocksRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetBlocksResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBlocksResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockCountRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBlockCountRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockCountResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBlockCountResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockDagInfoRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBlockDagInfoRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetBlockDagInfoResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBlockDagInfoResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_ResolveFinalityConflictRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_ResolveFinalityConflictRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_ResolveFinalityConflictResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_ResolveFinalityConflictResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyFinalityConflictsRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyFinalityConflictsRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyFinalityConflictsResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyFinalityConflictsResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_FinalityConflictNotification) isKaspadMessage_Payload() {}
+func (*GordMessage_FinalityConflictNotification) isGordMessage_Payload() {}
 
-func (*KaspadMessage_FinalityConflictResolvedNotification) isKaspadMessage_Payload() {}
+func (*GordMessage_FinalityConflictResolvedNotification) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetMempoolEntriesRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetMempoolEntriesRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetMempoolEntriesResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetMempoolEntriesResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_ShutDownRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_ShutDownRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_ShutDownResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_ShutDownResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetHeadersRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetHeadersRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetHeadersResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetHeadersResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyUtxosChangedRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyUtxosChangedRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyUtxosChangedResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyUtxosChangedResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_UtxosChangedNotification) isKaspadMessage_Payload() {}
+func (*GordMessage_UtxosChangedNotification) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetUtxosByAddressesRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetUtxosByAddressesRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetUtxosByAddressesResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetUtxosByAddressesResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetVirtualSelectedParentBlueScoreRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetVirtualSelectedParentBlueScoreRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetVirtualSelectedParentBlueScoreResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetVirtualSelectedParentBlueScoreResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_VirtualSelectedParentBlueScoreChangedNotification) isKaspadMessage_Payload() {}
+func (*GordMessage_VirtualSelectedParentBlueScoreChangedNotification) isGordMessage_Payload() {}
 
-func (*KaspadMessage_BanRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_BanRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_BanResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_BanResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_UnbanRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_UnbanRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_UnbanResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_UnbanResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetInfoRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetInfoRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetInfoResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetInfoResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_StopNotifyingUtxosChangedRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_StopNotifyingUtxosChangedRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_StopNotifyingUtxosChangedResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_StopNotifyingUtxosChangedResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyPruningPointUTXOSetOverrideRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyPruningPointUTXOSetOverrideRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyPruningPointUTXOSetOverrideResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyPruningPointUTXOSetOverrideResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_PruningPointUTXOSetOverrideNotification) isKaspadMessage_Payload() {}
+func (*GordMessage_PruningPointUTXOSetOverrideNotification) isGordMessage_Payload() {}
 
-func (*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_EstimateNetworkHashesPerSecondRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_EstimateNetworkHashesPerSecondRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_EstimateNetworkHashesPerSecondResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_EstimateNetworkHashesPerSecondResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyVirtualDaaScoreChangedRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyVirtualDaaScoreChangedRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyVirtualDaaScoreChangedResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyVirtualDaaScoreChangedResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_VirtualDaaScoreChangedNotification) isKaspadMessage_Payload() {}
+func (*GordMessage_VirtualDaaScoreChangedNotification) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetBalanceByAddressRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBalanceByAddressRequest) isGordMessage_Payload() {}
 
 func (*GordMessage_GetBalanceByAddressResponse) isGordMessage_Payload() {}
 
@@ -2804,7 +2804,7 @@ func file_messages_proto_rawDescGZIP() []byte {
 
 var file_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_messages_proto_goTypes = []interface{}{
-	(*KaspadMessage)(nil),                                              // 0: protowire.KaspadMessage
+	(*KaspadMessage)(nil),                                              // 0: protowire.GordMessage
 	(*AddressesMessage)(nil),                                           // 1: protowire.AddressesMessage
 	(*BlockMessage)(nil),                                               // 2: protowire.BlockMessage
 	(*TransactionMessage)(nil),                                         // 3: protowire.TransactionMessage
