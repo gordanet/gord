@@ -48,7 +48,7 @@ func TestEstimateMassAfterSignatures(t *testing.T) {
 			t.Fatalf("Sign: %+v", err)
 		}
 
-		signedTxStep2Bytes, err := libkaspawallet.Sign(params, mnemonics[1:2], signedTxStep1Bytes, false)
+		signedTxStep2Bytes, err := libgorwallet.Sign(params, mnemonics[1:2], signedTxStep1Bytes, false)
 		if err != nil {
 			t.Fatalf("Sign: %+v", err)
 		}
