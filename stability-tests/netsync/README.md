@@ -5,7 +5,7 @@ Note: the test doesn't delete kaspad's data directory and it's the user
 responsibility to delete the data directories that appear in the log.
 
 ## Running
- 1. `go install kaspad`.
+ 1. `go install gord`.
  2. `go install ./...`.
  3. `cd run`
  4. `./run.sh`
