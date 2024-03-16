@@ -48,7 +48,7 @@ func TestAmountCreation(t *testing.T) {
 			name:     "rounding up",
 			amount:   54.999999999999943157,
 			valid:    true,
-			expected: 55 * constants.SeepPerGor,
+			expected: 55 * constants.SompiPerGor,
 		},
 		{
 			name:     "rounding down",
@@ -143,7 +143,7 @@ func TestAmountUnitConversions(t *testing.T) {
 			amount:    44433322211100,
 			unit:      AmountSeep,
 			converted: 44433322211100,
-			s:         "44433322211100 Seep",
+			s:         "44433322211100 Sompi",
 		},
 		{
 
@@ -219,7 +219,7 @@ func TestAmountMulF64(t *testing.T) {
 			name: "Multiply by 0.",
 			amt:  1e8, // 1 GOR
 			mul:  0,
-			res:  0, // 0 KAS
+			res:  0, // 0 GOR
 		},
 		{
 			name: "Multiply 1 by 0.5.",
