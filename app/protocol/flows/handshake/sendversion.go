@@ -17,7 +17,7 @@ var (
 	userAgentName = "gord"
 
 	// userAgentVersion is the user agent version and is used to help
-	// identify ourselves to other kaspa peers.
+	// identify ourselves to other gor peers.
 	userAgentVersion = version.Version()
 
 	// defaultServices describes the default services that are supported by
