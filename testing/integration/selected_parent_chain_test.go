@@ -10,8 +10,8 @@ import (
 )
 
 func TestVirtualSelectedParentChain(t *testing.T) {
-	// Setup a couple of kaspad instances
-	kaspad1, kaspad2, _, teardown := standardSetup(t)
+	// Setup a couple of gord instances
+	gord1, gor2, _, teardown := standardSetup(t)
 	defer teardown()
 
 	// Register to virtual selected parent chain changes
@@ -24,7 +24,7 @@ func TestVirtualSelectedParentChain(t *testing.T) {
 		t.Fatalf("Failed to register for virtual selected parent chain change notifications: %s", err)
 	}
 
-	// In kaspad1, mine a chain over the genesis and make sure
+	// In gord1, mine a chain over the genesis and make sure
 	// each chain changed notifications contains only one entry
 	// in `added` and nothing in `removed`
 	chain1TipHash := consensushashing.BlockHash(kaspad1.config.NetParams().GenesisBlock)
@@ -50,16 +50,16 @@ func TestVirtualSelectedParentChain(t *testing.T) {
 		chain1TipHashString = minedBlockHashString
 	}
 
-	// In kaspad2, mine a different chain of `blockAmountToMine` + 1
+	// In gord2, mine a different chain of `blockAmountToMine` + 1
 	// blocks over the genesis
 	var chain2Tip *externalapi.DomainBlock
 	for i := 0; i < blockAmountToMine+1; i++ {
 		chain2Tip = mineNextBlock(t, kaspad2)
 	}
 
-	// Connect the two kaspads. This should trigger sync
+	// Connect the two gords. This should trigger sync
 	// between the two nodes
-	connect(t, kaspad1, kaspad2)
+	connect(t, gord1, gord2)
 
 	chain2TipHash := consensushashing.BlockHash(chain2Tip)
 	chain2TipHashString := chain2TipHash.String()
