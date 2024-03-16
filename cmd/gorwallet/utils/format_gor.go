@@ -12,7 +12,7 @@ import (
 )
 
 // FormatGor takes the amount of seeps as uint64, and returns amount of GOR with 8  decimal places
-func FormatSdr(amount uint64) string {
+func FormatGor(amount uint64) string {
 	res := "                   "
 	if amount > 0 {
 		res = fmt.Sprintf("%19.8f", float64(amount)/constants.SompiPerGor)
