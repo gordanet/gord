@@ -120,7 +120,7 @@ var bnStrings = map[GorNet]string{
 }
 
 // String returns the GorNet in human-readable form.
-func (n GordNet) String() string {
+func (n GorNet) String() string {
 	if s, ok := bnStrings[n]; ok {
 		return s
 	}
