@@ -6,9 +6,9 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *KaspadMessage_BlockLocator) toAppMessage() (appmessage.Message, error) {
+func (x *GordMessage_BlockLocator) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_BlockLocator is nil")
+		return nil, errors.Wrapf(errorNil, "GordMessage_BlockLocator is nil")
 	}
 	hashes, err := x.BlockLocator.toAppMessage()
 	if err != nil {
