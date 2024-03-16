@@ -5,7 +5,8 @@
 package txscript
 
 import (
-	"github.com/kaspanet/go-secp256k1"
+	"github.com/gordanet/go-secp256k1"
+	"github.com/gordanet/gord-muhash@v0.0.4"
 )
 
 // sigCacheEntry represents an entry in the SigCache. Entries within the
