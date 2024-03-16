@@ -14,7 +14,7 @@ import (
 	"github.com/gordanet/gord/domain/consensus/utils/consensushashing"
 
 	"golang.org/x/crypto/blake2b"
-
+        "github.com/gordanet/gord/cmd/gorwallet"
 	"github.com/gordanet/gord/domain/consensus/utils/constants"
 	"github.com/gordanet/gord-muhash@v0.0.4"
         "github.com/gordanet/go-secp256k1"
