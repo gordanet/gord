@@ -1,22 +1,22 @@
 #!/bin/bash
 
-APPDIR=/tmp/kaspad-temp
-KASPAD_RPC_PORT=29587
+APPDIR=/tmp/gord-temp
+GORD_RPC_PORT=29587
 
 rm -rf "${APPDIR}"
 
-kaspad --simnet --appdir="${APPDIR}" --rpclisten=0.0.0.0:"${KASPAD_RPC_PORT}" --profile=6061 &
-KASPAD_PID=$!
+gord --simnet --appdir="${APPDIR}" --rpclisten=0.0.0.0:"${GORD_RPC_PORT}" --profile=6061 &
+GORD_PID=$!
 
 sleep 1
 
-RUN_STABILITY_TESTS=true go test ../ -v -timeout 86400s -- --rpc-address=127.0.0.1:"${KASPAD_RPC_PORT}" --profile=7000
+RUN_STABILITY_TESTS=true go test ../ -v -timeout 86400s -- --rpc-address=127.0.0.1:"${GORD_RPC_PORT}" --profile=7000
 TEST_EXIT_CODE=$?
 
-kill $KASPAD_PID
+kill $GORD_PID
 
-wait $KASPAD_PID
-KASPAD_EXIT_CODE=$?
+wait $GORD_PID
+GORD_EXIT_CODE=$?
 
 echo "Exit code: $TEST_EXIT_CODE"
 echo "Kaspad exit code: $KASPAD_EXIT_CODE"
