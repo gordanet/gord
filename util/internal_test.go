@@ -54,14 +54,14 @@ func TstAddressSAddrP2PK(addr string) []byte {
 }
 
 // TstAddressSAddr returns the expected script address bytes for
-// ECDSA P2PK kaspa addresses.
+// ECDSA P2PK gor addresses.
 func TstAddressSAddrP2PKECDSA(addr string) []byte {
 	_, decoded, _, _ := bech32.Decode(addr)
 	return decoded[:PublicKeySizeECDSA]
 }
 
 // TstAddressSAddrP2SH returns the expected script address bytes for
-// P2SH kaspa addresses.
+// P2SH gor addresses.
 func TstAddressSAddrP2SH(addr string) []byte {
 	_, decoded, _, _ := bech32.Decode(addr)
 	return decoded[:blake2b.Size256]
