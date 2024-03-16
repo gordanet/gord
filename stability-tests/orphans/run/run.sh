@@ -1,23 +1,23 @@
 #!/bin/bash
-rm -rf /tmp/kaspad-temp
+rm -rf /tmp/gord-temp
 
-kaspad --simnet --appdir=/tmp/kaspad-temp --profile=6061 &
-KASPAD_PID=$!
+gord --simnet --appdir=/tmp/gordd-temp --profile=6061 &
+GORD_PID=$!
 
 sleep 1
 
 orphans --simnet -alocalhost:16511 -n20 --profile=7000
 TEST_EXIT_CODE=$?
 
-kill $KASPAD_PID
+kill $GORD_PID
 
-wait $KASPAD_PID
+wait $GORD_PID
 KASPAD_EXIT_CODE=$?
 
 echo "Exit code: $TEST_EXIT_CODE"
-echo "Kaspad exit code: $KASPAD_EXIT_CODE"
+echo "Gord exit code: $GORD_EXIT_CODE"
 
-if [ $TEST_EXIT_CODE -eq 0 ] && [ $KASPAD_EXIT_CODE -eq 0 ]; then
+if [ $TEST_EXIT_CODE -eq 0 ] && [ $GORD_EXIT_CODE -eq 0 ]; then
   echo "orphans test: PASSED"
   exit 0
 fi
