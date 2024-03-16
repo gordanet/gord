@@ -5,9 +5,9 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *KaspadMessage_Reject) toAppMessage() (appmessage.Message, error) {
+func (x *GordMessage_Reject) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_Reject is nil")
+		return nil, errors.Wrapf(errorNil, "GordMessage_Reject is nil")
 	}
 	return x.Reject.toAppMessage()
 }
@@ -21,7 +21,7 @@ func (x *RejectMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *KaspadMessage_Reject) fromAppMessage(msgReject *appmessage.MsgReject) error {
+func (x *GordMessage_Reject) fromAppMessage(msgReject *appmessage.MsgReject) error {
 	x.Reject = &RejectMessage{
 		Reason: msgReject.Reason,
 	}
