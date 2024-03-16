@@ -1,8 +1,8 @@
-ARG KASPAD_IMAGE
-ARG KASPAMINER_IMAGE
+ARG GORD_IMAGE
+ARG GORDMINER_IMAGE
 
-FROM ${KASPAD_IMAGE} as kaspad
-FROM ${KASPAMINER_IMAGE} as kaspaminer
+FROM ${GORD_IMAGE} as gord
+FROM ${GORDMINER_IMAGE} as gorminer
 
 FROM golang:1.19-alpine
 
@@ -19,8 +19,8 @@ RUN go mod download
 
 COPY . .
 
-COPY --from=kaspad /app/ /app/
-COPY --from=kaspaminer /app/ /app/
+COPY --from=gord /app/ /app/
+COPY --from=gorminer /app/ /app/
 ENV PATH="/app:${PATH}"
 
 WORKDIR /go/src/github.com/gordanet/gord/stability-tests
