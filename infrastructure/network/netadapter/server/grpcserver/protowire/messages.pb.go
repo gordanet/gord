@@ -2936,136 +2936,136 @@ var file_messages_proto_goTypes = []interface{}{
 	(*GetCoinSupplyResponseMessage)(nil),                               // 129: protowire.GetCoinSupplyResponseMessage
 }
 var file_messages_proto_depIdxs = []int32{
-	1,   // 0: protowire.KaspadMessage.addresses:type_name -> protowire.AddressesMessage
-	2,   // 1: protowire.KaspadMessage.block:type_name -> protowire.BlockMessage
-	3,   // 2: protowire.KaspadMessage.transaction:type_name -> protowire.TransactionMessage
-	4,   // 3: protowire.KaspadMessage.blockLocator:type_name -> protowire.BlockLocatorMessage
-	5,   // 4: protowire.KaspadMessage.requestAddresses:type_name -> protowire.RequestAddressesMessage
-	6,   // 5: protowire.KaspadMessage.requestRelayBlocks:type_name -> protowire.RequestRelayBlocksMessage
-	7,   // 6: protowire.KaspadMessage.requestTransactions:type_name -> protowire.RequestTransactionsMessage
-	2,   // 7: protowire.KaspadMessage.ibdBlock:type_name -> protowire.BlockMessage
-	8,   // 8: protowire.KaspadMessage.invRelayBlock:type_name -> protowire.InvRelayBlockMessage
-	9,   // 9: protowire.KaspadMessage.invTransactions:type_name -> protowire.InvTransactionsMessage
-	10,  // 10: protowire.KaspadMessage.ping:type_name -> protowire.PingMessage
-	11,  // 11: protowire.KaspadMessage.pong:type_name -> protowire.PongMessage
-	12,  // 12: protowire.KaspadMessage.verack:type_name -> protowire.VerackMessage
-	13,  // 13: protowire.KaspadMessage.version:type_name -> protowire.VersionMessage
-	14,  // 14: protowire.KaspadMessage.transactionNotFound:type_name -> protowire.TransactionNotFoundMessage
-	15,  // 15: protowire.KaspadMessage.reject:type_name -> protowire.RejectMessage
-	16,  // 16: protowire.KaspadMessage.pruningPointUtxoSetChunk:type_name -> protowire.PruningPointUtxoSetChunkMessage
-	17,  // 17: protowire.KaspadMessage.requestIBDBlocks:type_name -> protowire.RequestIBDBlocksMessage
-	18,  // 18: protowire.KaspadMessage.unexpectedPruningPoint:type_name -> protowire.UnexpectedPruningPointMessage
-	19,  // 19: protowire.KaspadMessage.ibdBlockLocator:type_name -> protowire.IbdBlockLocatorMessage
-	20,  // 20: protowire.KaspadMessage.ibdBlockLocatorHighestHash:type_name -> protowire.IbdBlockLocatorHighestHashMessage
-	21,  // 21: protowire.KaspadMessage.requestNextPruningPointUtxoSetChunk:type_name -> protowire.RequestNextPruningPointUtxoSetChunkMessage
-	22,  // 22: protowire.KaspadMessage.donePruningPointUtxoSetChunks:type_name -> protowire.DonePruningPointUtxoSetChunksMessage
-	23,  // 23: protowire.KaspadMessage.ibdBlockLocatorHighestHashNotFound:type_name -> protowire.IbdBlockLocatorHighestHashNotFoundMessage
-	24,  // 24: protowire.KaspadMessage.blockWithTrustedData:type_name -> protowire.BlockWithTrustedDataMessage
-	25,  // 25: protowire.KaspadMessage.doneBlocksWithTrustedData:type_name -> protowire.DoneBlocksWithTrustedDataMessage
-	26,  // 26: protowire.KaspadMessage.requestPruningPointAndItsAnticone:type_name -> protowire.RequestPruningPointAndItsAnticoneMessage
-	27,  // 27: protowire.KaspadMessage.blockHeaders:type_name -> protowire.BlockHeadersMessage
-	28,  // 28: protowire.KaspadMessage.requestNextHeaders:type_name -> protowire.RequestNextHeadersMessage
-	29,  // 29: protowire.KaspadMessage.DoneHeaders:type_name -> protowire.DoneHeadersMessage
-	30,  // 30: protowire.KaspadMessage.requestPruningPointUTXOSet:type_name -> protowire.RequestPruningPointUTXOSetMessage
-	31,  // 31: protowire.KaspadMessage.requestHeaders:type_name -> protowire.RequestHeadersMessage
-	32,  // 32: protowire.KaspadMessage.requestBlockLocator:type_name -> protowire.RequestBlockLocatorMessage
-	33,  // 33: protowire.KaspadMessage.pruningPoints:type_name -> protowire.PruningPointsMessage
-	34,  // 34: protowire.KaspadMessage.requestPruningPointProof:type_name -> protowire.RequestPruningPointProofMessage
-	35,  // 35: protowire.KaspadMessage.pruningPointProof:type_name -> protowire.PruningPointProofMessage
-	36,  // 36: protowire.KaspadMessage.ready:type_name -> protowire.ReadyMessage
-	37,  // 37: protowire.KaspadMessage.blockWithTrustedDataV4:type_name -> protowire.BlockWithTrustedDataV4Message
-	38,  // 38: protowire.KaspadMessage.trustedData:type_name -> protowire.TrustedDataMessage
-	39,  // 39: protowire.KaspadMessage.requestIBDChainBlockLocator:type_name -> protowire.RequestIBDChainBlockLocatorMessage
-	40,  // 40: protowire.KaspadMessage.ibdChainBlockLocator:type_name -> protowire.IbdChainBlockLocatorMessage
-	41,  // 41: protowire.KaspadMessage.requestAnticone:type_name -> protowire.RequestAnticoneMessage
-	42,  // 42: protowire.KaspadMessage.requestNextPruningPointAndItsAnticoneBlocks:type_name -> protowire.RequestNextPruningPointAndItsAnticoneBlocksMessage
-	43,  // 43: protowire.KaspadMessage.getCurrentNetworkRequest:type_name -> protowire.GetCurrentNetworkRequestMessage
-	44,  // 44: protowire.KaspadMessage.getCurrentNetworkResponse:type_name -> protowire.GetCurrentNetworkResponseMessage
-	45,  // 45: protowire.KaspadMessage.submitBlockRequest:type_name -> protowire.SubmitBlockRequestMessage
-	46,  // 46: protowire.KaspadMessage.submitBlockResponse:type_name -> protowire.SubmitBlockResponseMessage
-	47,  // 47: protowire.KaspadMessage.getBlockTemplateRequest:type_name -> protowire.GetBlockTemplateRequestMessage
-	48,  // 48: protowire.KaspadMessage.getBlockTemplateResponse:type_name -> protowire.GetBlockTemplateResponseMessage
-	49,  // 49: protowire.KaspadMessage.notifyBlockAddedRequest:type_name -> protowire.NotifyBlockAddedRequestMessage
-	50,  // 50: protowire.KaspadMessage.notifyBlockAddedResponse:type_name -> protowire.NotifyBlockAddedResponseMessage
-	51,  // 51: protowire.KaspadMessage.blockAddedNotification:type_name -> protowire.BlockAddedNotificationMessage
-	52,  // 52: protowire.KaspadMessage.getPeerAddressesRequest:type_name -> protowire.GetPeerAddressesRequestMessage
-	53,  // 53: protowire.KaspadMessage.getPeerAddressesResponse:type_name -> protowire.GetPeerAddressesResponseMessage
-	54,  // 54: protowire.KaspadMessage.getSelectedTipHashRequest:type_name -> protowire.GetSelectedTipHashRequestMessage
-	55,  // 55: protowire.KaspadMessage.getSelectedTipHashResponse:type_name -> protowire.GetSelectedTipHashResponseMessage
-	56,  // 56: protowire.KaspadMessage.getMempoolEntryRequest:type_name -> protowire.GetMempoolEntryRequestMessage
-	57,  // 57: protowire.KaspadMessage.getMempoolEntryResponse:type_name -> protowire.GetMempoolEntryResponseMessage
-	58,  // 58: protowire.KaspadMessage.getConnectedPeerInfoRequest:type_name -> protowire.GetConnectedPeerInfoRequestMessage
-	59,  // 59: protowire.KaspadMessage.getConnectedPeerInfoResponse:type_name -> protowire.GetConnectedPeerInfoResponseMessage
-	60,  // 60: protowire.KaspadMessage.addPeerRequest:type_name -> protowire.AddPeerRequestMessage
-	61,  // 61: protowire.KaspadMessage.addPeerResponse:type_name -> protowire.AddPeerResponseMessage
-	62,  // 62: protowire.KaspadMessage.submitTransactionRequest:type_name -> protowire.SubmitTransactionRequestMessage
-	63,  // 63: protowire.KaspadMessage.submitTransactionResponse:type_name -> protowire.SubmitTransactionResponseMessage
-	64,  // 64: protowire.KaspadMessage.notifyVirtualSelectedParentChainChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentChainChangedRequestMessage
-	65,  // 65: protowire.KaspadMessage.notifyVirtualSelectedParentChainChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentChainChangedResponseMessage
-	66,  // 66: protowire.KaspadMessage.virtualSelectedParentChainChangedNotification:type_name -> protowire.VirtualSelectedParentChainChangedNotificationMessage
-	67,  // 67: protowire.KaspadMessage.getBlockRequest:type_name -> protowire.GetBlockRequestMessage
-	68,  // 68: protowire.KaspadMessage.getBlockResponse:type_name -> protowire.GetBlockResponseMessage
-	69,  // 69: protowire.KaspadMessage.getSubnetworkRequest:type_name -> protowire.GetSubnetworkRequestMessage
-	70,  // 70: protowire.KaspadMessage.getSubnetworkResponse:type_name -> protowire.GetSubnetworkResponseMessage
-	71,  // 71: protowire.KaspadMessage.getVirtualSelectedParentChainFromBlockRequest:type_name -> protowire.GetVirtualSelectedParentChainFromBlockRequestMessage
-	72,  // 72: protowire.KaspadMessage.getVirtualSelectedParentChainFromBlockResponse:type_name -> protowire.GetVirtualSelectedParentChainFromBlockResponseMessage
-	73,  // 73: protowire.KaspadMessage.getBlocksRequest:type_name -> protowire.GetBlocksRequestMessage
-	74,  // 74: protowire.KaspadMessage.getBlocksResponse:type_name -> protowire.GetBlocksResponseMessage
-	75,  // 75: protowire.KaspadMessage.getBlockCountRequest:type_name -> protowire.GetBlockCountRequestMessage
-	76,  // 76: protowire.KaspadMessage.getBlockCountResponse:type_name -> protowire.GetBlockCountResponseMessage
-	77,  // 77: protowire.KaspadMessage.getBlockDagInfoRequest:type_name -> protowire.GetBlockDagInfoRequestMessage
-	78,  // 78: protowire.KaspadMessage.getBlockDagInfoResponse:type_name -> protowire.GetBlockDagInfoResponseMessage
-	79,  // 79: protowire.KaspadMessage.resolveFinalityConflictRequest:type_name -> protowire.ResolveFinalityConflictRequestMessage
-	80,  // 80: protowire.KaspadMessage.resolveFinalityConflictResponse:type_name -> protowire.ResolveFinalityConflictResponseMessage
-	81,  // 81: protowire.KaspadMessage.notifyFinalityConflictsRequest:type_name -> protowire.NotifyFinalityConflictsRequestMessage
-	82,  // 82: protowire.KaspadMessage.notifyFinalityConflictsResponse:type_name -> protowire.NotifyFinalityConflictsResponseMessage
-	83,  // 83: protowire.KaspadMessage.finalityConflictNotification:type_name -> protowire.FinalityConflictNotificationMessage
-	84,  // 84: protowire.KaspadMessage.finalityConflictResolvedNotification:type_name -> protowire.FinalityConflictResolvedNotificationMessage
-	85,  // 85: protowire.KaspadMessage.getMempoolEntriesRequest:type_name -> protowire.GetMempoolEntriesRequestMessage
-	86,  // 86: protowire.KaspadMessage.getMempoolEntriesResponse:type_name -> protowire.GetMempoolEntriesResponseMessage
-	87,  // 87: protowire.KaspadMessage.shutDownRequest:type_name -> protowire.ShutDownRequestMessage
-	88,  // 88: protowire.KaspadMessage.shutDownResponse:type_name -> protowire.ShutDownResponseMessage
-	89,  // 89: protowire.KaspadMessage.getHeadersRequest:type_name -> protowire.GetHeadersRequestMessage
-	90,  // 90: protowire.KaspadMessage.getHeadersResponse:type_name -> protowire.GetHeadersResponseMessage
-	91,  // 91: protowire.KaspadMessage.notifyUtxosChangedRequest:type_name -> protowire.NotifyUtxosChangedRequestMessage
-	92,  // 92: protowire.KaspadMessage.notifyUtxosChangedResponse:type_name -> protowire.NotifyUtxosChangedResponseMessage
-	93,  // 93: protowire.KaspadMessage.utxosChangedNotification:type_name -> protowire.UtxosChangedNotificationMessage
-	94,  // 94: protowire.KaspadMessage.getUtxosByAddressesRequest:type_name -> protowire.GetUtxosByAddressesRequestMessage
-	95,  // 95: protowire.KaspadMessage.getUtxosByAddressesResponse:type_name -> protowire.GetUtxosByAddressesResponseMessage
-	96,  // 96: protowire.KaspadMessage.getVirtualSelectedParentBlueScoreRequest:type_name -> protowire.GetVirtualSelectedParentBlueScoreRequestMessage
-	97,  // 97: protowire.KaspadMessage.getVirtualSelectedParentBlueScoreResponse:type_name -> protowire.GetVirtualSelectedParentBlueScoreResponseMessage
-	98,  // 98: protowire.KaspadMessage.notifyVirtualSelectedParentBlueScoreChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage
-	99,  // 99: protowire.KaspadMessage.notifyVirtualSelectedParentBlueScoreChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedResponseMessage
-	100, // 100: protowire.KaspadMessage.virtualSelectedParentBlueScoreChangedNotification:type_name -> protowire.VirtualSelectedParentBlueScoreChangedNotificationMessage
-	101, // 101: protowire.KaspadMessage.banRequest:type_name -> protowire.BanRequestMessage
-	102, // 102: protowire.KaspadMessage.banResponse:type_name -> protowire.BanResponseMessage
-	103, // 103: protowire.KaspadMessage.unbanRequest:type_name -> protowire.UnbanRequestMessage
-	104, // 104: protowire.KaspadMessage.unbanResponse:type_name -> protowire.UnbanResponseMessage
-	105, // 105: protowire.KaspadMessage.getInfoRequest:type_name -> protowire.GetInfoRequestMessage
-	106, // 106: protowire.KaspadMessage.getInfoResponse:type_name -> protowire.GetInfoResponseMessage
-	107, // 107: protowire.KaspadMessage.stopNotifyingUtxosChangedRequest:type_name -> protowire.StopNotifyingUtxosChangedRequestMessage
-	108, // 108: protowire.KaspadMessage.stopNotifyingUtxosChangedResponse:type_name -> protowire.StopNotifyingUtxosChangedResponseMessage
-	109, // 109: protowire.KaspadMessage.notifyPruningPointUTXOSetOverrideRequest:type_name -> protowire.NotifyPruningPointUTXOSetOverrideRequestMessage
-	110, // 110: protowire.KaspadMessage.notifyPruningPointUTXOSetOverrideResponse:type_name -> protowire.NotifyPruningPointUTXOSetOverrideResponseMessage
-	111, // 111: protowire.KaspadMessage.pruningPointUTXOSetOverrideNotification:type_name -> protowire.PruningPointUTXOSetOverrideNotificationMessage
-	112, // 112: protowire.KaspadMessage.stopNotifyingPruningPointUTXOSetOverrideRequest:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideRequestMessage
-	113, // 113: protowire.KaspadMessage.stopNotifyingPruningPointUTXOSetOverrideResponse:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideResponseMessage
-	114, // 114: protowire.KaspadMessage.estimateNetworkHashesPerSecondRequest:type_name -> protowire.EstimateNetworkHashesPerSecondRequestMessage
-	115, // 115: protowire.KaspadMessage.estimateNetworkHashesPerSecondResponse:type_name -> protowire.EstimateNetworkHashesPerSecondResponseMessage
-	116, // 116: protowire.KaspadMessage.notifyVirtualDaaScoreChangedRequest:type_name -> protowire.NotifyVirtualDaaScoreChangedRequestMessage
-	117, // 117: protowire.KaspadMessage.notifyVirtualDaaScoreChangedResponse:type_name -> protowire.NotifyVirtualDaaScoreChangedResponseMessage
-	118, // 118: protowire.KaspadMessage.virtualDaaScoreChangedNotification:type_name -> protowire.VirtualDaaScoreChangedNotificationMessage
-	119, // 119: protowire.KaspadMessage.getBalanceByAddressRequest:type_name -> protowire.GetBalanceByAddressRequestMessage
-	120, // 120: protowire.KaspadMessage.getBalanceByAddressResponse:type_name -> protowire.GetBalanceByAddressResponseMessage
-	121, // 121: protowire.KaspadMessage.getBalancesByAddressesRequest:type_name -> protowire.GetBalancesByAddressesRequestMessage
-	122, // 122: protowire.KaspadMessage.getBalancesByAddressesResponse:type_name -> protowire.GetBalancesByAddressesResponseMessage
-	123, // 123: protowire.KaspadMessage.notifyNewBlockTemplateRequest:type_name -> protowire.NotifyNewBlockTemplateRequestMessage
-	124, // 124: protowire.KaspadMessage.notifyNewBlockTemplateResponse:type_name -> protowire.NotifyNewBlockTemplateResponseMessage
-	125, // 125: protowire.KaspadMessage.newBlockTemplateNotification:type_name -> protowire.NewBlockTemplateNotificationMessage
-	126, // 126: protowire.KaspadMessage.getMempoolEntriesByAddressesRequest:type_name -> protowire.GetMempoolEntriesByAddressesRequestMessage
-	127, // 127: protowire.KaspadMessage.getMempoolEntriesByAddressesResponse:type_name -> protowire.GetMempoolEntriesByAddressesResponseMessage
-	128, // 128: protowire.KaspadMessage.getCoinSupplyRequest:type_name -> protowire.GetCoinSupplyRequestMessage
-	129, // 129: protowire.KaspadMessage.getCoinSupplyResponse:type_name -> protowire.GetCoinSupplyResponseMessage
+	1,   // 0: protowire.GordMessage.addresses:type_name -> protowire.AddressesMessage
+	2,   // 1: protowire.GpordMessage.block:type_name -> protowire.BlockMessage
+	3,   // 2: protowire.GordMessage.transaction:type_name -> protowire.TransactionMessage
+	4,   // 3: protowire.GordMessage.blockLocator:type_name -> protowire.BlockLocatorMessage
+	5,   // 4: protowire.GordMessage.requestAddresses:type_name -> protowire.RequestAddressesMessage
+	6,   // 5: protowire.GordMessage.requestRelayBlocks:type_name -> protowire.RequestRelayBlocksMessage
+	7,   // 6: protowire.GordMessage.requestTransactions:type_name -> protowire.RequestTransactionsMessage
+	2,   // 7: protowire.GordMessage.ibdBlock:type_name -> protowire.BlockMessage
+	8,   // 8: protowire.GordMessage.invRelayBlock:type_name -> protowire.InvRelayBlockMessage
+	9,   // 9: protowire.GordMessage.invTransactions:type_name -> protowire.InvTransactionsMessage
+	10,  // 10: protowire.GordMessage.ping:type_name -> protowire.PingMessage
+	11,  // 11: protowire.GordMessage.pong:type_name -> protowire.PongMessage
+	12,  // 12: protowire.GordMessage.verack:type_name -> protowire.VerackMessage
+	13,  // 13: protowire.GordMessage.version:type_name -> protowire.VersionMessage
+	14,  // 14: protowire.GordMessage.transactionNotFound:type_name -> protowire.TransactionNotFoundMessage
+	15,  // 15: protowire.GordMessage.reject:type_name -> protowire.RejectMessage
+	16,  // 16: protowire.GordMessage.pruningPointUtxoSetChunk:type_name -> protowire.PruningPointUtxoSetChunkMessage
+	17,  // 17: protowire.GordMessage.requestIBDBlocks:type_name -> protowire.RequestIBDBlocksMessage
+	18,  // 18: protowire.GordMessage.unexpectedPruningPoint:type_name -> protowire.UnexpectedPruningPointMessage
+	19,  // 19: protowire.GordMessage.ibdBlockLocator:type_name -> protowire.IbdBlockLocatorMessage
+	20,  // 20: protowire.GordMessage.ibdBlockLocatorHighestHash:type_name -> protowire.IbdBlockLocatorHighestHashMessage
+	21,  // 21: protowire.GordMessage.requestNextPruningPointUtxoSetChunk:type_name -> protowire.RequestNextPruningPointUtxoSetChunkMessage
+	22,  // 22: protowire.GordMessage.donePruningPointUtxoSetChunks:type_name -> protowire.DonePruningPointUtxoSetChunksMessage
+	23,  // 23: protowire.GordMessage.ibdBlockLocatorHighestHashNotFound:type_name -> protowire.IbdBlockLocatorHighestHashNotFoundMessage
+	24,  // 24: protowire.GordMessage.blockWithTrustedData:type_name -> protowire.BlockWithTrustedDataMessage
+	25,  // 25: protowire.GordMessage.doneBlocksWithTrustedData:type_name -> protowire.DoneBlocksWithTrustedDataMessage
+	26,  // 26: protowire.GordMessage.requestPruningPointAndItsAnticone:type_name -> protowire.RequestPruningPointAndItsAnticoneMessage
+	27,  // 27: protowire.GordMessage.blockHeaders:type_name -> protowire.BlockHeadersMessage
+	28,  // 28: protowire.GordMessage.requestNextHeaders:type_name -> protowire.RequestNextHeadersMessage
+	29,  // 29: protowire.GordMessage.DoneHeaders:type_name -> protowire.DoneHeadersMessage
+	30,  // 30: protowire.GoradMessage.requestPruningPointUTXOSet:type_name -> protowire.RequestPruningPointUTXOSetMessage
+	31,  // 31: protowire.GordMessage.requestHeaders:type_name -> protowire.RequestHeadersMessage
+	32,  // 32: protowire.GordMessage.requestBlockLocator:type_name -> protowire.RequestBlockLocatorMessage
+	33,  // 33: protowire.GordMessage.pruningPoints:type_name -> protowire.PruningPointsMessage
+	34,  // 34: protowire.GordMessage.requestPruningPointProof:type_name -> protowire.RequestPruningPointProofMessage
+	35,  // 35: protowire.GordMessage.pruningPointProof:type_name -> protowire.PruningPointProofMessage
+	36,  // 36: protowire.GordMessage.ready:type_name -> protowire.ReadyMessage
+	37,  // 37: protowire.GordMessage.blockWithTrustedDataV4:type_name -> protowire.BlockWithTrustedDataV4Message
+	38,  // 38: protowire.GordMessage.trustedData:type_name -> protowire.TrustedDataMessage
+	39,  // 39: protowire.GordMessage.requestIBDChainBlockLocator:type_name -> protowire.RequestIBDChainBlockLocatorMessage
+	40,  // 40: protowire.GordMessage.ibdChainBlockLocator:type_name -> protowire.IbdChainBlockLocatorMessage
+	41,  // 41: protowire.GordMessage.requestAnticone:type_name -> protowire.RequestAnticoneMessage
+	42,  // 42: protowire.GordMessage.requestNextPruningPointAndItsAnticoneBlocks:type_name -> protowire.RequestNextPruningPointAndItsAnticoneBlocksMessage
+	43,  // 43: protowire.GordMessage.getCurrentNetworkRequest:type_name -> protowire.GetCurrentNetworkRequestMessage
+	44,  // 44: protowire.GordMessage.getCurrentNetworkResponse:type_name -> protowire.GetCurrentNetworkResponseMessage
+	45,  // 45: protowire.GordMessage.submitBlockRequest:type_name -> protowire.SubmitBlockRequestMessage
+	46,  // 46: protowire.GordMessage.submitBlockResponse:type_name -> protowire.SubmitBlockResponseMessage
+	47,  // 47: protowire.GordMessage.getBlockTemplateRequest:type_name -> protowire.GetBlockTemplateRequestMessage
+	48,  // 48: protowire.GordMessage.getBlockTemplateResponse:type_name -> protowire.GetBlockTemplateResponseMessage
+	49,  // 49: protowire.GordMessage.notifyBlockAddedRequest:type_name -> protowire.NotifyBlockAddedRequestMessage
+	50,  // 50: protowire.GordMessage.notifyBlockAddedResponse:type_name -> protowire.NotifyBlockAddedResponseMessage
+	51,  // 51: protowire.GordMessage.blockAddedNotification:type_name -> protowire.BlockAddedNotificationMessage
+	52,  // 52: protowire.GordMessage.getPeerAddressesRequest:type_name -> protowire.GetPeerAddressesRequestMessage
+	53,  // 53: protowire.GordMessage.getPeerAddressesResponse:type_name -> protowire.GetPeerAddressesResponseMessage
+	54,  // 54: protowire.GordMessage.getSelectedTipHashRequest:type_name -> protowire.GetSelectedTipHashRequestMessage
+	55,  // 55: protowire.GordMessage.getSelectedTipHashResponse:type_name -> protowire.GetSelectedTipHashResponseMessage
+	56,  // 56: protowire.GordMessage.getMempoolEntryRequest:type_name -> protowire.GetMempoolEntryRequestMessage
+	57,  // 57: protowire.GordMessage.getMempoolEntryResponse:type_name -> protowire.GetMempoolEntryResponseMessage
+	58,  // 58: protowire.GordMessage.getConnectedPeerInfoRequest:type_name -> protowire.GetConnectedPeerInfoRequestMessage
+	59,  // 59: protowire.GordMessage.getConnectedPeerInfoResponse:type_name -> protowire.GetConnectedPeerInfoResponseMessage
+	60,  // 60: protowire.GordMessage.addPeerRequest:type_name -> protowire.AddPeerRequestMessage
+	61,  // 61: protowire.GordMessage.addPeerResponse:type_name -> protowire.AddPeerResponseMessage
+	62,  // 62: protowire.GordMessage.submitTransactionRequest:type_name -> protowire.SubmitTransactionRequestMessage
+	63,  // 63: protowire.GordMessage.submitTransactionResponse:type_name -> protowire.SubmitTransactionResponseMessage
+	64,  // 64: protowire.GordMessage.notifyVirtualSelectedParentChainChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentChainChangedRequestMessage
+	65,  // 65: protowire.GordMessage.notifyVirtualSelectedParentChainChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentChainChangedResponseMessage
+	66,  // 66: protowire.GordMessage.virtualSelectedParentChainChangedNotification:type_name -> protowire.VirtualSelectedParentChainChangedNotificationMessage
+	67,  // 67: protowire.GordMessage.getBlockRequest:type_name -> protowire.GetBlockRequestMessage
+	68,  // 68: protowire.GordMessage.getBlockResponse:type_name -> protowire.GetBlockResponseMessage
+	69,  // 69: protowire.GordMessage.getSubnetworkRequest:type_name -> protowire.GetSubnetworkRequestMessage
+	70,  // 70: protowire.GordMessage.getSubnetworkResponse:type_name -> protowire.GetSubnetworkResponseMessage
+	71,  // 71: protowire.GordMessage.getVirtualSelectedParentChainFromBlockRequest:type_name -> protowire.GetVirtualSelectedParentChainFromBlockRequestMessage
+	72,  // 72: protowire.GordMessage.getVirtualSelectedParentChainFromBlockResponse:type_name -> protowire.GetVirtualSelectedParentChainFromBlockResponseMessage
+	73,  // 73: protowire.GordMessage.getBlocksRequest:type_name -> protowire.GetBlocksRequestMessage
+	74,  // 74: protowire.GordMessage.getBlocksResponse:type_name -> protowire.GetBlocksResponseMessage
+	75,  // 75: protowire.GordMessage.getBlockCountRequest:type_name -> protowire.GetBlockCountRequestMessage
+	76,  // 76: protowire.GordMessage.getBlockCountResponse:type_name -> protowire.GetBlockCountResponseMessage
+	77,  // 77: protowire.GordMessage.getBlockDagInfoRequest:type_name -> protowire.GetBlockDagInfoRequestMessage
+	78,  // 78: protowire.GordMessage.getBlockDagInfoResponse:type_name -> protowire.GetBlockDagInfoResponseMessage
+	79,  // 79: protowire.GordMessage.resolveFinalityConflictRequest:type_name -> protowire.ResolveFinalityConflictRequestMessage
+	80,  // 80: protowire.GordMessage.resolveFinalityConflictResponse:type_name -> protowire.ResolveFinalityConflictResponseMessage
+	81,  // 81: protowire.GordMessage.notifyFinalityConflictsRequest:type_name -> protowire.NotifyFinalityConflictsRequestMessage
+	82,  // 82: protowire.GordMessage.notifyFinalityConflictsResponse:type_name -> protowire.NotifyFinalityConflictsResponseMessage
+	83,  // 83: protowire.GordMessage.finalityConflictNotification:type_name -> protowire.FinalityConflictNotificationMessage
+	84,  // 84: protowire.GordMessage.finalityConflictResolvedNotification:type_name -> protowire.FinalityConflictResolvedNotificationMessage
+	85,  // 85: protowire.GordMessage.getMempoolEntriesRequest:type_name -> protowire.GetMempoolEntriesRequestMessage
+	86,  // 86: protowire.GordMessage.getMempoolEntriesResponse:type_name -> protowire.GetMempoolEntriesResponseMessage
+	87,  // 87: protowire.GordMessage.shutDownRequest:type_name -> protowire.ShutDownRequestMessage
+	88,  // 88: protowire.GordMessage.shutDownResponse:type_name -> protowire.ShutDownResponseMessage
+	89,  // 89: protowire.GordMessage.getHeadersRequest:type_name -> protowire.GetHeadersRequestMessage
+	90,  // 90: protowire.GordMessage.getHeadersResponse:type_name -> protowire.GetHeadersResponseMessage
+	91,  // 91: protowire.GordMessage.notifyUtxosChangedRequest:type_name -> protowire.NotifyUtxosChangedRequestMessage
+	92,  // 92: protowire.GordMessage.notifyUtxosChangedResponse:type_name -> protowire.NotifyUtxosChangedResponseMessage
+	93,  // 93: protowire.GordMessage.utxosChangedNotification:type_name -> protowire.UtxosChangedNotificationMessage
+	94,  // 94: protowire.GordMessage.getUtxosByAddressesRequest:type_name -> protowire.GetUtxosByAddressesRequestMessage
+	95,  // 95: protowire.GordMessage.getUtxosByAddressesResponse:type_name -> protowire.GetUtxosByAddressesResponseMessage
+	96,  // 96: protowire.GordMessage.getVirtualSelectedParentBlueScoreRequest:type_name -> protowire.GetVirtualSelectedParentBlueScoreRequestMessage
+	97,  // 97: protowire.GordMessage.getVirtualSelectedParentBlueScoreResponse:type_name -> protowire.GetVirtualSelectedParentBlueScoreResponseMessage
+	98,  // 98: protowire.GordMessage.notifyVirtualSelectedParentBlueScoreChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage
+	99,  // 99: protowire.GordMessage.notifyVirtualSelectedParentBlueScoreChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedResponseMessage
+	100, // 100: protowire.GordMessage.virtualSelectedParentBlueScoreChangedNotification:type_name -> protowire.VirtualSelectedParentBlueScoreChangedNotificationMessage
+	101, // 101: protowire.GordMessage.banRequest:type_name -> protowire.BanRequestMessage
+	102, // 102: protowire.GordMessage.banResponse:type_name -> protowire.BanResponseMessage
+	103, // 103: protowire.GordMessage.unbanRequest:type_name -> protowire.UnbanRequestMessage
+	104, // 104: protowire.GordMessage.unbanResponse:type_name -> protowire.UnbanResponseMessage
+	105, // 105: protowire.GordMessage.getInfoRequest:type_name -> protowire.GetInfoRequestMessage
+	106, // 106: protowire.GordMessage.getInfoResponse:type_name -> protowire.GetInfoResponseMessage
+	107, // 107: protowire.GordMessage.stopNotifyingUtxosChangedRequest:type_name -> protowire.StopNotifyingUtxosChangedRequestMessage
+	108, // 108: protowire.GordMessage.stopNotifyingUtxosChangedResponse:type_name -> protowire.StopNotifyingUtxosChangedResponseMessage
+	109, // 109: protowire.GordMessage.notifyPruningPointUTXOSetOverrideRequest:type_name -> protowire.NotifyPruningPointUTXOSetOverrideRequestMessage
+	110, // 110: protowire.GordMessage.notifyPruningPointUTXOSetOverrideResponse:type_name -> protowire.NotifyPruningPointUTXOSetOverrideResponseMessage
+	111, // 111: protowire.GordMessage.pruningPointUTXOSetOverrideNotification:type_name -> protowire.PruningPointUTXOSetOverrideNotificationMessage
+	112, // 112: protowire.GordMessage.stopNotifyingPruningPointUTXOSetOverrideRequest:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideRequestMessage
+	113, // 113: protowire.GordMessage.stopNotifyingPruningPointUTXOSetOverrideResponse:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideResponseMessage
+	114, // 114: protowire.GordMessage.estimateNetworkHashesPerSecondRequest:type_name -> protowire.EstimateNetworkHashesPerSecondRequestMessage
+	115, // 115: protowire.GordMessage.estimateNetworkHashesPerSecondResponse:type_name -> protowire.EstimateNetworkHashesPerSecondResponseMessage
+	116, // 116: protowire.GordMessage.notifyVirtualDaaScoreChangedRequest:type_name -> protowire.NotifyVirtualDaaScoreChangedRequestMessage
+	117, // 117: protowire.GordMessage.notifyVirtualDaaScoreChangedResponse:type_name -> protowire.NotifyVirtualDaaScoreChangedResponseMessage
+	118, // 118: protowire.GordMessage.virtualDaaScoreChangedNotification:type_name -> protowire.VirtualDaaScoreChangedNotificationMessage
+	119, // 119: protowire.GordMessage.getBalanceByAddressRequest:type_name -> protowire.GetBalanceByAddressRequestMessage
+	120, // 120: protowire.GordMessage.getBalanceByAddressResponse:type_name -> protowire.GetBalanceByAddressResponseMessage
+	121, // 121: protowire.GordMessage.getBalancesByAddressesRequest:type_name -> protowire.GetBalancesByAddressesRequestMessage
+	122, // 122: protowire.GordMessage.getBalancesByAddressesResponse:type_name -> protowire.GetBalancesByAddressesResponseMessage
+	123, // 123: protowire.GordMessage.notifyNewBlockTemplateRequest:type_name -> protowire.NotifyNewBlockTemplateRequestMessage
+	124, // 124: protowire.GordMessage.notifyNewBlockTemplateResponse:type_name -> protowire.NotifyNewBlockTemplateResponseMessage
+	125, // 125: protowire.GordMessage.newBlockTemplateNotification:type_name -> protowire.NewBlockTemplateNotificationMessage
+	126, // 126: protowire.GordMessage.getMempoolEntriesByAddressesRequest:type_name -> protowire.GetMempoolEntriesByAddressesRequestMessage
+	127, // 127: protowire.GordMessage.getMempoolEntriesByAddressesResponse:type_name -> protowire.GetMempoolEntriesByAddressesResponseMessage
+	128, // 128: protowire.GordMessage.getCoinSupplyRequest:type_name -> protowire.GetCoinSupplyRequestMessage
+	129, // 129: protowire.GordMessage.getCoinSupplyResponse:type_name -> protowire.GetCoinSupplyResponseMessage
 	0,   // 130: protowire.P2P.MessageStream:input_type -> protowire.GordMessage
 	0,   // 131: protowire.RPC.MessageStream:input_type -> protowire.GordMessage
 	0,   // 132: protowire.P2P.MessageStream:output_type -> protowire.GordMessage
@@ -3101,92 +3101,92 @@ func file_messages_proto_init() {
 	file_messages_proto_msgTypes[0].OneofWrappers = []interface{}{
 		(*GordMessage_Addresses)(nil),
 		(*GordMessage_Block)(nil),
-		(*KaspadMessage_Transaction)(nil),
-		(*KaspadMessage_BlockLocator)(nil),
-		(*KaspadMessage_RequestAddresses)(nil),
-		(*KaspadMessage_RequestRelayBlocks)(nil),
-		(*KaspadMessage_RequestTransactions)(nil),
-		(*KaspadMessage_IbdBlock)(nil),
-		(*KaspadMessage_InvRelayBlock)(nil),
-		(*KaspadMessage_InvTransactions)(nil),
-		(*KaspadMessage_Ping)(nil),
-		(*KaspadMessage_Pong)(nil),
-		(*KaspadMessage_Verack)(nil),
-		(*KaspadMessage_Version)(nil),
-		(*KaspadMessage_TransactionNotFound)(nil),
-		(*KaspadMessage_Reject)(nil),
-		(*KaspadMessage_PruningPointUtxoSetChunk)(nil),
-		(*KaspadMessage_RequestIBDBlocks)(nil),
-		(*KaspadMessage_UnexpectedPruningPoint)(nil),
-		(*KaspadMessage_IbdBlockLocator)(nil),
-		(*KaspadMessage_IbdBlockLocatorHighestHash)(nil),
-		(*KaspadMessage_RequestNextPruningPointUtxoSetChunk)(nil),
-		(*KaspadMessage_DonePruningPointUtxoSetChunks)(nil),
-		(*KaspadMessage_IbdBlockLocatorHighestHashNotFound)(nil),
-		(*KaspadMessage_BlockWithTrustedData)(nil),
-		(*KaspadMessage_DoneBlocksWithTrustedData)(nil),
-		(*KaspadMessage_RequestPruningPointAndItsAnticone)(nil),
-		(*KaspadMessage_BlockHeaders)(nil),
-		(*KaspadMessage_RequestNextHeaders)(nil),
-		(*KaspadMessage_DoneHeaders)(nil),
-		(*KaspadMessage_RequestPruningPointUTXOSet)(nil),
-		(*KaspadMessage_RequestHeaders)(nil),
-		(*KaspadMessage_RequestBlockLocator)(nil),
-		(*KaspadMessage_PruningPoints)(nil),
-		(*KaspadMessage_RequestPruningPointProof)(nil),
-		(*KaspadMessage_PruningPointProof)(nil),
-		(*KaspadMessage_Ready)(nil),
-		(*KaspadMessage_BlockWithTrustedDataV4)(nil),
-		(*KaspadMessage_TrustedData)(nil),
-		(*KaspadMessage_RequestIBDChainBlockLocator)(nil),
-		(*KaspadMessage_IbdChainBlockLocator)(nil),
-		(*KaspadMessage_RequestAnticone)(nil),
-		(*KaspadMessage_RequestNextPruningPointAndItsAnticoneBlocks)(nil),
-		(*KaspadMessage_GetCurrentNetworkRequest)(nil),
-		(*KaspadMessage_GetCurrentNetworkResponse)(nil),
-		(*KaspadMessage_SubmitBlockRequest)(nil),
-		(*KaspadMessage_SubmitBlockResponse)(nil),
-		(*KaspadMessage_GetBlockTemplateRequest)(nil),
-		(*KaspadMessage_GetBlockTemplateResponse)(nil),
-		(*KaspadMessage_NotifyBlockAddedRequest)(nil),
-		(*KaspadMessage_NotifyBlockAddedResponse)(nil),
-		(*KaspadMessage_BlockAddedNotification)(nil),
-		(*KaspadMessage_GetPeerAddressesRequest)(nil),
-		(*KaspadMessage_GetPeerAddressesResponse)(nil),
-		(*KaspadMessage_GetSelectedTipHashRequest)(nil),
-		(*KaspadMessage_GetSelectedTipHashResponse)(nil),
-		(*KaspadMessage_GetMempoolEntryRequest)(nil),
-		(*KaspadMessage_GetMempoolEntryResponse)(nil),
-		(*KaspadMessage_GetConnectedPeerInfoRequest)(nil),
-		(*KaspadMessage_GetConnectedPeerInfoResponse)(nil),
-		(*KaspadMessage_AddPeerRequest)(nil),
-		(*KaspadMessage_AddPeerResponse)(nil),
-		(*KaspadMessage_SubmitTransactionRequest)(nil),
-		(*KaspadMessage_SubmitTransactionResponse)(nil),
-		(*KaspadMessage_NotifyVirtualSelectedParentChainChangedRequest)(nil),
-		(*KaspadMessage_NotifyVirtualSelectedParentChainChangedResponse)(nil),
-		(*KaspadMessage_VirtualSelectedParentChainChangedNotification)(nil),
-		(*KaspadMessage_GetBlockRequest)(nil),
-		(*KaspadMessage_GetBlockResponse)(nil),
-		(*KaspadMessage_GetSubnetworkRequest)(nil),
-		(*KaspadMessage_GetSubnetworkResponse)(nil),
-		(*KaspadMessage_GetVirtualSelectedParentChainFromBlockRequest)(nil),
-		(*KaspadMessage_GetVirtualSelectedParentChainFromBlockResponse)(nil),
-		(*KaspadMessage_GetBlocksRequest)(nil),
-		(*KaspadMessage_GetBlocksResponse)(nil),
-		(*KaspadMessage_GetBlockCountRequest)(nil),
-		(*KaspadMessage_GetBlockCountResponse)(nil),
-		(*KaspadMessage_GetBlockDagInfoRequest)(nil),
-		(*KaspadMessage_GetBlockDagInfoResponse)(nil),
-		(*KaspadMessage_ResolveFinalityConflictRequest)(nil),
-		(*KaspadMessage_ResolveFinalityConflictResponse)(nil),
-		(*KaspadMessage_NotifyFinalityConflictsRequest)(nil),
-		(*KaspadMessage_NotifyFinalityConflictsResponse)(nil),
-		(*KaspadMessage_FinalityConflictNotification)(nil),
-		(*KaspadMessage_FinalityConflictResolvedNotification)(nil),
-		(*KaspadMessage_GetMempoolEntriesRequest)(nil),
-		(*KaspadMessage_GetMempoolEntriesResponse)(nil),
-		(*KaspadMessage_ShutDownRequest)(nil),
+		(*GordMessage_Transaction)(nil),
+		(*GordMessage_BlockLocator)(nil),
+		(*GordMessage_RequestAddresses)(nil),
+		(*GordMessage_RequestRelayBlocks)(nil),
+		(*GordMessage_RequestTransactions)(nil),
+		(*GordMessage_IbdBlock)(nil),
+		(*GordMessage_InvRelayBlock)(nil),
+		(*GordMessage_InvTransactions)(nil),
+		(*GordMessage_Ping)(nil),
+		(*GordMessage_Pong)(nil),
+		(*GordMessage_Verack)(nil),
+		(*GordMessage_Version)(nil),
+		(*GordMessage_TransactionNotFound)(nil),
+		(*GordMessage_Reject)(nil),
+		(*GordMessage_PruningPointUtxoSetChunk)(nil),
+		(*GordMessage_RequestIBDBlocks)(nil),
+		(*GordMessage_UnexpectedPruningPoint)(nil),
+		(*GordMessage_IbdBlockLocator)(nil),
+		(*GordMessage_IbdBlockLocatorHighestHash)(nil),
+		(*GordMessage_RequestNextPruningPointUtxoSetChunk)(nil),
+		(*GordMessage_DonePruningPointUtxoSetChunks)(nil),
+		(*GordMessage_IbdBlockLocatorHighestHashNotFound)(nil),
+		(*GordMessage_BlockWithTrustedData)(nil),
+		(*GordMessage_DoneBlocksWithTrustedData)(nil),
+		(*GordMessage_RequestPruningPointAndItsAnticone)(nil),
+		(*GordMessage_BlockHeaders)(nil),
+		(*GordMessage_RequestNextHeaders)(nil),
+		(*GordMessage_DoneHeaders)(nil),
+		(*GordMessage_RequestPruningPointUTXOSet)(nil),
+		(*GordMessage_RequestHeaders)(nil),
+		(*GordMessage_RequestBlockLocator)(nil),
+		(*GordMessage_PruningPoints)(nil),
+		(*GordMessage_RequestPruningPointProof)(nil),
+		(*GordMessage_PruningPointProof)(nil),
+		(*GordMessage_Ready)(nil),
+		(*GordMessage_BlockWithTrustedDataV4)(nil),
+		(*GordMessage_TrustedData)(nil),
+		(*GordMessage_RequestIBDChainBlockLocator)(nil),
+		(*GordMessage_IbdChainBlockLocator)(nil),
+		(*GordMessage_RequestAnticone)(nil),
+		(*GordMessage_RequestNextPruningPointAndItsAnticoneBlocks)(nil),
+		(*GordMessage_GetCurrentNetworkRequest)(nil),
+		(*GordMessage_GetCurrentNetworkResponse)(nil),
+		(*GordMessage_SubmitBlockRequest)(nil),
+		(*GordMessage_SubmitBlockResponse)(nil),
+		(*GordMessage_GetBlockTemplateRequest)(nil),
+		(*GordMessage_GetBlockTemplateResponse)(nil),
+		(*GordMessage_NotifyBlockAddedRequest)(nil),
+		(*GordMessage_NotifyBlockAddedResponse)(nil),
+		(*GordMessage_BlockAddedNotification)(nil),
+		(*GordMessage_GetPeerAddressesRequest)(nil),
+		(*GordMessage_GetPeerAddressesResponse)(nil),
+		(*GordMessage_GetSelectedTipHashRequest)(nil),
+		(*GordMessage_GetSelectedTipHashResponse)(nil),
+		(*GordMessage_GetMempoolEntryRequest)(nil),
+		(*GordMessage_GetMempoolEntryResponse)(nil),
+		(*GordMessage_GetConnectedPeerInfoRequest)(nil),
+		(*GordMessage_GetConnectedPeerInfoResponse)(nil),
+		(*GordMessage_AddPeerRequest)(nil),
+		(*GordMessage_AddPeerResponse)(nil),
+		(*GordMessage_SubmitTransactionRequest)(nil),
+		(*GordMessage_SubmitTransactionResponse)(nil),
+		(*GordMessage_NotifyVirtualSelectedParentChainChangedRequest)(nil),
+		(*GorddMessage_NotifyVirtualSelectedParentChainChangedResponse)(nil),
+		(*GordMessage_VirtualSelectedParentChainChangedNotification)(nil),
+		(*GordMessage_GetBlockRequest)(nil),
+		(*GordMessage_GetBlockResponse)(nil),
+		(*GordMessage_GetSubnetworkRequest)(nil),
+		(*GordMessage_GetSubnetworkResponse)(nil),
+		(*GordMessage_GetVirtualSelectedParentChainFromBlockRequest)(nil),
+		(*GordMessage_GetVirtualSelectedParentChainFromBlockResponse)(nil),
+		(*GordMessage_GetBlocksRequest)(nil),
+		(*GordMessage_GetBlocksResponse)(nil),
+		(*GordMessage_GetBlockCountRequest)(nil),
+		(*GordMessage_GetBlockCountResponse)(nil),
+		(*GordMessage_GetBlockDagInfoRequest)(nil),
+		(*GordMessage_GetBlockDagInfoResponse)(nil),
+		(*GordMessage_ResolveFinalityConflictRequest)(nil),
+		(*GordMessage_ResolveFinalityConflictResponse)(nil),
+		(*GordMessage_NotifyFinalityConflictsRequest)(nil),
+		(*GordMessage_NotifyFinalityConflictsResponse)(nil),
+		(*GordMessage_FinalityConflictNotification)(nil),
+		(*GordMessage_FinalityConflictResolvedNotification)(nil),
+		(*GordMessage_GetMempoolEntriesRequest)(nil),
+		(*GordMessage_GetMempoolEntriesResponse)(nil),
+		(*GordMessage_ShutDownRequest)(nil),
 		(*GordMessage_ShutDownResponse)(nil),
 		(*GordMessage_GetHeadersRequest)(nil),
 		(*GordMessage_GetHeadersResponse)(nil),
