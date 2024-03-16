@@ -5,7 +5,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *KaspadMessage_GetCoinSupplyRequest) toAppMessage() (appmessage.Message, error) {
+func (x *GordMessage_GetCoinSupplyRequest) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.GetCoinSupplyRequestMessage{}, nil
 }
 
@@ -14,14 +14,14 @@ func (x *KaspadMessage_GetCoinSupplyRequest) fromAppMessage(_ *appmessage.GetCoi
 	return nil
 }
 
-func (x *KaspadMessage_GetCoinSupplyResponse) toAppMessage() (appmessage.Message, error) {
+func (x *GordMessage_GetCoinSupplyResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_GetCoinSupplyResponse is nil")
+		return nil, errors.Wrapf(errorNil, "GordMessage_GetCoinSupplyResponse is nil")
 	}
 	return x.GetCoinSupplyResponse.toAppMessage()
 }
 
-func (x *KaspadMessage_GetCoinSupplyResponse) fromAppMessage(message *appmessage.GetCoinSupplyResponseMessage) error {
+func (x *GordMessage_GetCoinSupplyResponse) fromAppMessage(message *appmessage.GetCoinSupplyResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}
