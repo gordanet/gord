@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/kaspanet/go-secp256k1"
+	"github.com/gordnet/go-secp256k1"
 	"github.com/gordanet/gord/cmd/gorwallet/daemon/client"
 	"github.com/gordanet/gord/cmd/gorwallet/daemon/pb"
 	"github.com/gordanet/gord/cmd/gorwallet/libgorwallet"
@@ -64,7 +64,7 @@ func sweep(conf *sweepConfig) error {
 		return err
 	}
 
-	UTXOs, err := libkaspawallet.KaspawalletdUTXOsTolibkaspawalletUTXOs(getExternalSpendableUTXOsResponse.Entries)
+	UTXOs, err := libgorwallet.GorwalletdUTXOsTolibkaspawalletUTXOs(getExternalSpendableUTXOsResponse.Entries)
 	if err != nil {
 		return err
 	}
@@ -116,7 +116,7 @@ func sweep(conf *sweepConfig) error {
 	fmt.Println("\nTransaction ID(s):")
 	for i, txID := range response.TxIDs {
 		fmt.Printf("\t%s\n", txID)
-		fmt.Println("\tSwept:\t", utils.FormatKas(splitTransactions[i].Outputs[0].Value), " KAS")
+		fmt.Println("\tSwept:\t", utils.FormatGOR(splitTransactions[i].Outputs[0].Value), " KAS")
 		totalExtracted = totalExtracted + splitTransactions[i].Outputs[0].Value
 	}
 
