@@ -16,7 +16,7 @@ func TestVirtualSelectedParentChain(t *testing.T) {
 
 	// Register to virtual selected parent chain changes
 	onVirtualSelectedParentChainChangedChan := make(chan *appmessage.VirtualSelectedParentChainChangedNotificationMessage)
-	err := kaspad1.rpcClient.RegisterForVirtualSelectedParentChainChangedNotifications(true,
+	err := gord1.rpcClient.RegisterForVirtualSelectedParentChainChangedNotifications(true,
 		func(notification *appmessage.VirtualSelectedParentChainChangedNotificationMessage) {
 			onVirtualSelectedParentChainChangedChan <- notification
 		})
