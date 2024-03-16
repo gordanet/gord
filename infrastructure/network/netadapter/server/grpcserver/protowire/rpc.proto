@@ -1,9 +1,9 @@
 // RPC-related types. Request messages, response messages, and dependant types.
 //
-// Clients are expected to build RequestMessages and wrap them in KaspadMessage. (see messages.proto)
+// Clients are expected to build RequestMessages and wrap them in GordMessage. (see messages.proto)
 //
-// Having received a RequestMessage, (wrapped in a KaspadMessage) the RPC server will respond with a
-// ResponseMessage (likewise wrapped in a KaspadMessage) respective to the original RequestMessage.
+// Having received a RequestMessage, (wrapped in a GordMessage) the RPC server will respond with a
+// ResponseMessage (likewise wrapped in a GordMessage) respective to the original RequestMessage.
 //
 // **IMPORTANT:** This API is a work in progress and is subject to break between versions.
 //
@@ -158,8 +158,8 @@ message GetBlockTemplateRequestMessage{
 message GetBlockTemplateResponseMessage{
   RpcBlock block = 3;
 
-  // Whether kaspad thinks that it's synced.
-  // Callers are discouraged (but not forbidden) from solving blocks when kaspad is not synced.
+  // Whether gord thinks that it's synced.
+  // Callers are discouraged (but not forbidden) from solving blocks when gord is not synced.
   // That is because when kaspad isn't in sync with the rest of the network there's a high
   // chance the block will never be accepted, thus the solving effort would have been wasted.
   bool isSynced = 2;
@@ -185,7 +185,7 @@ message BlockAddedNotificationMessage{
   RpcBlock block = 3;
 }
 
-// GetPeerAddressesRequestMessage requests the list of known kaspad addresses in the
+// GetPeerAddressesRequestMessage requests the list of known gord addresses in the
 // current network. (mainnet, testnet, etc.)
 message GetPeerAddressesRequestMessage{
 }
@@ -276,8 +276,8 @@ message GetConnectedPeerInfoMessage{
   bool isIbdPeer = 11;
 }
 
-// AddPeerRequestMessage adds a peer to kaspad's outgoing connection list.
-// This will, in most cases, result in kaspad connecting to said peer.
+// AddPeerRequestMessage adds a peer to gord's outgoing connection list.
+// This will, in most cases, result in gord connecting to said peer.
 message AddPeerRequestMessage{
   string address = 1;
 
@@ -394,7 +394,7 @@ message GetBlocksResponseMessage{
   RPCError error = 1000;
 }
 
-// GetBlockCountRequestMessage requests the current number of blocks in this kaspad.
+// GetBlockCountRequestMessage requests the current number of blocks in this gord.
 // Note that this number may decrease as pruning occurs.
 message GetBlockCountRequestMessage{
 }
@@ -406,7 +406,7 @@ message GetBlockCountResponseMessage{
 }
 
 // GetBlockDagInfoRequestMessage requests general information about the current state
-// of this kaspad's DAG.
+// of this gord's DAG.
 message GetBlockDagInfoRequestMessage{
 }
 
@@ -446,7 +446,7 @@ message FinalityConflictResolvedNotificationMessage{
   string finalityBlockHash = 1;
 }
 
-// ShutDownRequestMessage shuts down this kaspad.
+// ShutDownRequestMessage shuts down this gord.
 message ShutDownRequestMessage{
 }
 
@@ -470,7 +470,7 @@ message GetHeadersResponseMessage{
 // NotifyUtxosChangedRequestMessage registers this connection for utxoChanged notifications
 // for the given addresses.
 //
-// This call is only available when this kaspad was started with `--utxoindex`
+// This call is only available when this gord was started with `--utxoindex`
 //
 // See: UtxosChangedNotificationMessage
 message NotifyUtxosChangedRequestMessage {
@@ -498,7 +498,7 @@ message UtxosByAddressesEntry {
 // StopNotifyingUtxosChangedRequestMessage unregisters this connection for utxoChanged notifications
 // for the given addresses.
 //
-// This call is only available when this kaspad was started with `--utxoindex`
+// This call is only available when this gord was started with `--utxoindex`
 //
 // See: UtxosChangedNotificationMessage
 message StopNotifyingUtxosChangedRequestMessage {
@@ -509,9 +509,9 @@ message StopNotifyingUtxosChangedResponseMessage {
   RPCError error = 1000;
 }
 
-// GetUtxosByAddressesRequestMessage requests all current UTXOs for the given kaspad addresses
+// GetUtxosByAddressesRequestMessage requests all current UTXOs for the given gord addresses
 //
-// This call is only available when this kaspad was started with `--utxoindex`
+// This call is only available when this gord was started with `--utxoindex`
 message GetUtxosByAddressesRequestMessage {
   repeated string addresses = 1;
 }
@@ -524,7 +524,7 @@ message GetUtxosByAddressesResponseMessage {
 
 // GetBalanceByAddressRequest returns the total balance in unspent transactions towards a given address
 // 
-// This call is only available when this kaspad was started with `--utxoindex`
+// This call is only available when this gord was started with `--utxoindex`
 message GetBalanceByAddressRequestMessage {
   string address = 1;
 }
