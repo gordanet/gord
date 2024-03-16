@@ -41,7 +41,7 @@ func (u AmountUnit) String() string {
 		return "GOR"
 	case AmountMilliGOR:
 		return "mGOR"
-	case AmountMicroKAS:
+	case AmountMicroGOR:
 		return "μGOR"
 	case AmountSeep:
 		return "Seep"
