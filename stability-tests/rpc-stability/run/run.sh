@@ -1,23 +1,23 @@
 #!/bin/bash
-rm -rf /tmp/kaspad-temp
+rm -rf /tmp/gord-temp
 
-kaspad --devnet --appdir=/tmp/kaspad-temp --profile=6061 --loglevel=debug &
-KASPAD_PID=$!
+gord --devnet --appdir=/tmp/gord-temp --profile=6061 --loglevel=debug &
+GORD_PID=$!
 
 sleep 1
 
 rpc-stability --devnet -p commands.json --profile=7000
 TEST_EXIT_CODE=$?
 
-kill $KASPAD_PID
+kill $GORD_PID
 
-wait $KASPAD_PID
-KASPAD_EXIT_CODE=$?
+wait $GORD_PID
+GORD_EXIT_CODE=$?
 
 echo "Exit code: $TEST_EXIT_CODE"
-echo "Kaspad exit code: $KASPAD_EXIT_CODE"
+echo "Gord exit code: $GORD_EXIT_CODE"
 
-if [ $TEST_EXIT_CODE -eq 0 ] && [ $KASPAD_EXIT_CODE -eq 0 ]; then
+if [ $TEST_EXIT_CODE -eq 0 ] && [ $GORD_EXIT_CODE -eq 0 ]; then
   echo "rpc-stability test: PASSED"
   exit 0
 fi
