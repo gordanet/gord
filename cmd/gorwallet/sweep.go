@@ -6,6 +6,7 @@ import (
 	"fmt"
 
 	"github.com/gordanet/go-secp256k1"
+	"github.com/gordanet/gord-muhash@v0.0.4"
 	"github.com/gordanet/gord/cmd/gorwallet/daemon/client"
 	"github.com/gordanet/gord/cmd/gorwallet/daemon/pb"
 	"github.com/gordanet/gord/cmd/gorwallet/libgorwallet"
