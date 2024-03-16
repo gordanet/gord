@@ -107,13 +107,13 @@ func toPublicVersion(version [4]byte) ([4]byte, error) {
 	case BitcoinMainnetPrivate:
 		return BitcoinMainnetPublic, nil
 	case GorMainnetPrivate:
-		return KaspaMainnetPublic, nil
+		return GorMainnetPublic, nil
 	case GorTestnetPrivate:
-		return KaspaTestnetPublic, nil
+		return GorTestnetPublic, nil
 	case GorDevnetPrivate:
-		return KaspaDevnetPublic, nil
+		return GorDevnetPublic, nil
 	case GorSimnetPrivate:
-		return KaspaSimnetPublic, nil
+		return GorSimnetPublic, nil
 	}
 
 	return [4]byte{}, errors.Errorf("unknown version %x", version)
