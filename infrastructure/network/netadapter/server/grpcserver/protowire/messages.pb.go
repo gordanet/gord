@@ -26,137 +26,137 @@ type KaspadMessage struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Payload:
-	//	*KaspadMessage_Addresses
-	//	*KaspadMessage_Block
-	//	*KaspadMessage_Transaction
-	//	*KaspadMessage_BlockLocator
-	//	*KaspadMessage_RequestAddresses
-	//	*KaspadMessage_RequestRelayBlocks
-	//	*KaspadMessage_RequestTransactions
-	//	*KaspadMessage_IbdBlock
-	//	*KaspadMessage_InvRelayBlock
-	//	*KaspadMessage_InvTransactions
-	//	*KaspadMessage_Ping
-	//	*KaspadMessage_Pong
-	//	*KaspadMessage_Verack
-	//	*KaspadMessage_Version
-	//	*KaspadMessage_TransactionNotFound
-	//	*KaspadMessage_Reject
-	//	*KaspadMessage_PruningPointUtxoSetChunk
-	//	*KaspadMessage_RequestIBDBlocks
-	//	*KaspadMessage_UnexpectedPruningPoint
-	//	*KaspadMessage_IbdBlockLocator
-	//	*KaspadMessage_IbdBlockLocatorHighestHash
-	//	*KaspadMessage_RequestNextPruningPointUtxoSetChunk
-	//	*KaspadMessage_DonePruningPointUtxoSetChunks
-	//	*KaspadMessage_IbdBlockLocatorHighestHashNotFound
-	//	*KaspadMessage_BlockWithTrustedData
-	//	*KaspadMessage_DoneBlocksWithTrustedData
-	//	*KaspadMessage_RequestPruningPointAndItsAnticone
-	//	*KaspadMessage_BlockHeaders
-	//	*KaspadMessage_RequestNextHeaders
-	//	*KaspadMessage_DoneHeaders
-	//	*KaspadMessage_RequestPruningPointUTXOSet
-	//	*KaspadMessage_RequestHeaders
-	//	*KaspadMessage_RequestBlockLocator
-	//	*KaspadMessage_PruningPoints
-	//	*KaspadMessage_RequestPruningPointProof
-	//	*KaspadMessage_PruningPointProof
-	//	*KaspadMessage_Ready
-	//	*KaspadMessage_BlockWithTrustedDataV4
-	//	*KaspadMessage_TrustedData
-	//	*KaspadMessage_RequestIBDChainBlockLocator
-	//	*KaspadMessage_IbdChainBlockLocator
-	//	*KaspadMessage_RequestAnticone
-	//	*KaspadMessage_RequestNextPruningPointAndItsAnticoneBlocks
-	//	*KaspadMessage_GetCurrentNetworkRequest
-	//	*KaspadMessage_GetCurrentNetworkResponse
-	//	*KaspadMessage_SubmitBlockRequest
-	//	*KaspadMessage_SubmitBlockResponse
-	//	*KaspadMessage_GetBlockTemplateRequest
-	//	*KaspadMessage_GetBlockTemplateResponse
-	//	*KaspadMessage_NotifyBlockAddedRequest
-	//	*KaspadMessage_NotifyBlockAddedResponse
-	//	*KaspadMessage_BlockAddedNotification
-	//	*KaspadMessage_GetPeerAddressesRequest
-	//	*KaspadMessage_GetPeerAddressesResponse
-	//	*KaspadMessage_GetSelectedTipHashRequest
-	//	*KaspadMessage_GetSelectedTipHashResponse
-	//	*KaspadMessage_GetMempoolEntryRequest
-	//	*KaspadMessage_GetMempoolEntryResponse
-	//	*KaspadMessage_GetConnectedPeerInfoRequest
-	//	*KaspadMessage_GetConnectedPeerInfoResponse
-	//	*KaspadMessage_AddPeerRequest
-	//	*KaspadMessage_AddPeerResponse
-	//	*KaspadMessage_SubmitTransactionRequest
-	//	*KaspadMessage_SubmitTransactionResponse
-	//	*KaspadMessage_NotifyVirtualSelectedParentChainChangedRequest
-	//	*KaspadMessage_NotifyVirtualSelectedParentChainChangedResponse
-	//	*KaspadMessage_VirtualSelectedParentChainChangedNotification
-	//	*KaspadMessage_GetBlockRequest
-	//	*KaspadMessage_GetBlockResponse
-	//	*KaspadMessage_GetSubnetworkRequest
-	//	*KaspadMessage_GetSubnetworkResponse
-	//	*KaspadMessage_GetVirtualSelectedParentChainFromBlockRequest
-	//	*KaspadMessage_GetVirtualSelectedParentChainFromBlockResponse
-	//	*KaspadMessage_GetBlocksRequest
-	//	*KaspadMessage_GetBlocksResponse
-	//	*KaspadMessage_GetBlockCountRequest
-	//	*KaspadMessage_GetBlockCountResponse
-	//	*KaspadMessage_GetBlockDagInfoRequest
-	//	*KaspadMessage_GetBlockDagInfoResponse
-	//	*KaspadMessage_ResolveFinalityConflictRequest
-	//	*KaspadMessage_ResolveFinalityConflictResponse
-	//	*KaspadMessage_NotifyFinalityConflictsRequest
-	//	*KaspadMessage_NotifyFinalityConflictsResponse
-	//	*KaspadMessage_FinalityConflictNotification
-	//	*KaspadMessage_FinalityConflictResolvedNotification
-	//	*KaspadMessage_GetMempoolEntriesRequest
-	//	*KaspadMessage_GetMempoolEntriesResponse
-	//	*KaspadMessage_ShutDownRequest
-	//	*KaspadMessage_ShutDownResponse
-	//	*KaspadMessage_GetHeadersRequest
-	//	*KaspadMessage_GetHeadersResponse
-	//	*KaspadMessage_NotifyUtxosChangedRequest
-	//	*KaspadMessage_NotifyUtxosChangedResponse
-	//	*KaspadMessage_UtxosChangedNotification
-	//	*KaspadMessage_GetUtxosByAddressesRequest
-	//	*KaspadMessage_GetUtxosByAddressesResponse
-	//	*KaspadMessage_GetVirtualSelectedParentBlueScoreRequest
-	//	*KaspadMessage_GetVirtualSelectedParentBlueScoreResponse
-	//	*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest
-	//	*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse
-	//	*KaspadMessage_VirtualSelectedParentBlueScoreChangedNotification
-	//	*KaspadMessage_BanRequest
-	//	*KaspadMessage_BanResponse
-	//	*KaspadMessage_UnbanRequest
-	//	*KaspadMessage_UnbanResponse
-	//	*KaspadMessage_GetInfoRequest
-	//	*KaspadMessage_GetInfoResponse
-	//	*KaspadMessage_StopNotifyingUtxosChangedRequest
-	//	*KaspadMessage_StopNotifyingUtxosChangedResponse
-	//	*KaspadMessage_NotifyPruningPointUTXOSetOverrideRequest
-	//	*KaspadMessage_NotifyPruningPointUTXOSetOverrideResponse
-	//	*KaspadMessage_PruningPointUTXOSetOverrideNotification
-	//	*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest
-	//	*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse
-	//	*KaspadMessage_EstimateNetworkHashesPerSecondRequest
-	//	*KaspadMessage_EstimateNetworkHashesPerSecondResponse
-	//	*KaspadMessage_NotifyVirtualDaaScoreChangedRequest
-	//	*KaspadMessage_NotifyVirtualDaaScoreChangedResponse
-	//	*KaspadMessage_VirtualDaaScoreChangedNotification
-	//	*KaspadMessage_GetBalanceByAddressRequest
-	//	*KaspadMessage_GetBalanceByAddressResponse
-	//	*KaspadMessage_GetBalancesByAddressesRequest
-	//	*KaspadMessage_GetBalancesByAddressesResponse
-	//	*KaspadMessage_NotifyNewBlockTemplateRequest
-	//	*KaspadMessage_NotifyNewBlockTemplateResponse
-	//	*KaspadMessage_NewBlockTemplateNotification
-	//	*KaspadMessage_GetMempoolEntriesByAddressesRequest
-	//	*KaspadMessage_GetMempoolEntriesByAddressesResponse
-	//	*KaspadMessage_GetCoinSupplyRequest
-	//	*KaspadMessage_GetCoinSupplyResponse
-	Payload isKaspadMessage_Payload `protobuf_oneof:"payload"`
+	//	*GordMessage_Addresses
+	//	*GordMessage_Block
+	//	*GordMessage_Transaction
+	//	*GordMessage_BlockLocator
+	//	*GordMessage_RequestAddresses
+	//	*GordMessage_RequestRelayBlocks
+	//	*GordMessage_RequestTransactions
+	//	*GordMessage_IbdBlock
+	//	*GordMessage_InvRelayBlock
+	//	*GordMessage_InvTransactions
+	//	*GordMessage_Ping
+	//	*GordMessage_Pong
+	//	*GordMessage_Verack
+	//	*GordMessage_Version
+	//	*GordMessage_TransactionNotFound
+	//	*GordMessage_Reject
+	//	*GordMessage_PruningPointUtxoSetChunk
+	//	*GordMessage_RequestIBDBlocks
+	//	*GordMessage_UnexpectedPruningPoint
+	//	*GordMessage_IbdBlockLocator
+	//	*GordMessage_IbdBlockLocatorHighestHash
+	//	*GordMessage_RequestNextPruningPointUtxoSetChunk
+	//	*GordMessage_DonePruningPointUtxoSetChunks
+	//	*GordMessage_IbdBlockLocatorHighestHashNotFound
+	//	*GordMessage_BlockWithTrustedData
+	//	*GordMessage_DoneBlocksWithTrustedData
+	//	*GordMessage_RequestPruningPointAndItsAnticone
+	//	*GordMessage_BlockHeaders
+	//	*GordMessage_RequestNextHeaders
+	//	*GordMessage_DoneHeaders
+	//	*GordMessage_RequestPruningPointUTXOSet
+	//	*GordMessage_RequestHeaders
+	//	*GordMessage_RequestBlockLocator
+	//	*GordMessage_PruningPoints
+	//	*GordMessage_RequestPruningPointProof
+	//	*GordMessage_PruningPointProof
+	//	*GordMessage_Ready
+	//	*GordMessage_BlockWithTrustedDataV4
+	//	*GordMessage_TrustedData
+	//	*GordMessage_RequestIBDChainBlockLocator
+	//	*GordMessage_IbdChainBlockLocator
+	//	*GordMessage_RequestAnticone
+	//	*GordMessage_RequestNextPruningPointAndItsAnticoneBlocks
+	//	*GordMessage_GetCurrentNetworkRequest
+	//	*GordMessage_GetCurrentNetworkResponse
+	//	*GordMessage_SubmitBlockRequest
+	//	*GordMessage_SubmitBlockResponse
+	//	*GordMessage_GetBlockTemplateRequest
+	//	*GordMessage_GetBlockTemplateResponse
+	//	*GordMessage_NotifyBlockAddedRequest
+	//	*GordMessage_NotifyBlockAddedResponse
+	//	*GordMessage_BlockAddedNotification
+	//	*GordMessage_GetPeerAddressesRequest
+	//	*GordMessage_GetPeerAddressesResponse
+	//	*GordMessage_GetSelectedTipHashRequest
+	//	*GordMessage_GetSelectedTipHashResponse
+	//	*GordMessage_GetMempoolEntryRequest
+	//	*GordMessage_GetMempoolEntryResponse
+	//	*GordMessage_GetConnectedPeerInfoRequest
+	//	*GordMessage_GetConnectedPeerInfoResponse
+	//	*GordMessage_AddPeerRequest
+	//	*GordMessage_AddPeerResponse
+	//	*GordMessage_SubmitTransactionRequest
+	//	*GordMessage_SubmitTransactionResponse
+	//	*GordMessage_NotifyVirtualSelectedParentChainChangedRequest
+	//	*GordMessage_NotifyVirtualSelectedParentChainChangedResponse
+	//	*GordMessage_VirtualSelectedParentChainChangedNotification
+	//	*GordMessage_GetBlockRequest
+	//	*GordMessage_GetBlockResponse
+	//	*GordMessage_GetSubnetworkRequest
+	//	*GordMessage_GetSubnetworkResponse
+	//	*GordMessage_GetVirtualSelectedParentChainFromBlockRequest
+	//	*GordMessage_GetVirtualSelectedParentChainFromBlockResponse
+	//	*GordMessage_GetBlocksRequest
+	//	*GordMessage_GetBlocksResponse
+	//	*GordMessage_GetBlockCountRequest
+	//	*GordMessage_GetBlockCountResponse
+	//	*GordMessage_GetBlockDagInfoRequest
+	//	*GordMessage_GetBlockDagInfoResponse
+	//	*GordMessage_ResolveFinalityConflictRequest
+	//	*GordMessage_ResolveFinalityConflictResponse
+	//	*GordMessage_NotifyFinalityConflictsRequest
+	//	*GordMessage_NotifyFinalityConflictsResponse
+	//	*GordMessage_FinalityConflictNotification
+	//	*GordMessage_FinalityConflictResolvedNotification
+	//	*GordMessage_GetMempoolEntriesRequest
+	//	*GordMessage_GetMempoolEntriesResponse
+	//	*GordMessage_ShutDownRequest
+	//	*GordMessage_ShutDownResponse
+	//	*GordMessage_GetHeadersRequest
+	//	*GordMessage_GetHeadersResponse
+	//	*GordMessage_NotifyUtxosChangedRequest
+	//	*GordMessage_NotifyUtxosChangedResponse
+	//	*GordMessage_UtxosChangedNotification
+	//	*GordMessage_GetUtxosByAddressesRequest
+	//	*GordMessage_GetUtxosByAddressesResponse
+	//	*GordMessage_GetVirtualSelectedParentBlueScoreRequest
+	//	*GordMessage_GetVirtualSelectedParentBlueScoreResponse
+	//	*GordMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest
+	//	*GordMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse
+	//	*GordMessage_VirtualSelectedParentBlueScoreChangedNotification
+	//	*GordMessage_BanRequest
+	//	*GordMessage_BanResponse
+	//	*GordMessage_UnbanRequest
+	//	*GorMessage_UnbanResponse
+	//	*GordMessage_GetInfoRequest
+	//	*GordMessage_GetInfoResponse
+	//	*GordMessage_StopNotifyingUtxosChangedRequest
+	//	*GordMessage_StopNotifyingUtxosChangedResponse
+	//	*GordMessage_NotifyPruningPointUTXOSetOverrideRequest
+	//	*GordMessage_NotifyPruningPointUTXOSetOverrideResponse
+	//	*GordMessage_PruningPointUTXOSetOverrideNotification
+	//	*GordMessage_StopNotifyingPruningPointUTXOSetOverrideRequest
+	//	*GordMessage_StopNotifyingPruningPointUTXOSetOverrideResponse
+	//	*GordMessage_EstimateNetworkHashesPerSecondRequest
+	//	*GordMessage_EstimateNetworkHashesPerSecondResponse
+	//	*GordMessage_NotifyVirtualDaaScoreChangedRequest
+	//	*GordMessage_NotifyVirtualDaaScoreChangedResponse
+	//	*GordMessage_VirtualDaaScoreChangedNotification
+	//	*GordMessage_GetBalanceByAddressRequest
+	//	*GordMessage_GetBalanceByAddressResponse
+	//	*GordMessage_GetBalancesByAddressesRequest
+	//	*GordMessage_GetBalancesByAddressesResponse
+	//	*GordMessage_NotifyNewBlockTemplateRequest
+	//	*GordMessage_NotifyNewBlockTemplateResponse
+	//	*GordMessage_NewBlockTemplateNotification
+	//	*GordMessage_GetMempoolEntriesByAddressesRequest
+	//	*GordMessage_GetMempoolEntriesByAddressesResponse
+	//	*GordMessage_GetCoinSupplyRequest
+	//	*GordMessage_GetCoinSupplyResponse
+	Payload isGordMessage_Payload `protobuf_oneof:"payload"`
 }
 
 func (x *KaspadMessage) Reset() {
@@ -1003,98 +1003,98 @@ func (x *KaspadMessage) GetEstimateNetworkHashesPerSecondRequest() *EstimateNetw
 	return nil
 }
 
-func (x *KaspadMessage) GetEstimateNetworkHashesPerSecondResponse() *EstimateNetworkHashesPerSecondResponseMessage {
+func (x *GordMessage) GetEstimateNetworkHashesPerSecondResponse() *EstimateNetworkHashesPerSecondResponseMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_EstimateNetworkHashesPerSecondResponse); ok {
 		return x.EstimateNetworkHashesPerSecondResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyVirtualDaaScoreChangedRequest() *NotifyVirtualDaaScoreChangedRequestMessage {
+func (x *GordMessage) GetNotifyVirtualDaaScoreChangedRequest() *NotifyVirtualDaaScoreChangedRequestMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_NotifyVirtualDaaScoreChangedRequest); ok {
 		return x.NotifyVirtualDaaScoreChangedRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyVirtualDaaScoreChangedResponse() *NotifyVirtualDaaScoreChangedResponseMessage {
+func (x *GordMessage) GetNotifyVirtualDaaScoreChangedResponse() *NotifyVirtualDaaScoreChangedResponseMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_NotifyVirtualDaaScoreChangedResponse); ok {
 		return x.NotifyVirtualDaaScoreChangedResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetVirtualDaaScoreChangedNotification() *VirtualDaaScoreChangedNotificationMessage {
+func (x *GordMessage) GetVirtualDaaScoreChangedNotification() *VirtualDaaScoreChangedNotificationMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_VirtualDaaScoreChangedNotification); ok {
 		return x.VirtualDaaScoreChangedNotification
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBalanceByAddressRequest() *GetBalanceByAddressRequestMessage {
+func (x *GordMessage) GetGetBalanceByAddressRequest() *GetBalanceByAddressRequestMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_GetBalanceByAddressRequest); ok {
 		return x.GetBalanceByAddressRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBalanceByAddressResponse() *GetBalanceByAddressResponseMessage {
+func (x *GordMessage) GetGetBalanceByAddressResponse() *GetBalanceByAddressResponseMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_GetBalanceByAddressResponse); ok {
 		return x.GetBalanceByAddressResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBalancesByAddressesRequest() *GetBalancesByAddressesRequestMessage {
+func (x *GordMessage) GetGetBalancesByAddressesRequest() *GetBalancesByAddressesRequestMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_GetBalancesByAddressesRequest); ok {
 		return x.GetBalancesByAddressesRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetBalancesByAddressesResponse() *GetBalancesByAddressesResponseMessage {
+func (x *GordMessage) GetGetBalancesByAddressesResponse() *GetBalancesByAddressesResponseMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_GetBalancesByAddressesResponse); ok {
 		return x.GetBalancesByAddressesResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyNewBlockTemplateRequest() *NotifyNewBlockTemplateRequestMessage {
+func (x *GordMessage) GetNotifyNewBlockTemplateRequest() *NotifyNewBlockTemplateRequestMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_NotifyNewBlockTemplateRequest); ok {
 		return x.NotifyNewBlockTemplateRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNotifyNewBlockTemplateResponse() *NotifyNewBlockTemplateResponseMessage {
+func (x *GordMessage) GetNotifyNewBlockTemplateResponse() *NotifyNewBlockTemplateResponseMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_NotifyNewBlockTemplateResponse); ok {
 		return x.NotifyNewBlockTemplateResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetNewBlockTemplateNotification() *NewBlockTemplateNotificationMessage {
+func (x *GordMessage) GetNewBlockTemplateNotification() *NewBlockTemplateNotificationMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_NewBlockTemplateNotification); ok {
 		return x.NewBlockTemplateNotification
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetMempoolEntriesByAddressesRequest() *GetMempoolEntriesByAddressesRequestMessage {
+func (x *GordMessage) GetGetMempoolEntriesByAddressesRequest() *GetMempoolEntriesByAddressesRequestMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_GetMempoolEntriesByAddressesRequest); ok {
 		return x.GetMempoolEntriesByAddressesRequest
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetMempoolEntriesByAddressesResponse() *GetMempoolEntriesByAddressesResponseMessage {
+func (x *GordMessage) GetGetMempoolEntriesByAddressesResponse() *GetMempoolEntriesByAddressesResponseMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_GetMempoolEntriesByAddressesResponse); ok {
 		return x.GetMempoolEntriesByAddressesResponse
 	}
 	return nil
 }
 
-func (x *KaspadMessage) GetGetCoinSupplyRequest() *GetCoinSupplyRequestMessage {
+func (x *GordMessage) GetGetCoinSupplyRequest() *GetCoinSupplyRequestMessage {
 	if x, ok := x.GetPayload().(*KaspadMessage_GetCoinSupplyRequest); ok {
 		return x.GetCoinSupplyRequest
 	}
@@ -1320,19 +1320,19 @@ type KaspadMessage_BlockAddedNotification struct {
 	BlockAddedNotification *BlockAddedNotificationMessage `protobuf:"bytes,1009,opt,name=blockAddedNotification,proto3,oneof"`
 }
 
-type KaspadMessage_GetPeerAddressesRequest struct {
+type GordMessage_GetPeerAddressesRequest struct {
 	GetPeerAddressesRequest *GetPeerAddressesRequestMessage `protobuf:"bytes,1010,opt,name=getPeerAddressesRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetPeerAddressesResponse struct {
+type GordMessage_GetPeerAddressesResponse struct {
 	GetPeerAddressesResponse *GetPeerAddressesResponseMessage `protobuf:"bytes,1011,opt,name=getPeerAddressesResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetSelectedTipHashRequest struct {
+type GordMessage_GetSelectedTipHashRequest struct {
 	GetSelectedTipHashRequest *GetSelectedTipHashRequestMessage `protobuf:"bytes,1012,opt,name=getSelectedTipHashRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetSelectedTipHashResponse struct {
+type GordMessage_GetSelectedTipHashResponse struct {
 	GetSelectedTipHashResponse *GetSelectedTipHashResponseMessage `protobuf:"bytes,1013,opt,name=getSelectedTipHashResponse,proto3,oneof"`
 }
 
@@ -1872,25 +1872,25 @@ func (*KaspadMessage_VirtualDaaScoreChangedNotification) isKaspadMessage_Payload
 
 func (*KaspadMessage_GetBalanceByAddressRequest) isKaspadMessage_Payload() {}
 
-func (*KaspadMessage_GetBalanceByAddressResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBalanceByAddressResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetBalancesByAddressesRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBalancesByAddressesRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetBalancesByAddressesResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetBalancesByAddressesResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyNewBlockTemplateRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyNewBlockTemplateRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NotifyNewBlockTemplateResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_NotifyNewBlockTemplateResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_NewBlockTemplateNotification) isKaspadMessage_Payload() {}
+func (*GordMessage_NewBlockTemplateNotification) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetMempoolEntriesByAddressesRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetMempoolEntriesByAddressesRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetMempoolEntriesByAddressesResponse) isKaspadMessage_Payload() {}
+func (*GorMessage_GetMempoolEntriesByAddressesResponse) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetCoinSupplyRequest) isKaspadMessage_Payload() {}
+func (*GordMessage_GetCoinSupplyRequest) isGordMessage_Payload() {}
 
-func (*KaspadMessage_GetCoinSupplyResponse) isKaspadMessage_Payload() {}
+func (*GordMessage_GetCoinSupplyResponse) isGordMessage_Payload() {}
 
 var File_messages_proto protoreflect.FileDescriptor
 
@@ -3066,10 +3066,10 @@ var file_messages_proto_depIdxs = []int32{
 	127, // 127: protowire.KaspadMessage.getMempoolEntriesByAddressesResponse:type_name -> protowire.GetMempoolEntriesByAddressesResponseMessage
 	128, // 128: protowire.KaspadMessage.getCoinSupplyRequest:type_name -> protowire.GetCoinSupplyRequestMessage
 	129, // 129: protowire.KaspadMessage.getCoinSupplyResponse:type_name -> protowire.GetCoinSupplyResponseMessage
-	0,   // 130: protowire.P2P.MessageStream:input_type -> protowire.KaspadMessage
-	0,   // 131: protowire.RPC.MessageStream:input_type -> protowire.KaspadMessage
-	0,   // 132: protowire.P2P.MessageStream:output_type -> protowire.KaspadMessage
-	0,   // 133: protowire.RPC.MessageStream:output_type -> protowire.KaspadMessage
+	0,   // 130: protowire.P2P.MessageStream:input_type -> protowire.GordMessage
+	0,   // 131: protowire.RPC.MessageStream:input_type -> protowire.GordMessage
+	0,   // 132: protowire.P2P.MessageStream:output_type -> protowire.GordMessage
+	0,   // 133: protowire.RPC.MessageStream:output_type -> protowire.GordMessage
 	132, // [132:134] is the sub-list for method output_type
 	130, // [130:132] is the sub-list for method input_type
 	130, // [130:130] is the sub-list for extension type_name
@@ -3086,7 +3086,7 @@ func file_messages_proto_init() {
 	file_rpc_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_messages_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*KaspadMessage); i {
+			switch v := v.(*GordMessage); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3099,8 +3099,8 @@ func file_messages_proto_init() {
 		}
 	}
 	file_messages_proto_msgTypes[0].OneofWrappers = []interface{}{
-		(*KaspadMessage_Addresses)(nil),
-		(*KaspadMessage_Block)(nil),
+		(*GordMessage_Addresses)(nil),
+		(*GordMessage_Block)(nil),
 		(*KaspadMessage_Transaction)(nil),
 		(*KaspadMessage_BlockLocator)(nil),
 		(*KaspadMessage_RequestAddresses)(nil),
@@ -3187,48 +3187,48 @@ func file_messages_proto_init() {
 		(*KaspadMessage_GetMempoolEntriesRequest)(nil),
 		(*KaspadMessage_GetMempoolEntriesResponse)(nil),
 		(*KaspadMessage_ShutDownRequest)(nil),
-		(*KaspadMessage_ShutDownResponse)(nil),
-		(*KaspadMessage_GetHeadersRequest)(nil),
-		(*KaspadMessage_GetHeadersResponse)(nil),
-		(*KaspadMessage_NotifyUtxosChangedRequest)(nil),
-		(*KaspadMessage_NotifyUtxosChangedResponse)(nil),
-		(*KaspadMessage_UtxosChangedNotification)(nil),
-		(*KaspadMessage_GetUtxosByAddressesRequest)(nil),
-		(*KaspadMessage_GetUtxosByAddressesResponse)(nil),
-		(*KaspadMessage_GetVirtualSelectedParentBlueScoreRequest)(nil),
-		(*KaspadMessage_GetVirtualSelectedParentBlueScoreResponse)(nil),
-		(*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest)(nil),
-		(*KaspadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse)(nil),
-		(*KaspadMessage_VirtualSelectedParentBlueScoreChangedNotification)(nil),
-		(*KaspadMessage_BanRequest)(nil),
-		(*KaspadMessage_BanResponse)(nil),
-		(*KaspadMessage_UnbanRequest)(nil),
-		(*KaspadMessage_UnbanResponse)(nil),
-		(*KaspadMessage_GetInfoRequest)(nil),
-		(*KaspadMessage_GetInfoResponse)(nil),
-		(*KaspadMessage_StopNotifyingUtxosChangedRequest)(nil),
-		(*KaspadMessage_StopNotifyingUtxosChangedResponse)(nil),
-		(*KaspadMessage_NotifyPruningPointUTXOSetOverrideRequest)(nil),
-		(*KaspadMessage_NotifyPruningPointUTXOSetOverrideResponse)(nil),
-		(*KaspadMessage_PruningPointUTXOSetOverrideNotification)(nil),
-		(*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest)(nil),
-		(*KaspadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse)(nil),
-		(*KaspadMessage_EstimateNetworkHashesPerSecondRequest)(nil),
-		(*KaspadMessage_EstimateNetworkHashesPerSecondResponse)(nil),
-		(*KaspadMessage_NotifyVirtualDaaScoreChangedRequest)(nil),
-		(*KaspadMessage_NotifyVirtualDaaScoreChangedResponse)(nil),
-		(*KaspadMessage_VirtualDaaScoreChangedNotification)(nil),
-		(*KaspadMessage_GetBalanceByAddressRequest)(nil),
-		(*KaspadMessage_GetBalanceByAddressResponse)(nil),
-		(*KaspadMessage_GetBalancesByAddressesRequest)(nil),
-		(*KaspadMessage_GetBalancesByAddressesResponse)(nil),
-		(*KaspadMessage_NotifyNewBlockTemplateRequest)(nil),
-		(*KaspadMessage_NotifyNewBlockTemplateResponse)(nil),
-		(*KaspadMessage_NewBlockTemplateNotification)(nil),
-		(*KaspadMessage_GetMempoolEntriesByAddressesRequest)(nil),
-		(*KaspadMessage_GetMempoolEntriesByAddressesResponse)(nil),
-		(*KaspadMessage_GetCoinSupplyRequest)(nil),
-		(*KaspadMessage_GetCoinSupplyResponse)(nil),
+		(*GordMessage_ShutDownResponse)(nil),
+		(*GordMessage_GetHeadersRequest)(nil),
+		(*GordMessage_GetHeadersResponse)(nil),
+		(*GordMessage_NotifyUtxosChangedRequest)(nil),
+		(*GordMessage_NotifyUtxosChangedResponse)(nil),
+		(*gordMessage_UtxosChangedNotification)(nil),
+		(*GordMessage_GetUtxosByAddressesRequest)(nil),
+		(*GordMessage_GetUtxosByAddressesResponse)(nil),
+		(*GordMessage_GetVirtualSelectedParentBlueScoreRequest)(nil),
+		(*GordMessage_GetVirtualSelectedParentBlueScoreResponse)(nil),
+		(*GordMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest)(nil),
+		(*GordMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse)(nil),
+		(*GordMessage_VirtualSelectedParentBlueScoreChangedNotification)(nil),
+		(*GordMessage_BanRequest)(nil),
+		(*GordMessage_BanResponse)(nil),
+		(*GordMessage_UnbanRequest)(nil),
+		(*GordMessage_UnbanResponse)(nil),
+		(*GordMessage_GetInfoRequest)(nil),
+		(*GordMessage_GetInfoResponse)(nil),
+		(*GordMessage_StopNotifyingUtxosChangedRequest)(nil),
+		(*GorddMessage_StopNotifyingUtxosChangedResponse)(nil),
+		(*GordMessage_NotifyPruningPointUTXOSetOverrideRequest)(nil),
+		(*GordMessage_NotifyPruningPointUTXOSetOverrideResponse)(nil),
+		(*GordMessage_PruningPointUTXOSetOverrideNotification)(nil),
+		(*GordMessage_StopNotifyingPruningPointUTXOSetOverrideRequest)(nil),
+		(*GordMessage_StopNotifyingPruningPointUTXOSetOverrideResponse)(nil),
+		(*GordMessage_EstimateNetworkHashesPerSecondRequest)(nil),
+		(*GordMessage_EstimateNetworkHashesPerSecondResponse)(nil),
+		(*GordMessage_NotifyVirtualDaaScoreChangedRequest)(nil),
+		(*GordMessage_NotifyVirtualDaaScoreChangedResponse)(nil),
+		(*GordMessage_VirtualDaaScoreChangedNotification)(nil),
+		(*GordMessage_GetBalanceByAddressRequest)(nil),
+		(*GordMessage_GetBalanceByAddressResponse)(nil),
+		(*GordMessage_GetBalancesByAddressesRequest)(nil),
+		(*GordMessage_GetBalancesByAddressesResponse)(nil),
+		(*GordMessage_NotifyNewBlockTemplateRequest)(nil),
+		(*GordMessage_NotifyNewBlockTemplateResponse)(nil),
+		(*GorddMessage_NewBlockTemplateNotification)(nil),
+		(*GordMessage_GetMempoolEntriesByAddressesRequest)(nil),
+		(*GordMessage_GetMempoolEntriesByAddressesResponse)(nil),
+		(*GordMessage_GetCoinSupplyRequest)(nil),
+		(*GordMessage_GetCoinSupplyResponse)(nil),
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
