@@ -1,7 +1,7 @@
 package multiset
 
 import (
-	"github.com/gordanet/gord-muhash"
+	"github.com/gordanet/go-muhash@v0.0.4"
 	"github.com/gordanet/gord/domain/consensus/model"
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
