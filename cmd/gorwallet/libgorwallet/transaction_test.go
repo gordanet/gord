@@ -406,7 +406,7 @@ func TestMaxSompi(t *testing.T) {
 		txOut2 := fundingBlock3.Transactions[0].Outputs[0]
 		txOut3 := fundingBlock4.Transactions[0].Outputs[0]
 		txOut4 := block1.Transactions[0].Outputs[0]
-		selectedUTXOsForTxWithLargeInputAmount := []*libkaspawallet.UTXO{
+		selectedUTXOsForTxWithLargeInputAmount := []*libgorwallet.UTXO{
 			{
 				Outpoint: &externalapi.DomainOutpoint{
 					TransactionID: *consensushashing.TransactionID(fundingBlock2.Transactions[0]),
@@ -490,7 +490,7 @@ func TestMaxSompi(t *testing.T) {
 			t.Fatalf("Sign: %+v", err)
 		}
 
-		txWithLargeInputAndOutputAmount, err := libkaspawallet.ExtractTransaction(signedTxWithLargeInputAndOutputAmount, false)
+		txWithLargeInputAndOutputAmount, err := libgorwallet.ExtractTransaction(signedTxWithLargeInputAndOutputAmount, false)
 		if err != nil {
 			t.Fatalf("ExtractTransaction: %+v", err)
 		}
