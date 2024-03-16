@@ -25,7 +25,7 @@ const (
 	AmountGOR      AmountUnit = 0
 	AmountMilliGOR AmountUnit = -3
 	AmountMicroGOR AmountUnit = -6
-	AmountSeep     AmountUnit = -8
+	AmountSompi     AmountUnit = -8
 )
 
 // String returns the unit as a string. For recognized units, the SI
@@ -44,7 +44,7 @@ func (u AmountUnit) String() string {
 	case AmountMicroGOR:
 		return "μGOR"
 	case AmountSeep:
-		return "Seep"
+		return "Sompi"
 	default:
 		return "1e" + strconv.FormatInt(int64(u), 10) + " GOR"
 	}
@@ -84,10 +84,10 @@ func NewAmount(f float64) (Amount, error) {
 	case math.IsInf(f, 1):
 		fallthrough
 	case math.IsInf(f, -1):
-		return 0, errors.New("invalid gor amount")
+		return 0, errors.New("invalid GOR amount")
 	}
 
-	return round(f * constants.SeepPerGor), nil
+	return round(f * constants.SompiPerGor), nil
 }
 
 // ToUnit converts a monetary amount counted in gor base units to a
