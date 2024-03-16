@@ -43,7 +43,7 @@ func (u AmountUnit) String() string {
 		return "mGOR"
 	case AmountMicroGOR:
 		return "μGOR"
-	case AmountSeep:
+	case AmountSompi:
 		return "Sompi"
 	default:
 		return "1e" + strconv.FormatInt(int64(u), 10) + " GOR"
