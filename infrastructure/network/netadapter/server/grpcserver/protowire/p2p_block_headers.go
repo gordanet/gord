@@ -7,7 +7,7 @@ import (
 
 func (x *GordMessage_BlockHeaders) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_BlockHeaders is nil")
+		return nil, errors.Wrapf(errorNil, "GordMessage_BlockHeaders is nil")
 	}
 	blockHeaders, err := x.BlockHeaders.toAppMessage()
 	if err != nil {
