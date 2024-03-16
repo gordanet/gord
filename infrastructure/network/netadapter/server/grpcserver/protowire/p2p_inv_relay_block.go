@@ -5,9 +5,9 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *KaspadMessage_InvRelayBlock) toAppMessage() (appmessage.Message, error) {
+func (x *GordMessage_InvRelayBlock) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_InvRelayBlock is nil")
+		return nil, errors.Wrapf(errorNil, "GordMessage_InvRelayBlock is nil")
 	}
 	return x.InvRelayBlock.toAppMessage()
 }
