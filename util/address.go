@@ -118,7 +118,7 @@ type Address interface {
 	Prefix() Bech32Prefix
 
 	// IsForPrefix returns whether or not the address is associated with the
-	// passed kaspa network.
+	// passed gor network.
 	IsForPrefix(prefix Bech32Prefix) bool
 }
 
