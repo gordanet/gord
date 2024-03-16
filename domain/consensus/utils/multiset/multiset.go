@@ -1,7 +1,7 @@
 package multiset
 
 import (
-	"github.com/kaspanet/gord-muhash"
+	"github.com/gordanet/gord-muhash"
 	"github.com/gordanet/gord/domain/consensus/model"
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
