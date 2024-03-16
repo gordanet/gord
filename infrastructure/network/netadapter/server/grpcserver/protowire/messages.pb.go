@@ -20,7 +20,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type KaspadMessage struct {
+type GordMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -402,7 +402,7 @@ func (x *GordMessage) GetRequestNextHeaders() *RequestNextHeadersMessage {
 }
 
 func (x *KaspadMessage) GetDoneHeaders() *DoneHeadersMessage {
-	if x, ok := x.GetPayload().(*KaspadMessage_DoneHeaders); ok {
+	if x, ok := x.GetPayload().(*GordMessage_DoneHeaders); ok {
 		return x.DoneHeaders
 	}
 	return nil
@@ -1124,7 +1124,7 @@ type GordMessage_Transaction struct {
 	Transaction *TransactionMessage `protobuf:"bytes,3,opt,name=transaction,proto3,oneof"`
 }
 
-type KaspadMessage_BlockLocator struct {
+type GordMessage_BlockLocator struct {
 	BlockLocator *BlockLocatorMessage `protobuf:"bytes,5,opt,name=blockLocator,proto3,oneof"`
 }
 
@@ -1136,7 +1136,7 @@ type GordMessage_RequestRelayBlocks struct {
 	RequestRelayBlocks *RequestRelayBlocksMessage `protobuf:"bytes,10,opt,name=requestRelayBlocks,proto3,oneof"`
 }
 
-type KaspadMessage_RequestTransactions struct {
+type GordMessage_RequestTransactions struct {
 	RequestTransactions *RequestTransactionsMessage `protobuf:"bytes,12,opt,name=requestTransactions,proto3,oneof"`
 }
 
@@ -1148,7 +1148,7 @@ type GordMessage_InvRelayBlock struct {
 	InvRelayBlock *InvRelayBlockMessage `protobuf:"bytes,14,opt,name=invRelayBlock,proto3,oneof"`
 }
 
-type KaspadMessage_InvTransactions struct {
+type GordMessage_InvTransactions struct {
 	InvTransactions *InvTransactionsMessage `protobuf:"bytes,15,opt,name=invTransactions,proto3,oneof"`
 }
 
@@ -1156,7 +1156,7 @@ type GordMessage_Ping struct {
 	Ping *PingMessage `protobuf:"bytes,16,opt,name=ping,proto3,oneof"`
 }
 
-type KaspadMessage_Pong struct {
+type GordMessage_Pong struct {
 	Pong *PongMessage `protobuf:"bytes,17,opt,name=pong,proto3,oneof"`
 }
 
@@ -1172,7 +1172,7 @@ type GordMessage_TransactionNotFound struct {
 	TransactionNotFound *TransactionNotFoundMessage `protobuf:"bytes,21,opt,name=transactionNotFound,proto3,oneof"`
 }
 
-type KaspadMessage_Reject struct {
+type GordMessage_Reject struct {
 	Reject *RejectMessage `protobuf:"bytes,22,opt,name=reject,proto3,oneof"`
 }
 
@@ -1188,11 +1188,11 @@ type GordMessage_UnexpectedPruningPoint struct {
 	UnexpectedPruningPoint *UnexpectedPruningPointMessage `protobuf:"bytes,27,opt,name=unexpectedPruningPoint,proto3,oneof"`
 }
 
-type KaspadMessage_IbdBlockLocator struct {
+type GordMessage_IbdBlockLocator struct {
 	IbdBlockLocator *IbdBlockLocatorMessage `protobuf:"bytes,30,opt,name=ibdBlockLocator,proto3,oneof"`
 }
 
-type KaspadMessage_IbdBlockLocatorHighestHash struct {
+type GordMessage_IbdBlockLocatorHighestHash struct {
 	IbdBlockLocatorHighestHash *IbdBlockLocatorHighestHashMessage `protobuf:"bytes,31,opt,name=ibdBlockLocatorHighestHash,proto3,oneof"`
 }
 
@@ -1204,7 +1204,7 @@ type GordMessage_DonePruningPointUtxoSetChunks struct {
 	DonePruningPointUtxoSetChunks *DonePruningPointUtxoSetChunksMessage `protobuf:"bytes,34,opt,name=donePruningPointUtxoSetChunks,proto3,oneof"`
 }
 
-type KaspadMessage_IbdBlockLocatorHighestHashNotFound struct {
+type GordMessage_IbdBlockLocatorHighestHashNotFound struct {
 	IbdBlockLocatorHighestHashNotFound *IbdBlockLocatorHighestHashNotFoundMessage `protobuf:"bytes,35,opt,name=ibdBlockLocatorHighestHashNotFound,proto3,oneof"`
 }
 
@@ -1212,11 +1212,11 @@ type GordMessage_BlockWithTrustedData struct {
 	BlockWithTrustedData *BlockWithTrustedDataMessage `protobuf:"bytes,36,opt,name=blockWithTrustedData,proto3,oneof"`
 }
 
-type KaspadMessage_DoneBlocksWithTrustedData struct {
+type GordMessage_DoneBlocksWithTrustedData struct {
 	DoneBlocksWithTrustedData *DoneBlocksWithTrustedDataMessage `protobuf:"bytes,37,opt,name=doneBlocksWithTrustedData,proto3,oneof"`
 }
 
-type KaspadMessage_RequestPruningPointAndItsAnticone struct {
+type GordMessage_RequestPruningPointAndItsAnticone struct {
 	RequestPruningPointAndItsAnticone *RequestPruningPointAndItsAnticoneMessage `protobuf:"bytes,40,opt,name=requestPruningPointAndItsAnticone,proto3,oneof"`
 }
 
@@ -1240,7 +1240,7 @@ type GordMessage_RequestHeaders struct {
 	RequestHeaders *RequestHeadersMessage `protobuf:"bytes,45,opt,name=requestHeaders,proto3,oneof"`
 }
 
-type KaspadMessage_RequestBlockLocator struct {
+type GordMessage_RequestBlockLocator struct {
 	RequestBlockLocator *RequestBlockLocatorMessage `protobuf:"bytes,46,opt,name=requestBlockLocator,proto3,oneof"`
 }
 
@@ -1268,7 +1268,7 @@ type GordMessage_TrustedData struct {
 	TrustedData *TrustedDataMessage `protobuf:"bytes,52,opt,name=trustedData,proto3,oneof"`
 }
 
-type KaspadMessage_RequestIBDChainBlockLocator struct {
+type GordMessage_RequestIBDChainBlockLocator struct {
 	RequestIBDChainBlockLocator *RequestIBDChainBlockLocatorMessage `protobuf:"bytes,53,opt,name=requestIBDChainBlockLocator,proto3,oneof"`
 }
 
@@ -1276,7 +1276,7 @@ type GordMessage_IbdChainBlockLocator struct {
 	IbdChainBlockLocator *IbdChainBlockLocatorMessage `protobuf:"bytes,54,opt,name=ibdChainBlockLocator,proto3,oneof"`
 }
 
-type KaspadMessage_RequestAnticone struct {
+type GordMessage_RequestAnticone struct {
 	RequestAnticone *RequestAnticoneMessage `protobuf:"bytes,55,opt,name=requestAnticone,proto3,oneof"`
 }
 
@@ -1288,7 +1288,7 @@ type GordMessage_GetCurrentNetworkRequest struct {
 	GetCurrentNetworkRequest *GetCurrentNetworkRequestMessage `protobuf:"bytes,1001,opt,name=getCurrentNetworkRequest,proto3,oneof"`
 }
 
-type KaspadMessage_GetCurrentNetworkResponse struct {
+type GordMessage_GetCurrentNetworkResponse struct {
 	GetCurrentNetworkResponse *GetCurrentNetworkResponseMessage `protobuf:"bytes,1002,opt,name=getCurrentNetworkResponse,proto3,oneof"`
 }
 
@@ -1296,11 +1296,11 @@ type GordMessage_SubmitBlockRequest struct {
 	SubmitBlockRequest *SubmitBlockRequestMessage `protobuf:"bytes,1003,opt,name=submitBlockRequest,proto3,oneof"`
 }
 
-type KaspadMessage_SubmitBlockResponse struct {
+type GordMessage_SubmitBlockResponse struct {
 	SubmitBlockResponse *SubmitBlockResponseMessage `protobuf:"bytes,1004,opt,name=submitBlockResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetBlockTemplateRequest struct {
+type GordMessage_GetBlockTemplateRequest struct {
 	GetBlockTemplateRequest *GetBlockTemplateRequestMessage `protobuf:"bytes,1005,opt,name=getBlockTemplateRequest,proto3,oneof"`
 }
 
@@ -1308,11 +1308,11 @@ type GordMessage_GetBlockTemplateResponse struct {
 	GetBlockTemplateResponse *GetBlockTemplateResponseMessage `protobuf:"bytes,1006,opt,name=getBlockTemplateResponse,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyBlockAddedRequest struct {
+type GordMessage_NotifyBlockAddedRequest struct {
 	NotifyBlockAddedRequest *NotifyBlockAddedRequestMessage `protobuf:"bytes,1007,opt,name=notifyBlockAddedRequest,proto3,oneof"`
 }
 
-type KaspadMessage_NotifyBlockAddedResponse struct {
+type GordMessage_NotifyBlockAddedResponse struct {
 	NotifyBlockAddedResponse *NotifyBlockAddedResponseMessage `protobuf:"bytes,1008,opt,name=notifyBlockAddedResponse,proto3,oneof"`
 }
 
@@ -1344,7 +1344,7 @@ type GordMessage_GetMempoolEntryResponse struct {
 	GetMempoolEntryResponse *GetMempoolEntryResponseMessage `protobuf:"bytes,1015,opt,name=getMempoolEntryResponse,proto3,oneof"`
 }
 
-type KaspadMessage_GetConnectedPeerInfoRequest struct {
+type GordMessage_GetConnectedPeerInfoRequest struct {
 	GetConnectedPeerInfoRequest *GetConnectedPeerInfoRequestMessage `protobuf:"bytes,1016,opt,name=getConnectedPeerInfoRequest,proto3,oneof"`
 }
 
@@ -1356,7 +1356,7 @@ type GordMessage_AddPeerRequest struct {
 	AddPeerRequest *AddPeerRequestMessage `protobuf:"bytes,1018,opt,name=addPeerRequest,proto3,oneof"`
 }
 
-type KaspadMessage_AddPeerResponse struct {
+type GordMessage_AddPeerResponse struct {
 	AddPeerResponse *AddPeerResponseMessage `protobuf:"bytes,1019,opt,name=addPeerResponse,proto3,oneof"`
 }
 
@@ -1524,7 +1524,7 @@ type GordMessage_BanResponse struct {
 	BanResponse *BanResponseMessage `protobuf:"bytes,1060,opt,name=banResponse,proto3,oneof"`
 }
 
-type KaspadMessage_UnbanRequest struct {
+type GordMessage_UnbanRequest struct {
 	UnbanRequest *UnbanRequestMessage `protobuf:"bytes,1061,opt,name=unbanRequest,proto3,oneof"`
 }
 
@@ -1634,7 +1634,7 @@ type GordMessage_GetCoinSupplyResponse struct {
 
 func (*GordMessage_Addresses) isGordMessage_Payload() {}
 
-func (*KaspadMessage_Block) isKaspadMessage_Payload() {}
+func (*GordMessage_Block) isKaspadMessage_Payload() {}
 
 func (*GordMessage_Transaction) isGordMessage_Payload() {}
 
@@ -2804,7 +2804,7 @@ func file_messages_proto_rawDescGZIP() []byte {
 
 var file_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_messages_proto_goTypes = []interface{}{
-	(*KaspadMessage)(nil),                                              // 0: protowire.GordMessage
+	(*GordMessage)(nil),                                                // 0: protowire.GordMessage
 	(*AddressesMessage)(nil),                                           // 1: protowire.AddressesMessage
 	(*BlockMessage)(nil),                                               // 2: protowire.BlockMessage
 	(*TransactionMessage)(nil),                                         // 3: protowire.TransactionMessage
@@ -2937,7 +2937,7 @@ var file_messages_proto_goTypes = []interface{}{
 }
 var file_messages_proto_depIdxs = []int32{
 	1,   // 0: protowire.GordMessage.addresses:type_name -> protowire.AddressesMessage
-	2,   // 1: protowire.GpordMessage.block:type_name -> protowire.BlockMessage
+	2,   // 1: protowire.GordMessage.block:type_name -> protowire.BlockMessage
 	3,   // 2: protowire.GordMessage.transaction:type_name -> protowire.TransactionMessage
 	4,   // 3: protowire.GordMessage.blockLocator:type_name -> protowire.BlockLocatorMessage
 	5,   // 4: protowire.GordMessage.requestAddresses:type_name -> protowire.RequestAddressesMessage
@@ -3192,7 +3192,7 @@ func file_messages_proto_init() {
 		(*GordMessage_GetHeadersResponse)(nil),
 		(*GordMessage_NotifyUtxosChangedRequest)(nil),
 		(*GordMessage_NotifyUtxosChangedResponse)(nil),
-		(*gordMessage_UtxosChangedNotification)(nil),
+		(*GordMessage_UtxosChangedNotification)(nil),
 		(*GordMessage_GetUtxosByAddressesRequest)(nil),
 		(*GordMessage_GetUtxosByAddressesResponse)(nil),
 		(*GordMessage_GetVirtualSelectedParentBlueScoreRequest)(nil),
@@ -3207,7 +3207,7 @@ func file_messages_proto_init() {
 		(*GordMessage_GetInfoRequest)(nil),
 		(*GordMessage_GetInfoResponse)(nil),
 		(*GordMessage_StopNotifyingUtxosChangedRequest)(nil),
-		(*GorddMessage_StopNotifyingUtxosChangedResponse)(nil),
+		(*GordMessage_StopNotifyingUtxosChangedResponse)(nil),
 		(*GordMessage_NotifyPruningPointUTXOSetOverrideRequest)(nil),
 		(*GordMessage_NotifyPruningPointUTXOSetOverrideResponse)(nil),
 		(*GordMessage_PruningPointUTXOSetOverrideNotification)(nil),
