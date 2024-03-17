@@ -1,9 +1,9 @@
 #!/bin/bash
 rm -rf /tmp/gord-temp
 
-kaspad --devnet --appdir=/tmp/gord-temp --profile=6061 --loglevel=debug &
+gord --devnet --appdir=/tmp/gord-temp --profile=6061 --loglevel=debug &
 GORD_PID=$!
-gorD_KILLED=0
+GORD_KILLED=0
 function killGordIfNotKilled() {
     if [ $GORD_KILLED -eq 0 ]; then
       kill $GORD_PID
