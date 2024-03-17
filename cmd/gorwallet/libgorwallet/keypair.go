@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/gordanet/go-secp256k1"
+	"github.com/gordanet/go-secp256k1 v1.0.2"
 	"github.com/gordanet/gord/cmd/gorwallet/libgorwallet/bip32"
 	"github.com/gordanet/gord/domain/dagconfig"
 	"github.com/gordanet/gord/util"
