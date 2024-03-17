@@ -16,7 +16,7 @@ RUN go mod download
 
 COPY . .
 
-RUN go build $FLAGS -o kaspad .
+RUN go build $FLAGS -o gord .
 
 # --- multistage docker build: stage #2: runtime image
 FROM alpine
