@@ -2,7 +2,7 @@ package bip32
 
 import (
 	"encoding/binary"
-	"github.com/gordanet/go-secp256k1"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/gordanet/gord/cmd/gorwallet/libgorwallet/bip32/base58"
 	"github.com/pkg/errors"
 )
