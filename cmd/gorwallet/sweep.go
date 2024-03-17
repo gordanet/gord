@@ -5,7 +5,6 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/gordanet/go-secp256k1"
 	"github.com/gordanet/gord/cmd/gorwallet/daemon/client"
 	"github.com/gordanet/gord/cmd/gorwallet/daemon/pb"
 	"github.com/gordanet/gord/cmd/gorwallet/libgorwallet"
@@ -18,6 +17,7 @@ import (
 	"github.com/gordanet/gord/domain/consensus/utils/txscript"
 	"github.com/gordanet/gord/domain/consensus/utils/utxo"
 	"github.com/gordanet/gord/domain/dagconfig"
+	 "github.com/kaspanet/go-secp256k1
 	"github.com/gordanet/gord/domain/miningmanager/mempool"
 	"github.com/gordanet/gord/util"
 	"github.com/gordanet/gord/util/txmass"
