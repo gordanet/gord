@@ -10,7 +10,7 @@ import (
 	"encoding/binary"
 	"fmt"
 	"hash"
-
+        "github.com/gordanet/gord/cmd/gorwallet"
 	"github.com/gordanet/gord/domain/consensus/utils/consensushashing"
 
 	"golang.org/x/crypto/blake2b"
