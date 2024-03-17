@@ -30,7 +30,7 @@ func TestUTXOIndex(t *testing.T) {
 
 	// skip the first block because it's paying to genesis script,
 	// which contains no outputs
-	mineNextBlock(t, kaspad)
+	mineNextBlock(t, gordd)
 
 	// Register for UTXO changes
 	const blockAmountToMine = 100
