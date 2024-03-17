@@ -8,4 +8,4 @@ import (
 	"github.com/gordanet/gord/infrastructure/logger"
 )
 
-var kasdLog = logger.RegisterSubSystem("KASD")
+var GordLog = logger.RegisterSubSystem("GORD")
