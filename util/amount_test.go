@@ -223,9 +223,9 @@ func TestAmountMulF64(t *testing.T) {
 		},
 		{
 			name: "Multiply 1 by 0.5.",
-			amt:  1, // 1 Seep
+			amt:  1, // 1 Sompi
 			mul:  0.5,
-			res:  1, // 1 Seep
+			res:  1, // 1 Sompi
 		},
 		{
 			name: "Multiply 100 by 66%.",
