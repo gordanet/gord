@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/gordanet/go-secp256k1"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/gordanet/gord/app/appmessage"
 	"github.com/gordanet/gord/domain/consensus/utils/mining"
 	"github.com/gordanet/gord/util"
