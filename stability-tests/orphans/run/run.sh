@@ -12,7 +12,7 @@ TEST_EXIT_CODE=$?
 kill $GORD_PID
 
 wait $GORD_PID
-KASPAD_EXIT_CODE=$?
+GORD_EXIT_CODE=$?
 
 echo "Exit code: $TEST_EXIT_CODE"
 echo "Gord exit code: $GORD_EXIT_CODE"
