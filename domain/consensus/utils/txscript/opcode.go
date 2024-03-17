@@ -12,9 +12,12 @@ import (
 	"hash"
 
 	"github.com/gordanet/gord/domain/consensus/utils/consensushashing"
+
 	"golang.org/x/crypto/blake2b"
+
 	"github.com/gordanet/gord/domain/consensus/utils/constants"
-        "github.com/gordanet/go-secp256k1"
+
+	"github.com/gordanet/go-secp256k1"
 )
 
 // An opcode defines the information related to a txscript opcode. opfunc, if
@@ -28,7 +31,7 @@ type opcode struct {
 	opfunc func(*parsedOpcode, *Engine) error
 }
 
-// These constants are the values of the kaspa script opcodes.
+// These constants are the values of the sedra script opcodes.
 const (
 	Op0                   = 0x00 // 0
 	OpFalse               = 0x00 // 0 - AKA Op0
