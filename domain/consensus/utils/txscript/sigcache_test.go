@@ -6,7 +6,7 @@ package txscript
 
 import (
 	"crypto/rand"
-	"github.com/gordanet/go-secp256k1"
+	"github.com/kaspanet/go-secp256k1"
 	"testing"
 )
 
