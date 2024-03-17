@@ -1,7 +1,7 @@
 #!/bin/bash
 rm -rf /tmp/gord-temp
 
-kaspad --devnet --appdir=/tmp/gord-temp --profile=6061 &
+GORD --devnet --appdir=/tmp/gord-temp --profile=6061 &
 GORD_PID=$!
 
 sleep 1
@@ -15,7 +15,7 @@ wait $GORD_PID
 KASPAD_EXIT_CODE=$?
 
 echo "Exit code: $TEST_EXIT_CODE"
-echo "Gord exit code: $KASPAD_EXIT_CODE"
+echo "Gord exit code: $GORD_EXIT_CODE"
 
 if [ $TEST_EXIT_CODE -eq 0 ] && [ $GORD_EXIT_CODE -eq 0 ]; then
   echo "infra-level-garbage test: PASSED"
