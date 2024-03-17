@@ -5,7 +5,6 @@ import (
 	"github.com/gordanet/gord/cmd/gorwallet/libgorwallet/serialization"
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
 	"github.com/gordanet/gord/domain/consensus/utils/consensushashing"
-	"github.com/gordanet/go-secp256k1"
 	"github.com/gordanet/gord/domain/consensus/utils/txscript"
 	"github.com/gordanet/gord/domain/consensus/utils/utxo"
 	"github.com/gordanet/gord/domain/dagconfig"
