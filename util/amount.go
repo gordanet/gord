@@ -29,7 +29,7 @@ const (
 )
 
 // String returns the unit as a string. For recognized units, the SI
-// prefix is used, or "Seep" for the base unit. For all unrecognized
+// prefix is used, or "Sompi" for the base unit. For all unrecognized
 // units, "1eN GOR" is returned, where N is the AmountUnit.
 func (u AmountUnit) String() string {
 	switch u {
@@ -51,7 +51,7 @@ func (u AmountUnit) String() string {
 }
 
 // Amount represents the base gor monetary unit (colloquially referred
-// to as a `Seep'). A single Amount is equal to 1e-8 of a gor.
+// to as a `Sompi'). A single Amount is equal to 1e-8 of a gor.
 type Amount uint64
 
 // round converts a floating point number, which may or may not be representable
@@ -70,8 +70,8 @@ func round(f float64) Amount {
 // does not check that the amount is within the total amount of gor
 // producible as f may not refer to an amount at a single moment in time.
 //
-// NewAmount is for specifically for converting GOR to Seep.
-// For creating a new Amount with an int64 value which denotes a quantity of Seep,
+// NewAmount is for specifically for converting GOR to Sompi.
+// For creating a new Amount with an int64 value which denotes a quantity of Sompi,
 // do a simple type conversion from type int64 to Amount.
 // TODO: Refactor NewAmount. When amounts are more than 1e9 GOR, the precision
 // can be higher than one seep (1e9 and 1e9+1e-8 will result as the same number)
