@@ -5,7 +5,7 @@
 package txscript
 
 import (
-	"github.com/gordanet/gord-secp256k1 v1.0.2"
+	"github.com/gordanet/go-secp256k1 v1.0.2"
 	"github.com/gordanet/gord-muhash@v0.0.4"
 )
 
