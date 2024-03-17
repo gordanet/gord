@@ -67,14 +67,14 @@ func ExampleAmount_unitConversions() {
 	fmt.Println("Sompi to GOR:", amount)
 	fmt.Println("Sompi to MilliGOR:", amount.Format(util.AmountMilliGOR))
 	fmt.Println("Sompi to MicroGOR:", amount.Format(util.AmountMicroGOR))
-	fmt.Println("Sompi to Seep:", amount.Format(util.AmountSompi))
+	fmt.Println("Sompi to Sompi:", amount.Format(util.AmountSompi))
 
 	// Output:
 	// Sompi to kGOR: 444.333222111 kGOR
 	// Sompi to GOR: 444333.222111 GOR
 	// Sompi to MilliGOR: 444333222.111 mGOR
 	// Sompi to MicroGOR: 444333222111 μGOR
-	// Sompi to Seep: 44433322211100 Seep
+	// Sompi to Sompi: 44433322211100 Sompi
 }
 
 // This example demonstrates how to convert the compact "bits" in a block header
