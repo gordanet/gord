@@ -12,7 +12,7 @@ type converter interface {
 // ToAppMessage converts a KaspadMessage to its appmessage.Message representation
 func (x *GordMessage) ToAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage is nil")
+		return nil, errors.Wrapf(errorNil, "GordMessage is nil")
 	}
 	converter, ok := x.Payload.(converter)
 	if !ok {
