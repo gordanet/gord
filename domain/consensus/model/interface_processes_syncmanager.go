@@ -2,7 +2,7 @@ package model
 
 import "github.com/gordanet/gord/domain/consensus/model/externalapi"
 
-// SyncManager exposes functions to support sync between kaspad nodes
+// SyncManager exposes functions to support sync between gordd nodes
 type SyncManager interface {
 	GetHashesBetween(stagingArea *StagingArea, lowHash, highHash *externalapi.DomainHash, maxBlocks uint64) (
 		hashes []*externalapi.DomainHash, actualHighHash *externalapi.DomainHash, err error)
