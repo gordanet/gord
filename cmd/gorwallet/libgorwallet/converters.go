@@ -10,7 +10,7 @@ import (
 	"github.com/gordanet/gord/domain/consensus/utils/utxo"
 )
 
-// GorwalletdUTXOsTolibkaspawalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libgorwallet.UTXO
+// GorwalletdUTXOsTolibgorwalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libgorwallet.UTXO
 func gorwalletdUTXOsTolibgorwalletUTXOs(gorwalletdUtxoEntires []*pb.UtxosByAddressesEntry) ([]*UTXO, error) {
 	UTXOs := make([]*UTXO, len(gorwalletdUtxoEntires))
 	for i, entry := range gorwalletdUtxoEntires {
