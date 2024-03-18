@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gordanet/go-secp256k1"
-	"github.com/gordanet/go-muhash"
+	"github.com/kaspanet/go-secp256k1"
+	"github.com/kaspanet/go-muhash"
 	"github.com/gordanet/gord/app/appmessage"
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
 	"github.com/gordanet/gord/domain/consensus/utils/consensushashing"
