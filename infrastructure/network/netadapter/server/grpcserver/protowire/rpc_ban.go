@@ -26,7 +26,7 @@ func (x *GordMessage_BanRequest) fromAppMessage(message *appmessage.BanRequestMe
 	return nil
 }
 
-func (x *KaspadMessage_BanResponse) toAppMessage() (appmessage.Message, error) {
+func (x *GordMessage_BanResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "GordMessage_BanResponse is nil")
 	}
