@@ -1,5 +1,5 @@
 # Orphans
-This tool makes sure orphan resolution works and doesn't crash kaspad
+This tool makes sure orphan resolution works and doesn't crash gord
 
 ## Running
  1. `go install` gord and orphans.
