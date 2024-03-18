@@ -51,7 +51,7 @@ func (x *NotifyPruningPointUTXOSetOverrideResponseMessage) toAppMessage() (appme
 
 func (x *GordMessage_PruningPointUTXOSetOverrideNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_PruningPointUTXOSetOverrideNotification is nil")
+		return nil, errors.Wrapf(errorNil, "GordMessage_PruningPointUTXOSetOverrideNotification is nil")
 	}
 	return &appmessage.PruningPointUTXOSetOverrideNotificationMessage{}, nil
 }
