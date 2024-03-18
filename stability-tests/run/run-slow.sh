@@ -14,7 +14,7 @@ echo "Running infra-level-garbage"
 cd "${PROJECT_ROOT}/infra-level-garbage/run" && ./run.sh || failedTests+=("infra-level-garbage")
 echo "Done running infra-level-garbage"
 
-echo "Running kaspadsanity"
+echo "Running gordsanity"
 cd "${PROJECT_ROOT}/gordsanity/run" && ./run.sh || failedTests+=("gordsanity")
 echo "Done running gordsanity"
 
