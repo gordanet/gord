@@ -47,7 +47,7 @@ func TstAddressScriptHash(prefix Bech32Prefix, hash [blake2b.Size256]byte) *Addr
 }
 
 // TstAddressSAddr returns the expected script address bytes for
-// P2PK kaspa addresses.
+// P2PK gor addresses.
 func TstAddressSAddrP2PK(addr string) []byte {
 	_, decoded, _, _ := bech32.Decode(addr)
 	return decoded[:PublicKeySize]
