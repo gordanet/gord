@@ -16,7 +16,7 @@ func (x *GordMessage_NotifyNewBlockTemplateRequest) fromAppMessage(_ *appmessage
 
 func (x *GordMessage_NotifyNewBlockTemplateResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_NotifyNewBlockTemplateResponse is nil")
+		return nil, errors.Wrapf(errorNil, "GordMessage_NotifyNewBlockTemplateResponse is nil")
 	}
 	return x.NotifyNewBlockTemplateResponse.toAppMessage()
 }
