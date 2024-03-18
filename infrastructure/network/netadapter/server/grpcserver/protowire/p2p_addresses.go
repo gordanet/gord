@@ -38,7 +38,7 @@ func (x *AddressesMessage) toAppMessage() ([]*appmessage.NetAddress, error) {
 	return addressList, nil
 }
 
-func (x *KaspadMessage_Addresses) fromAppMessage(msgAddresses *appmessage.MsgAddresses) error {
+func (x *GordMessage_Addresses) fromAppMessage(msgAddresses *appmessage.MsgAddresses) error {
 	if len(msgAddresses.AddressList) > appmessage.MaxAddressesPerMsg {
 		return errors.Errorf("too many addresses for message "+
 			"[count %d, max %d]", len(msgAddresses.AddressList), appmessage.MaxAddressesPerMsg)
