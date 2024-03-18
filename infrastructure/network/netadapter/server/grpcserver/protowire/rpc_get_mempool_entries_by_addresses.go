@@ -23,7 +23,7 @@ func (x *GordMessage_GetMempoolEntriesByAddressesRequest) fromAppMessage(message
 
 func (x *GetMempoolEntriesByAddressesRequestMessage) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_GetMempoolEntriesRequest is nil")
+		return nil, errors.Wrapf(errorNil, "GordMessage_GetMempoolEntriesRequest is nil")
 	}
 	return &appmessage.GetMempoolEntriesByAddressesRequestMessage{
 		Addresses:             x.Addresses,
