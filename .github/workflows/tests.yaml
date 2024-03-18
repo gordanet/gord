@@ -74,7 +74,8 @@ jobs:
       - name: Run fast stability tests
         working-directory: stability-tests
         run: ./install_and_test.sh
-
+      - name: Install go-muhash
+        run: go get -u gordanet/go-muhash v0.0.4
 
   coverage:
     runs-on: ubuntu-latest
