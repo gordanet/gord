@@ -10,7 +10,7 @@ have to repeat the relatively expensive hashing operations.
 
 # Tx Overview
 
-A Tx defines a kaspa transaction that provides more efficient manipulation of
+A Tx defines a gor transaction that provides more efficient manipulation of
 raw transactions. It memoizes the hash for the transaction on its
 first access so subsequent accesses don't have to repeat the relatively
 expensive hashing operations.
