@@ -5,7 +5,6 @@
 package dagconfig
 
 import (
-	"github.com/kaspanet/go-muhash@v0.0.4"
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
 	"github.com/gordanet/gord/domain/consensus/utils/blockheader"
 	"github.com/gordanet/gord/domain/consensus/utils/subnetworks"
