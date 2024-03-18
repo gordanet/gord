@@ -14,7 +14,7 @@ func (x *GordMessage_GetInfoRequest) fromAppMessage(_ *appmessage.GetInfoRequest
 	return nil
 }
 
-func (x *KaspadMessage_GetInfoResponse) toAppMessage() (appmessage.Message, error) {
+func (x *GordMessage_GetInfoResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "GordMessage_GetInfoResponse is nil")
 	}
