@@ -9,7 +9,7 @@ func (x *GordMessage_GetCoinSupplyRequest) toAppMessage() (appmessage.Message, e
 	return &appmessage.GetCoinSupplyRequestMessage{}, nil
 }
 
-func (x *KaspadMessage_GetCoinSupplyRequest) fromAppMessage(_ *appmessage.GetCoinSupplyRequestMessage) error {
+func (x *GordMessage_GetCoinSupplyRequest) fromAppMessage(_ *appmessage.GetCoinSupplyRequestMessage) error {
 	x.GetCoinSupplyRequest = &GetCoinSupplyRequestMessage{}
 	return nil
 }
