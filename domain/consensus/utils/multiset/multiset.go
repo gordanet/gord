@@ -1,9 +1,10 @@
 package multiset
 
 import (
-	"github.com/kaspanet/go-muhash v0.0.4"
+	
 	"github.com/gordanet/gord/domain/consensus/model"
 	"github.com/gordanet/gord/domain/consensus/model/externalapi"
+	"github.com/kaspanet/go-muhash"
 	"github.com/pkg/errors"
 )
 
