@@ -11,7 +11,7 @@ import (
 	"github.com/gordanet/gord/domain/consensus/utils/subnetworks"
 	"github.com/gordanet/gord/domain/consensus/utils/transactionhelper"
 	"math/big"
-	"github.com/gordanet/go-muhash"
+	"github.com/kaspanet/go-muhash"
 )
 
 var genesisTxOuts = []*externalapi.DomainTransactionOutput{}
