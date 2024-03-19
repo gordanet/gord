@@ -1,7 +1,7 @@
 package miningmanager_test
 
 import (
-	"github.com/gordanet/gord/cmd/gorwallet/libgorwallet"
+	"github.com/gordanet/gord/cmd/gorwallet/libkaspawallet"
 	"github.com/gordanet/gord/domain/consensusreference"
 	"github.com/gordanet/gord/domain/miningmanager/model"
 	"github.com/gordanet/gord/util"
@@ -819,7 +819,7 @@ func generateNewCoinbase(addressPrefix util.Bech32Prefix, op opType) (*externala
 			ExtraData:       nil,
 		}, nil
 	}
-	_, publicKey, err := libgorwallet.CreateKeyPair(op == opECDSA)
+	_, publicKey, err := libkaspawallet.CreateKeyPair(op == opECDSA)
 	if err != nil {
 		return nil, err
 	}

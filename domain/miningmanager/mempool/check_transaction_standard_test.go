@@ -206,7 +206,7 @@ func TestCheckTransactionStandardInIsolation(t *testing.T) {
 		Sequence:         constants.MaxTxInSequenceNum,
 	}
 	addrHash := [32]byte{0x01}
-	addr, err := util.NewAddressPublicKey(addrHash[:], util.Bech32PrefixGorTest)
+	addr, err := util.NewAddressPublicKey(addrHash[:], util.Bech32PrefixKaspaTest)
 	if err != nil {
 		t.Fatalf("NewAddressPublicKey: unexpected error: %v", err)
 	}
@@ -215,7 +215,7 @@ func TestCheckTransactionStandardInIsolation(t *testing.T) {
 		t.Fatalf("PayToAddrScript: unexpected error: %v", err)
 	}
 	dummyTxOut := externalapi.DomainTransactionOutput{
-		Value:           100000000, // 1 GOR
+		Value:           100000000, // 1 KAS
 		ScriptPublicKey: dummyScriptPublicKey,
 	}
 
