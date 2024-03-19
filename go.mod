@@ -3,8 +3,8 @@ module github.com/gordanet/gord
 go 1.18
 
 require (
-        github.com/gordanet/gor-muhash v1.0.0
-	github.com/gordanet/gor-secp256k1 
+        github.com/kaspanet/go-muhash v0.0.4
+	github.com/kaspanet/go-secp256k1 v0.0.7 
 	github.com/btcsuite/btcutil v1.0.2
 	github.com/btcsuite/go-socks v0.0.0-20170105172521-4720035b7bfd
 	github.com/btcsuite/winsvc v1.0.0
