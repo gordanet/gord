@@ -33,7 +33,7 @@ func TestServiceFlagStringer(t *testing.T) {
 	}
 }
 
-// TestKaspaNetStringer tests the stringized output for gord net types.
+// TestGorNetStringer tests the stringized output for gord net types.
 func TestGordNetStringer(t *testing.T) {
 	tests := []struct {
 		in   GordNet
