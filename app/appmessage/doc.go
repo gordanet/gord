@@ -115,7 +115,7 @@ from a remote peer is:
 	msg := appmessage.NewMsgRequestAddresses()
 
 	// Writes a gord message msg to conn using the protocol version
-	// pver, and the gord network kaspaNet. The return is a possible
+	// pver, and the gord network GorNet. The return is a possible
 	// error.
 	err := appmessage.WriteMessage(conn, msg, pver, gordNet)
 	if err != nil {
