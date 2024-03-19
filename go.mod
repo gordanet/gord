@@ -4,7 +4,7 @@ go 1.18
 
 require (
         github.com/gordanet/go-muhash v1.0.0
-	github.com/kaspanet/go-secp256k1 v1.0.0
+	github.com/kaspanet/go-secp256k1 
 	github.com/btcsuite/btcutil v1.0.2
 	github.com/btcsuite/go-socks v0.0.0-20170105172521-4720035b7bfd
 	github.com/btcsuite/winsvc v1.0.0
