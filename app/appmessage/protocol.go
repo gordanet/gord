@@ -89,7 +89,7 @@ func (f ServiceFlag) String() string {
 	return s
 }
 
-// GordNet represents which gord network a message belongs to.
+// GorNet represents which gor network a message belongs to.
 type KaspaNet uint32
 
 // Constants used to indicate the message gord network. They can also be
