@@ -3,14 +3,14 @@ package main
 import (
 	"fmt"
 	"path/filepath"
-	"github.com/lib/pq"
+	
 	"github.com/syndtr/goleveldb/leveldb"
 //	"github.com/syndtr/goleveldb/leveldb/util"
 	"log"
 	"strings"
 	"encoding/hex"
 	"database/sql"
-	"github.com/lib/pq"
+	
 )
 
 func main() {
