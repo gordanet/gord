@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/kaspanet/kaspad/blockdag"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/stability-tests/common"
+	
+	"github.com/gordanet/gord/domain/consensus/model/externalapi"
+	"github.com/gordanet/gord/infrastructure/logger"
+	"github.com/gordanet/gord/stability-tests/common"
 	"os"
 )
 
