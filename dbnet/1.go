@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"path/filepath"
+	"github.com/lib/pq"
 	"github.com/syndtr/goleveldb/leveldb"
 //	"github.com/syndtr/goleveldb/leveldb/util"
 	"log"
