@@ -1,7 +1,7 @@
 package server
 
 import (
-	"github.com/gornet/go-secp256k1"
+	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
 
 	"github.com/gordanet/gord/cmd/gorwallet/libgorwallet"
