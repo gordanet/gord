@@ -214,7 +214,7 @@ var MainnetParams = Params{
 	RPCPort:     "46110",
 	DefaultPort: "46111",
 	DNSSeeds: []string{
-		// This DNS seeder is run by Wolfie
+		// Team DNS seed
 		"ixbase.info",
 		"maxgor.info",
 		"176.104.53.246",
