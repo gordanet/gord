@@ -284,9 +284,8 @@ var TestnetParams = Params{
 	RPCPort:     "36210",
 	DefaultPort: "36211",
 	DNSSeeds: []string{
-		"testnet-10-dnsseed.kas.pa",
-		// This DNS seeder is run by Tiram
-		"seeder1-testnet.kaspad.net",
+		"testnet-1.karlsencoin.com",
+		
 	},
 
 	// DAG parameters
